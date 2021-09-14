@@ -33,7 +33,7 @@ class Padawan{
         prixHT= 100;
         TVA= 0.10;
         Quantity= 3;
-        PrixTTC= (PrixHT*(1*TVA)*Quantity);
+        PrixTTC= (PrixHT*(1+TVA)*Quantity);
 
         System.out.println(PrixTTC);
     }
@@ -73,7 +73,6 @@ class Padawan {
 //import java.util.Scanner;
 class Padawan {
     public static void main(String[] args) {
-        double prixTTC;
         prixTTC= 0;
         prixHT= 0;
         TVA= 0.1;
@@ -82,7 +81,7 @@ class Padawan {
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir le prix de votre article :");
         int prixHT = sc.nextInt();
-        PrixTTC= (PrixHT*(1*TVA)*Quantity);
+        PrixTTC= (PrixHT*(1+TVA)*Quantity);
 
         if (prixHT > 100 ) {
             System.out.println((PrixTTC*0.10)+ " (Felicitation vous avez une remise de 10%)");
