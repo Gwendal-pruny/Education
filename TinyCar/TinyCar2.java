@@ -72,11 +72,12 @@ class Padawan {
         int prixHT= 0;
         int TVA= 0.20;
         int Quantity= 3;
+        string mdp;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Pour acceder a notre catalogue merci de repondre correctement => Quelle est la réponse a l'univers ? :");
+        System.out.println("Pour acceder a notre catalogue merci de repondre correctement => la réponse à la grande question sur la vie, l’univers et le reste :");
         string mdp = sc.nextInt();
-        if (mdp !=){
+        if (mdp != 42){
             System.out.println("Faux. Les inculte ne sont pas tolerer, chiao");
             stop;
         }
@@ -102,4 +103,70 @@ class Padawan {
             System.out.println(Prix TTC);
         }
     }
+}
+
+// Question 4
+
+class Padawan {
+    public static void main(String[] args) {
+        int prixTTC= 0;
+        int prixHT= 0;
+        int TVA= 0.20;
+        int Quantity= 3;
+        int Reduc= 0;
+        string mdp;
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pour acceder a notre catalogue merci de repondre correctement => la réponse à la grande question sur la vie, l’univers et le reste :");
+        string mdp = sc.nextInt();
+        if (mdp != 42){
+            System.out.println("Faux. Les inculte ne sont pas tolerer, chiao");
+            stop;
+        }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez indiquer si vous possèder une carte de fiddeliter : [oui/non]");
+        string carte = sc.nextInt();
+        if (carte == 'oui'){
+            System.out.println("Veuillez indiquer ca gamme : [gold/platinium]");
+            string categorie = sc.nextInt();
+        }
+        else {
+            categorie = nul;
+        }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez saisir la marque :");
+        string marque = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez saisir le model :");
+        string model = sc.nextInt();
+        System.out.println("Veuillez indiquer si le véhuicule est electique : [oui/non] ");
+        string elec = sc.nextInt();
+        if (elec == 'oui'){
+            TVA = 5;
+        }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez saisir le prix de la "+ (model)"de marque"+ (marque) " :");
+        int prixHT = sc.nextInt();
+        PrixTTC= (PrixHT*(1+TVA)*Quantity);
+        switch (categorie) {
+            case "gold":Reduc = Reduc + 0.20;
+                if (elec == 'oui'){
+                    Reduc = Reduc + 10
+                }
+                break;
+            case "platinium" :Reduc =  Reduc + 15;
+                break;
+            case "nul":Reduc = Reduc;
+                break;
+            default:
+                System.out.println("404 - La carte de fideliter est invalide");
+                stop;
+        }
+
+        if (prixHT > 20 000 ) {
+            Reduc = Reduc + 10;
+        }
+        Prix = PrixTTC*(Reduc/100);
+        System.out.println("Votre voiture coute (TTC):"+(Prix)" (Felicitation vous avez une réduc de "+Reduc "%");
 }
