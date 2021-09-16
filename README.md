@@ -4,11 +4,11 @@ Mission 0 :
 
 **Nom prénom :**
 
-Je suis Gwendal Pruyny et j'ai 18 ans.
+Je suis Gwendal Pruny et j'ai 18 ans.
 
 **De quel Lycée / école ( formation ) :**
 
-J'ai suivit un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie  de l'information et du developpement durabele Système informatique et numérique ) à Jean Perrin dans Saint-ouen l'aumone mais j'ai fait la plus grande partie de mon lycée et tout mon collège a Notre de Dame de la COmpassion a pontoise.
+J'ai suivit un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie  de l'information et du developpement durabele Système informatique et numérique ) à Jean Perrin dans Saint-ouen l'aumone mais, j'ai fait la plus grande partie de mon lycée et tout mon collège a Notre de Dame de la Compassion a pontoise.
 
 **Résidence :**
 
@@ -42,4 +42,7 @@ Qualités :
 **Suis-je un adulte ?**
 
 Non pas encor j'espère
-*
+
+**Entreprise :**
+
+SquadEasy / Rôle : QA
