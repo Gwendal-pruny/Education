@@ -6,11 +6,11 @@ Mission 0 :
 
 Je suis Gwendal Pruyny et j'ai 18 ans.
 
-**De quel Lycée / école ( formation ) : **
+**De quel Lycée / école ( formation ) :**
 
 J'ai suivit un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie  de l'information et du developpement durabele Système informatique et numérique ) à Jean Perrin dans Saint-ouen l'aumone mais j'ai fait la plus grande partie de mon lycée et tout mon collège a Notre de Dame de la COmpassion a pontoise.
 
-**Résidence : **
+**Résidence :**
 
 J'habite a ennery et je met 10 à 40 minutes pour venir en prenant le seul bus qui passe dans ma campagne.
 
