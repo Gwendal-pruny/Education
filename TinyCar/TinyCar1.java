@@ -1,7 +1,8 @@
 //Question 1
-//Pas comprit 
 
-//age=20; i=0 ; i=1+1 ; // int
+int age=20;
+int i=0;
+int i=1+1 ; // int
 //j=i ; //char 
 //voiture= "peugeot" ;  //string
 //h=k+k ; // char
