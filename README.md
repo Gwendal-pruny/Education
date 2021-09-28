@@ -47,4 +47,8 @@ Non pas encor j'espère
 
 SquadEasy / Rôle : QA
 
+<<<<<<< HEAD
 ![he non](/mrk.jpg)
+=======
+[![HEY](mrk.jpg)]
+>>>>>>> 2051ed5d4ad0580d98b35a9d566b1cec9d1b92dc
