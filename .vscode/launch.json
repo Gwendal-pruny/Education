@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Question4",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question4",
+            "projectName": "EsieeIT_d19432f0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question3",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question3",
+            "projectName": "EsieeIT_d19432f0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question2",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question2",
+            "projectName": "EsieeIT_d19432f0"
+        },
+        {
+            "type": "java",
+            "name": "Launch TEST",
+            "request": "launch",
+            "mainClass": "TinyCar1.TEST",
+            "projectName": "EsieeIT_d19432f0"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
