@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Eden Park",
+        "location": "Auckland"
+    },
+    {
+        "id": 2,
+        "name": "Sky Stadium",
+        "location": "Wellington"
+    },
+    {
+        "id": 3,
+        "name": "Mt Smart Stadium",
+        "location": "Auckland"
+    },
+    {
+        "id": 4,
+        "name": "FMG Stadium Waikato",
+        "location": "Hamilton"
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "cities": [
+        {
+            "name_ja": "東京都",
+            "name_latin": "Tōkyō",
+            "population": 13960236
+        },
+        {
+            "name_ja": "大阪市",
+            "name_latin": "Osaka",
+            "population": 2751862
+        },
+        {
+            "name_ja": "福岡市",
+            "name_latin": "Fukuoka",
+            "population": 1603043
+        }
+    ]
+}
