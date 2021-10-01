@@ -1,10 +1,8 @@
 package TinyCar2;
 import java.util.Scanner;
 
-class Question3 {
+class Question4 {
     public static boolean isValid = false;
-    
-
     public static void main(String[] args) {    
         Scanner sc = new Scanner(System.in);
     
@@ -14,6 +12,7 @@ class Question3 {
             int Quantity= 1;
             double Reduc = 0.0;
             String marque = "None";
+            String categorie;
             //MDP
             System.out.println("Pour acceder a notre catalogue merci de repondre correctement => la réponse à la grande question sur la vie, l’univers et le reste :");
             int mdp = sc.nextInt();
@@ -22,7 +21,19 @@ class Question3 {
                 sc.close();
                 isValid = true; // stoper le programme
             }
-            
+
+            System.out.println("Veuillez indiquer si vous possèder une carte de fiddeliter : [oui/non]");
+            String carte = sc.next();
+            // apply advantage for vip
+
+            if (carte.equals("oui")){
+                System.out.println("Veuillez indiquer ca gamme : [gold/platinium]");
+                categorie = sc.next();
+            }
+            else {
+                categorie = "null";
+                System.out.println(carte);
+            }
             //get marque
             System.out.println("Veuillez saisir la marque :");
             marque = sc.next();
@@ -43,12 +54,30 @@ class Question3 {
             if (prixHT > 20000) {
                 Reduc += 0.10;
             }
+            switch (categorie) {
+                // apply reduc adventage of gold and plat member
+                case "gold":Reduc = Reduc + 0.20;
+                    if (elec == "oui"){
+                        Reduc = Reduc + 0.10;
+                    }
+                    break;
+                case "platinium" :Reduc =  Reduc + 0.15;
+                    break;
+                case "null":Reduc = Reduc;
+                    break;
+                default:
+                // invalide inpuit
+                    System.out.println("404 - La carte de fideliter est invalide");
+                    isValid = true;
+            }
             //get the final price
             double PrixTTC= (prixHT*(1+TVA)*Quantity);
             if (Reduc != 0.0){
                 PrixTTC = PrixTTC*(1+Reduc);
             }
-            System.out.println("Votre voiture coute (TTC):"+(PrixTTC)+" (Felicitation vous avez une réduc de "+(Reduc*100)+"%)");
+            double rReduc = Math.round(Reduc*100);
+            double rPrixTTC =  Math.round(PrixTTC);
+            System.out.println("Votre voiture coute (TTC):"+(rPrixTTC)+" (Felicitation vous avez une réduc de "+(rReduc)+"%)");
 
 
             System.out.println("Voulez-vous recommancer ? oui / non ");
