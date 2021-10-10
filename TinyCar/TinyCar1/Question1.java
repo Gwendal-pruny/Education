@@ -14,7 +14,7 @@ class Question1 {
     System.out.println("La variable i de type integer contient : 2");
     System.out.println("La variable j de type int  contient : 2");
     System.out.println("La variable voiture de type string contient : peaugot");
-    System.out.println("La variable h de type char contient :kk");
+    System.out.println("La variable h de type string contient :kk");
     System.out.println("La variable majeur de type boolean contient : true");
 
     

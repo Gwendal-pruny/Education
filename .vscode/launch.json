@@ -9,6 +9,34 @@
             "name": "Launch TinyCar3",
             "request": "launch",
             "mainClass": "TinyCar3",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question3",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question3",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question2",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question2",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question1",
+            "request": "launch",
+            "mainClass": "TinyCar1.Question1",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch TinyCar3",
+            "request": "launch",
+            "mainClass": "TinyCar3",
             "projectName": "EsieeIT_d19432f0"
         },
         {
