@@ -7,7 +7,7 @@ class Question4 {
         Scanner sc = new Scanner(System.in);
     
         while(!isValid) {
-            // On initialise toutes les variables
+            // initialize variables
             double TVA= 0.20;
             int Quantity= 1;
             double Reduc = 0.0;
@@ -19,7 +19,7 @@ class Question4 {
             if (mdp != 42){
                 System.out.println("Faux. Les inculte ne sont pas tolerer, chiao");
                 sc.close();
-                isValid = true; // stoper le programme
+                isValid = true; // stop the programme
             }
 
             System.out.println("Veuillez indiquer si vous possèder une carte de fiddeliter : [oui/non]");
@@ -43,7 +43,7 @@ class Question4 {
             //get v type
             System.out.println("Veuillez indiquer si le véhicule est electique : [oui/non] ");
             String elec = sc.next();
-            // apply reduc if v type is electrique 
+            // apply reduc if v type is electric 
             if (elec == "oui"){
                 TVA = 0.05;
             }
@@ -55,18 +55,18 @@ class Question4 {
                 Reduc += 0.10;
             }
             switch (categorie) {
-                // apply reduc adventage of gold and plat member
+                // apply Reduc advantage of gold and plat member
                 case "gold":Reduc = Reduc + 0.20;
                     if (elec == "oui"){
                         Reduc = Reduc + 0.10;
                     }
                     break;
-                case "platinium" :Reduc =  Reduc + 0.15;
+                case "platinum" :Reduc =  Reduc + 0.15;
                     break;
-                case "null":Reduc = Reduc;
+                case "null":;
                     break;
                 default:
-                // invalide inpuit
+                // invalid input
                     System.out.println("404 - La carte de fideliter est invalide");
                     isValid = true;
             }
@@ -83,12 +83,15 @@ class Question4 {
             System.out.println("Voulez-vous recommancer ? oui / non ");
             String reload = sc.next();
             if (reload != "non") {
-                isValid = false; // recommancer le programme
+                isValid = false; // restart programme
+                System.out.println("======================================================"); 
+
             }
             else {
                 System.out.println("Merci, bonne journée");
+                System.out.println("======================================================");
                 sc.close();
-                isValid = true; // stoper le programme
+                isValid = true; // stop the programme
             }
         }
     }

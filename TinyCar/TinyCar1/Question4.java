@@ -10,12 +10,10 @@ public class Question4 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir la marque :");
         String marque = sc.nextLine();
-        Scanner sc2 = new Scanner(System.in);
         System.out.println("Veuillez saisir le model :");
-        String model = sc2.nextLine();
-        Scanner sc3 = new Scanner(System.in);
+        String model = sc.nextLine();
         System.out.println("Veuillez saisir le prix de la "+(model)+"de marque"+(marque)+ " :");
-        int prixHT = sc3.nextInt();
+        int prixHT = sc.nextInt();
         double PrixTTC = (prixHT*(1+TVA)*Quantity);
 
         if (prixHT > 100 ) {
@@ -23,5 +21,6 @@ public class Question4 {
         } else {
             System.out.println(PrixTTC);
         }
+        sc.close();
     }
 }

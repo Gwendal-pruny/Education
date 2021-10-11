@@ -15,5 +15,6 @@ class Question3 {
         } else {
             System.out.println(PrixTTC);
         }
+        sc.close();
     }
 }

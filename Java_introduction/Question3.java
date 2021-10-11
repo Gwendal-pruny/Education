@@ -1,8 +1,7 @@
-package TinyCar1;
-
-class Question2{
+public class Question3 {
     public static void main (String[] args){
         double prixTTC;
+        prixTTC= 0;
         int prixHT= 100;
         double TVA= 0.10;
         int Quantity= 3;

@@ -1,6 +1,11 @@
 {
     "java.project.sourcePaths": [
         "TinyCar",
-        ".VERIF"
+        ".VERIF",
+        "Java_introduction"
+    ],
+    "cSpell.words": [
+        "elec",
+        "Reduc"
     ]
 }
