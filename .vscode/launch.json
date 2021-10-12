@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Questions7",
+            "request": "launch",
+            "mainClass": "Questions7",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Questions",
+            "request": "launch",
+            "mainClass": "Questions",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question4",
+            "request": "launch",
+            "mainClass": "Question4",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question3",
+            "request": "launch",
+            "mainClass": "TinyCar2.Question3",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch frebourg_mission",
+            "request": "launch",
+            "mainClass": "frebourg_mission",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
             "name": "Launch Question1",
             "request": "launch",
             "mainClass": "TinyCar2.Question1",

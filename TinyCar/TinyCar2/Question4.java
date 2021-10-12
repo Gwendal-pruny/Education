@@ -82,7 +82,7 @@ class Question4 {
 
             System.out.println("Voulez-vous recommancer ? oui / non ");
             String reload = sc.next();
-            if (reload != "non") {
+            if (reload == "oui") {
                 isValid = false; // restart programme
                 System.out.println("======================================================"); 
 

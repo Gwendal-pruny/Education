@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
         "TinyCar",
+        "Java_introduction",
         ".VERIF",
-        "Java_introduction"
+        "Cours Esiee-it/Frebourg/java"
     ],
     "cSpell.words": [
         "elec",
