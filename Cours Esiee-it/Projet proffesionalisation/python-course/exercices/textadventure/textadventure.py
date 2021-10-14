@@ -2,26 +2,60 @@
 Cours "Introduction 2" - Exercice "Text Adventure"
 """
 
-personnage = {
-    "PV": 70
+CHARACTERE = {
+    "NAME"
+    "AGE"
+    "LVL"
+    "PV": 70,
+    "SPELL" : [
+                
+              ]
 }
 
-pouvoirs = [
-    "Un pour Tous",
-    "Contrôler la gravité",
-    "Faire des explosions",
-    "Être une grenouille",
-    "Créer des objets",
-    "Mi-chaud mi-froid",
-    "Aller très vite"
+FIRST_SPELL_LIST_MAGE = [
+    "Air"
+    "Bois"
+    "Eau"
+    "Feu"
+    "Métal"
+    "Néant"
+    "Terre"
 ]
 
-plats = "Ramen,Onigiri,Udon,Curry" # À transformer en liste
+FIRST_SPELL_LIST_PALADIN = [
+    "Armes magique"
+    "Soins légers"
+    "Lumière divine"
+    "Purification"
+]
 
-plats_stock = {} # À remplir avec les plats
+FIRST_SPELL_LIST_DEMON = [
+    "Armes magique"
+    "Peau de fer"
+    "Bénédiction du sang"
+    "Rage"
+    "Destruction"
+    "Némésis"
+]
 
-objets_cles = ["smartphone"]
-inventaire = {}
+FIRST_SPELL_LIST_ASSASSIN = [
+    "True Strick"
+    "Secret Weapon",
+    "Blade of Blood"
+    "Poison Strick"
+]
+
+FOOD = [
+        "Ramen",
+        "Onigiri",
+        "Udon",
+        "Curry"
+        ] # À transformer en liste
+
+FOOD_STOCK = {"Ramen", "Onigiri", "Udon", "Curry"} # À remplir avec les plats
+
+KEYS = ["smartphone"]
+INVENTORY = {"Ramen"}
 
 # ********************************************************************************
 # FONCTIONS UTILITAIRES
@@ -36,6 +70,9 @@ def proposer_actions(actions):
     message = "│[Actions] "
     # A remplir ici
     print(message)
+    
+def proposer_observer(oberserver):
+    message ="│[Observer] "
 
 # ********************************************************************************
 # INTRODUCTION
@@ -50,16 +87,23 @@ def intro():
     print("|| Bienvenue au lycée A.U. ! ||")
     print("===============================")
     print("Commençons par créer ton personnage.")
-    print("\nQuel âge as-tu ?")
+    AGE = int(input("\nQuel âge as-tu ?\n\n\n\n"))
+    NAME = str(input("\nQuel nom as-tu ?\n\n\n\n"))
+    CLASS = str(input("\nQuel class souhaitez vous ? 1 -> MAGE \n 2 -> PALADIN \n 3 -> DEMON \n 4 -> ASSASSIN \n 5 -> RAMDOM"))
 
-    # Demander un âge et écrire cette information dans le dictionnaire "personnage"
     
     # Afficher la liste des pouvoirs (avec leur position) et demander d'en choisir un
+    CHARACTERE["LVL"] = 1 
+    
+    print("**"+(NAME)+ " à LVLUP au niveaux "+ str(CHARACTERE["LVL"]) +"**\n")
+    print(FIRST_SPELL_LIST_[CLASS])
+    SPELL_CHOOSE = int(input("Choissisez votre nouvelle compétance :"))
+    
 
     # Stocker le nom du pouvoir choisi dans le dictionnaire "personnage"
-    
+    CHARACTERE["SPELL"].append(SPELL_CHOOSE)
     # Afficher tout le contenu (clé et valeur) du dictionnaire "personnage"
-
+    print(CHARACTERE)
     lieu_hall()
 
 # ********************************************************************************

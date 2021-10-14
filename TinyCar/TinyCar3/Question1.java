@@ -1,7 +1,8 @@
+package TinyCar3;
 
 import java.util.Scanner;
 
-class TinyCar3 {
+class Question1 {
     public static void main(String[] args) {
         
         // On initialise toutes les variables
