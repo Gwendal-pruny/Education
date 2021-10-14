@@ -4,7 +4,7 @@
 # Mission 1 : Découverte d'une première Solution technique d'accès (STA)
 
 
-## Bonjour ! Voici mes STA, 2 ordinateur portable et 1 pc fix.
+## Bonjour ! Voici mes STA, 2 ordinateurs portable et 1 pc fix.
 
 ### Ordinateur portable étude 
 
@@ -22,7 +22,7 @@ ASUS ZENBOOK DUO
 - 1 To SSD
 - 2 Ecran tactile
 
-**CONNECTIQUE :**
+**CONNECTIQUES :**
 - 1 DCIN
 - 2 USB
 - 1 HDMI
@@ -33,7 +33,7 @@ ASUS ZENBOOK DUO
 **OS :**
 Ubuntu 20.04.3 LTS
 
-**SOFTWARE INSTALLES :**
+**SOFTWARE :**
 - draw.io
 - LibreOffice Suite
 - Slack
@@ -65,13 +65,13 @@ Ubuntu 20.04.3 LTS
 **MARQUE :** DELL XPS 15
 
 **COMPOSANTS :**
-- PROCESSEUR : Intel Core i9-10885H
+- PROCESSEUR : Intel Core i7-10885H
 - CARTE GRAPHIQUE : NVIDIA GeForce GTX 1650 Ti
 - RAM : 32 Go 
 - 2 To HDD
 - 256 Go SSD
 
-**CONNECTIQUE :**
+**CONNECTIQUES :**
 - 3 Type C
 - 1 Jack
 - Carte SD
@@ -79,7 +79,7 @@ Ubuntu 20.04.3 LTS
 **OS :**
 Ubuntu 20.04.3 LTS
 
-**SOFTWARE INSTALLES :**
+**SOFTWARE :**
 - draw.io
 - LibreOffice Suite
 - Slack
@@ -107,7 +107,7 @@ Ubuntu 20.04.3 LTS
 <details><summary>Click to expand</summary>
 
 
-**MARQUE :**  Marque confondu / Pc montée et composant choisit par mes soins
+**MARQUE :**  Marque confondu / Pc montée et composant choisi par mes soins =)
 
 **COMPOSANTS :**
 - PROCESSEUR : Intel Core ryzen 5 10700x
@@ -116,24 +116,23 @@ Ubuntu 20.04.3 LTS
 - 3 To HDD
 - 1 To SSD
 - 256 Go NVME
-- WaterCooling
 - Carte Wifi 
 
 
 
 
-**CONNECTIQUE :**
+**CONNECTIQUES :**
 - 1 Type C
 - 3 Jack
 - Sd card reader
-- 5 usb + hub 6 USB
+- 4 usb + hub 6 USB
 - 1 hdmi
 - 1 dp
 - 1 vga
 
 
 **OS :**
-Windows 11 Alpha
+Windows 11
 
 **SOFTWARE INSTALLES :**
 - draw.io
@@ -145,6 +144,7 @@ Windows 11 Alpha
 - Brave
 - Dbeaver
 - Adobe Suite
+- ...A lot more not rly interesting
 
 
 **POSSIBILITER D'EVOLUTION :**

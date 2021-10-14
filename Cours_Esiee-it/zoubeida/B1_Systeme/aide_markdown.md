@@ -31,5 +31,29 @@ At the command prompt, type `nano`.
 
 [![Ma superbe image](/assets/images/ "IMAGE")](LINK)
 
-\* Without the backslash, this would be a bullet in an unordered list.
+* this would be a bullet in an unordered list.
+
+> blockquote
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+term
+: definition
+
+~~The world is flat.~~
 

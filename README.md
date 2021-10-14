@@ -1,50 +1,53 @@
 # EsieeIT
 
-Mission 0 :
-
 **Nom prénom :**
 
 Je suis Gwendal Pruny et j'ai 18 ans.
 
 **De quel Lycée / école ( formation ) :**
 
-J'ai suivit un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie  de l'information et du developpement durabele Système informatique et numérique ) à Jean Perrin dans Saint-ouen l'aumone mais, j'ai fait la plus grande partie de mon lycée et tout mon collège a Notre de Dame de la Compassion a pontoise.
+J'ai suivi un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie de l'information et du développement durable système informatique et numérique) à Jean Perrin à Saint-ouen l'aumône mais, j'ai fait la plus grande partie de mon lycée et tout mon collège à Notre de Dame de la Compassion à Pontoise.
 
 **Résidence :**
 
-J'habite a ennery et je met 10 à 40 minutes pour venir en prenant le seul bus qui passe dans ma campagne.
+J'habite à Ennery et je mets 10 à 40 minutes pour venir en prenant le seul bus qui passe dans ma campagne.
 
 **Pourquoi BTS SIO SLAM ?**
 
-Avec la formation BTS SIO SLAM j'ai la possibiliter d'obtenir un diblome reconnu et qui a de la valeur pour rentrer n'importe quelle cursus plus tard ( Ingenieur, M2I ..). La possibiliter d'être en même temps en alternance était aussi essentiels car  l'expèriance est très priser en informatique.
+Avec la formation BTS SIO SLAM j'ai la possibilité d'obtenir un diplôme reconnu et qui a de la valeur pour rentrer dans énormément de cursus plus tard ( Ingénieur, M2I ...). La possibilité d'être en même temps en alternance été aussi essentiels car l'expérience est très prisé en informatique.
 
 **Pourquoi Esiee-IT ?**
 
-J'ai choisit Esiee-IT car c'est uen toute nouvelle école de la CCI avec un grand potentielle est des cursur qui m'intéresse tousse, sans parler de l'aventage géopgraphique.
+J'ai choisi Esiee-IT car c'est une toute nouvelle école de la CCI avec une grande potentielle et des cursur qui m'intéresse tousse.
 
 **Qui suis-je comme étudiant ?**
 
 Defauts :
 
-    Trop facilement ennuyer, Travaille pas assez ce qui me déplait / Travaille trop ce qui me plaît
+    Trop facilement ennuyer, Travaille pas assez ce qui me déplaît / travaille trop ce qui me plaît.
 
 Qualités :
 
-    Serieux, passioner , opstiner
-
+    Sérieux, passionné, opstiner
 
 
 **Information Supplémentaire :**
 
-404
+Error 418
 
 
 **Suis-je un adulte ?**
 
-Non pas encor j'espère
+/!\ Subjectif /!\
+
+<img src="https://imgur.com/B2xdg05.gif" width="200" height="200" />
+
+*Biologiquement : Oui* /
+*Psychologiquement : Oui* /
+*Mentalement : Je souhaite rester encor un ado =) mon entourage n'est pas encore adulte, l'être et être seul n'est pas intéressant.*
 
 **Entreprise :**
 
-SquadEasy / Rôle : QA
-
-![he non](asset/mrk.jpg)
+Entreprise : SquadEasy
+Rôle : QA en mode BDD (Quality Assurer / behaviour driven development)
+Stack : Node.JS , JS (Objectif en cours -> FullStack)
