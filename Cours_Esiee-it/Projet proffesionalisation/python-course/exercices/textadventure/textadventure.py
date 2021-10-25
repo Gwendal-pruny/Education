@@ -46,6 +46,10 @@ SPELL_LIST_ASSASSIN = [
     "Poison-Strick"
 ]
 
+KEYS_INVENTORY = [
+    
+]
+
 FOOD = [
         "Ramen",
         "Onigiri",
@@ -63,16 +67,19 @@ INVENTORY = {"Ramen"}
 # ********************************************************************************
 
 def proposer_lieux(mots_cles):
-    message = "│[Lieux] "
+    message = "│"+mots_cles
     # A remplir ici
     print(message)
 
 def proposer_actions(actions):
-    message = "│[Actions] "
+    message = "│"+actions
     # A remplir ici
     print(message)
     
-# def proposer_observer(oberserver):
+def proposer_observer(oberserver):
+    message = "│"+oberserver
+    
+    print(message)
 
 
 def lvlup(CLASS, LVL):
@@ -171,9 +178,9 @@ def lvlup(CLASS, LVL):
                 print("Invalide input - RETRY")
 
 def printCharacter():
-    print("┌─────────────── CHARACTERE ──────────────────────")
+    print("┌──────────── CHARACTERE ───────────────")
     print(yaml.dump(CHARACTERE))
-    print("└─────────────── CHARACTERE ──────────────────────")
+    print("└──────────── CHARACTERE ───────────────")
 
 
 
@@ -213,22 +220,37 @@ def intro():
 # LIEUX
 # ********************************************************************************
 
+# ENTRE DANS LE HALL
+
 def lieu_hall():
     LIEUX = "lieu_hall"
     print(chr(27) + "[2J")
-    print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+    printCharacter()
+    print("      ////////    ///  ///")
+    print("      ///  ///    ///  ///")
+    print("      ////////    ///  ///")
+    print("      ///  ///    ////////")
+    print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
     print("Tu es dans le hall d'entrée de l'école.")
     print("On peut aller à de nombreux endroits d'ici.")
 
+# REDIRECTION ACTIVITE
+
     while True:
         print("┌────────────────────────────────────────")
-        proposer_observer(["│1.[Esseyer de rentré dans les différentes pièces]"])
-        proposer_actions(["│2.[Quitter le hall]"]) # À compléter
-        proposer_lieux(["│3.[Prendre les escalier vers le niveaux supérieur]"]) # À compléter
-        reponse = input("[Choisir le nombre correspondant a votre choix]├─> ")
+        proposer_observer("│1.Esseyer de rentré dans les différentes pièces")
+        proposer_actions("│2.Quitter le hall") # À compléter
+        proposer_lieux("│3.Prendre les escalier vers le niveaux supérieur") # À compléter
+        reponse = input("││Choisir le nombre correspondant a votre choix├─> ")
         print("└────────────────────────────────────────")
+        if reponse == 1 :
+            SpaceOptionsObserver(lieux_hall)
+        elif reponse == 2 :
+            SpaceOptionsAction(lieu_hall)
+        elif reponse == 3 :
+            SpaceOptionsLieux(lieu_hall)
 
-        # Gérer ici toutes les réponses possibles, qu'elles soient correctes ou non
+# ENTRE DANS LE PREMIER ETAGE
 
 def lieu_premier_etage():
     print(chr(27) + "[2J")
@@ -238,11 +260,14 @@ def lieu_premier_etage():
 
 
 # ********************************************************************************
-# SPACE OPTION
+# GAME ADVENTUREEEEEEEEEEE
 # ********************************************************************************
 
-def SpaceOptions(LIEUX):
-    if SpaceOptions.lieux == "lieu_hall":
+# *******************************       HALL        ******************************
+
+
+def SpaceOptionsObserver(LIEUX):
+    if SpaceOptionsObserver.lieux == "lieu_hall":
         print("│1.[Acceuil] \n")
         print("│2.[Bureau du proviseur] \n")
         print("│3.[Infirmerie] \n")
@@ -251,8 +276,49 @@ def SpaceOptions(LIEUX):
         print("|6.[Prendre les escalier vers le niveaux supérieur]")
         print("|7.[Quitter le hall]") # À compléter
         reponse = input("[Choisir le nombre correspondant a votre choix]├─> ")
+        if reponse == 1 :
+            if "FIRSTKEY" in KEYS_INVENTORY :
+                print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+                print("Bienvenue à l'acceuil !")
+                print("Avez vous besoin de renseignement ?")
+                print("│1.[Oui] \n")
+                print("│2.[Non] \n")
+                reponse = input("├─> ")
+                if reponse == 1 :
+                    print("Ta classe est situer a l'étage tu devrais allez voir t'es cammarade.")
+                elif reponse == 2 :
+                    print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+                    print("Tu est revenue dans le hall")
+                    SpaceOptionsObserver(lieu_hall)
+
+            else :
+                print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+                print("Bizzarement personne a l'acceuil...")
+                print("Partir ?")
+                print("│1.[Oui] \n")
+                print("│2.[Non] \n")
+                if reponse == 2 :                    
+                    print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+                    print("Tu t'ennui personne ne vient tu repart dans le hall")
+                    SpaceOptionsObserver(lieu_hall)
+                elif reponse == 1 :
+                    print("\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+                    print("Tu est revenue dans le hall")
+                    SpaceOptionsObserver(lieu_hall)
 
 
+# *******************************   PREMIER ETAGE   ******************************
+
+def SpaceOptionsObserver(LIEUX):
+    if SpaceOptionsObserver.lieux == "premier_etage":
+        print("│1.[Acceuil] \n")
+        print("│2.[Bureau du proviseur] \n")
+        print("│3.[Infirmerie] \n")
+        print("│4.[BDE] \n")
+        print("│5.[Super Secret Door] \n")
+        print("|6.[Prendre les escalier vers le niveaux supérieur]")
+        print("|7.[Quitter le hall]") # À compléter
+        reponse = input("[Choisir le nombre correspondant a votre choix]├─> ")
 
 
 
