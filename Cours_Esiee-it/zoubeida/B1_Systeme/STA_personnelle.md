@@ -42,6 +42,7 @@ Ubuntu 20.04.3 LTS
 - VSCode
 - Brave
 - Dbeaver
+- Git Kraken
 
 **POSSIBILITER D'EVOLUTION :**
 - MATERIEL : 
@@ -88,6 +89,8 @@ Ubuntu 20.04.3 LTS
 - VSCode
 - Brave
 - Dbeaver
+- Git Kraken
+
 
 **POSSIBILITER D'EVOLUTION :**
 - MATERIEL :
@@ -96,7 +99,7 @@ Ubuntu 20.04.3 LTS
     - [x] Ubuntu forever
 
 **INFO SUPPLEMENTAIRE :**
-- ACUN USB
+- AUCUN USB
 - CHARGE TYPE C
 
 </details>
@@ -120,7 +123,6 @@ Ubuntu 20.04.3 LTS
 
 
 
-
 **CONNECTIQUES :**
 - 1 Type C
 - 3 Jack
@@ -135,15 +137,17 @@ Ubuntu 20.04.3 LTS
 Windows 11
 
 **SOFTWARE INSTALLES :**
-- draw.io
 - LibreOffice Suite
 - Slack
 - Discord
-- Spootify
+- Spotify
 - VSCode
 - Brave
 - Dbeaver
 - Adobe Suite
+- InteliJ
+- Git Desktop
+- Netflix
 - ...A lot more not rly interesting
 
 
@@ -154,8 +158,9 @@ Windows 11
     - [x] Already last Windows ver
 
 **INFO SUPPLEMENTAIRE :**
-- Seulement sur windows pour les jeux et app .exe only 
-- 2 screen
+- Seulement sur windows pour les jeux et app .exe non disponible sur Linux
+- 2 screen ( 1 paysage / 1 portrait = plus simple pour devs )
+
 
 </details>
 
