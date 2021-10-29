@@ -8,8 +8,7 @@
 
 ### Ordinateur portable étude 
 
-<details><summary>Click to expand</summary>
-
+ 
 
 **MARQUE :** 
 
