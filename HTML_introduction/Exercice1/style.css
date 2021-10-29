@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(asset/545909.jpg);
+    background: url(asset/bg.png);
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     overflow: hidden;
@@ -28,7 +28,7 @@ nav {
 }
 
 nav .menu-item {
-    color: white;
+    color: black;
     font-weight: 600;
     transform-style: preserve-3d;
     flex-grow: 1;
@@ -44,7 +44,7 @@ nav .menu-item {
 
 nav .menu-text, nav .menu-text a {
     font-size: 1em;
-    color: white;
+    color: black;
     text-decoration: none;
     text-shadow: 0 1px 5px rgba(0,0,0,0.1);
     transition: color 0.1s ease-out;
@@ -52,7 +52,7 @@ nav .menu-text, nav .menu-text a {
 }
 
 nav .menu-text a:hover {
-    color: rgba(255,255,255,0.5);
+    color: rgb(156, 0, 0);
 }
 
 #sub-menu-holder {
