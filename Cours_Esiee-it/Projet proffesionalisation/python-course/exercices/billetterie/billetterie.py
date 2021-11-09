@@ -1,8 +1,10 @@
 """
 Cours "Introduction 1" - Exercice "Billetterie"
 """
+#Import
 from simple_term_menu import TerminalMenu
-# Variables
+
+# Déclaration de toute les variables utiliser
 stations = {
     "Meinohama": 1.5,
     "Muromi": 0.8,
@@ -44,8 +46,9 @@ print("          ╰╯╱╱╰━━━┻╯╰━┻━━━┻━━━┻
 
 print("\nBienvenue sur la billetterie du métro municipal de Fukuoka.")
 
+
+# Questions des billets à l'utilisateur
 while True :
-    # Questions à l'utilisateur
     print("\n-> Combien souhaitez-vous de billets à tarif plein ?")
     terminal_menu = TerminalMenu(["0","1","2","3","4","Choisire le nombre"])
     nb_billets_adulte = terminal_menu.show()
@@ -59,6 +62,9 @@ while True :
             continue
     print(nb_billets_adulte)
     break
+
+
+# Questions des billets à tarif réduit à l'utilisateur
 
 while True :
     print("\n-> Souhaitez-vous des billets à tarif réduit et si oui combien ?")
@@ -82,6 +88,7 @@ while True :
         
 print(nb_billets_reduice)
 
+#Error pas de billets
 if nb_billets_adulte == 0 :
         if nb_billets_reduice == 0 :
             print(chr(27) + "[2J")
@@ -93,7 +100,9 @@ else :
     conditionBillet = False
 
 # escape sequences
-print(chr(27) + "[2J")        
+print(chr(27) + "[2J")  
+
+# Questions des Gares à l'utilisateur      
 while conditionGare == True:
     print("\nQuelle est votre station de départ ?")
     terminal_menu = TerminalMenu(["Meinohama","Muromi","Fujisaki","Nishijin","Tojinmachi","Ohorikoen (Ohori Park)","Akasaka","Tenjin","Nakasu-Kawabata","Gion","Hakata","Higashi-Hie","Fukuokakuko(Airport)"])
@@ -108,6 +117,8 @@ while conditionGare == True:
     station_end_name = (stations_names[station_end])
     print("Arriver : ")
     print(station_end_name)
+    
+    #Error same station start / end
     if station_end == station_start:
         print("Vous êtes déjà a destination.. Réesseyer en choissiant une gare d'arriver différente de celle de départ baka..")
     else :
@@ -117,22 +128,27 @@ if stations_names[station_start:station_end] == [] :
     voie = 2
 
 
-# Choix de la bonne zone tarifaire
-
-if distance <= 3:
-    tarif = 210
-if distance >= 3.1:
-    tarif = 270
-if distance >= 7.1:
-    tarif = 300
-if distance >= 11.1:
-    tarif = 340
 
 # Calcul distance
 if voie == 2 :
     distance = sum(stations_distances[station_end:station_start])
 else :
     distance = sum(stations_distances[station_start:station_end])
+
+# Choix de la bonne zone tarifaire
+
+if distance <= 3:
+    tarif = 210
+    Zone = 1
+if distance >= 3.1:
+    tarif = 270
+    Zone = 2
+if distance >= 7.1:
+    tarif = 300
+    Zone = 3
+if distance >= 11.1:
+    tarif = 340
+    Zone = 4
 
 # Calcul du coût total
 
@@ -143,6 +159,7 @@ print(chr(27) + "[2J")
 
 # Affichage des détails du voyage et du tarif
 # Affichage de la voie du train à emprunter
+# Affichage tarif celon zone tarifaire 
 print("          ╭━━━┳╮╱╭┳╮╭━┳╮╱╭┳━━━┳╮╭━┳━━━╮")
 print("          ┃╭━━┫┃╱┃┃┃┃╭┫┃╱┃┃╭━╮┃┃┃╭┫╭━╮┃")
 print("          ┃╰━━┫┃╱┃┃╰╯╯┃┃╱┃┃┃╱┃┃╰╯╯┃┃╱┃┃")
@@ -152,10 +169,10 @@ print("          ╰╯╱╱╰━━━┻╯╰━┻━━━┻━━━┻
 print("・．━━━━━━━━━━━━ ・ RÉCAPITULATIF ・ ━━━━━━━━━━━━．・")
 print("Itinéraire :")
 if voie == 2 :
-    print(stations_names[station_end:station_start])
+    print(*stations_names[station_end:station_start], sep = ", ")
 else :
-    print(stations_names[station_start:station_end])
-print("Distance a parcourir :", round(distance),"km")
-print("Le montant a payer est de :", round(Prix),"¥" "(Nombre billet adult :", nb_billets_adulte," pour ",(nb_billets_adulte * tarif),"¥ /","Nombre billet a tarif réduit :", nb_billets_reduice,"pour",nb_billets_reduice * (tarif / 2),"¥ )")
+    print(*stations_names[station_start:station_end], sep = ", ")
+print("Distance a parcourir :", round(distance),"km", "(Zone tarrifaire n°",Zone,":",tarif,") ¥")
+print("Le montant a payer est de :", round(Prix),"¥","(Nombre billet adult :", nb_billets_adulte," pour ",(nb_billets_adulte * tarif),"¥ /","Nombre billet a tarif réduit :", nb_billets_reduice,"pour",nb_billets_reduice * (tarif / 2),"¥ )")
 print("Votre train est sure la voix :", voie, "\nMerci de votre achat et Bon voyage !")
 print("・．━━━━━━━━━━━━━━━━━━━━━ † ━━━━━━━━━━━━━━━━━━━━━．・")
