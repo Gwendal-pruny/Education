@@ -58,7 +58,7 @@ while True :
             break
         except ValueError:
             print(chr(27) + "[2J")
-            print("Merci d'utiliser des nombre")
+            print("Merci d'utiliser des nombres")
             continue
     print(nb_billets_adulte)
     break
@@ -79,7 +79,7 @@ while True :
                 break
             except ValueError:
                 print(chr(27) + "[2J")
-                print("Merci d'utiliser des nombre")
+                print("Merci d'utiliser des nombres")
                 continue
         break
     elif has_reduit == 1 :
@@ -172,7 +172,7 @@ if voie == 2 :
     print(*stations_names[station_end:station_start], sep = ", ")
 else :
     print(*stations_names[station_start:station_end], sep = ", ")
-print("Distance a parcourir :", round(distance),"km", "(Zone tarrifaire n°",Zone,":",tarif,") ¥")
+print("Distance à parcourir :", round(distance),"km", "(Zone tarrifaire n°",Zone,":",tarif,") ¥")
 print("Le montant a payer est de :", round(Prix),"¥","(Nombre billet adult :", nb_billets_adulte," pour ",(nb_billets_adulte * tarif),"¥ /","Nombre billet a tarif réduit :", nb_billets_reduice,"pour",nb_billets_reduice * (tarif / 2),"¥ )")
-print("Votre train est sure la voix :", voie, "\nMerci de votre achat et Bon voyage !")
+print("Votre train est sure la voix :", voie, "\nMerci de votre achat et Bon voyage !            © Tout droit réserver : Gwendal Pruny")
 print("・．━━━━━━━━━━━━━━━━━━━━━ † ━━━━━━━━━━━━━━━━━━━━━．・")
