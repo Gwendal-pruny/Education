@@ -2,7 +2,7 @@ from .. import interface
 from ..util import move
 from ..room import Room
 
-map_ = """You are in the tavern in Regan.
+map_ = """You are in the hall in Regan.
 Outside is the town square and the weapons and armour shop.
 Goneril Mountain looms in the distance."""
 
@@ -13,7 +13,7 @@ def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "You are in the tavern in Regan.",
+                "You are in the hall in Regan.",
                 "The bartender is still bored, and the strange person in the corner is the same as usual."
             ],
             delay=4
@@ -32,8 +32,8 @@ def enter(room, player):
                 "You heard mysterious stories about Albany through your whole childhood.",
                 "Now that you are older, you have travelled to Albany to discover this foreign land, and the discover the truth.",
                 "",
-                "After sleeping in after the rough journey, you wake up and climb down the stairs into the main area of the Tavern.",
-                "The tavern is small and cozy, with a fireplace burning softly in the corner.",
+                "After sleeping in after the rough journey, you wake up and climb down the stairs into the main area of the hall.",
+                "The hall is small and cozy, with a fireplace burning softly in the corner.",
                 "The bartender looks up as you come down the stairs, but looks down again, the sight of you unable to remedy his boredom.",
                 "The only other person in the bar is a suspicious looking person in the corner, standing still and stiff like a stick, facing the wall."
             ],

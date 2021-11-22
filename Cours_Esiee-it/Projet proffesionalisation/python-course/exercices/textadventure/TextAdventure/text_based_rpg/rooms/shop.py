@@ -3,7 +3,7 @@ from ..util import move
 from ..room import Room
 
 map_ = """You are in the weapons and armour shop in Regan.
-Outside is the center of town, from where the tavern and the town square can be accessed.
+Outside is the center of town, from where the hall and the town square can be accessed.
 Goneril Mountain looms in the distance."""
 
 def enter(room, player):

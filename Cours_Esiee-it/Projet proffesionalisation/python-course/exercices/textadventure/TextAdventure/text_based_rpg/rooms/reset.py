@@ -1,4 +1,4 @@
-from .tavern import room as tavern
+from .hall import room as hall
 from .shop import room as shop
 from .town_square import room as town_square
 from .center_of_town import room as center_of_town
@@ -7,7 +7,7 @@ from .first_room import room as first_room
 from .second_room import room as second_room
 
 rooms = [
-    tavern,
+    hall,
     shop,
     town_square,
     center_of_town,

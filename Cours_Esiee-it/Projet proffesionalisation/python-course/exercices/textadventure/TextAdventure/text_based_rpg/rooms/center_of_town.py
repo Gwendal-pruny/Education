@@ -5,7 +5,7 @@ from ..room import Room
 map_ = """You are out in the town of Regan.
 To your west is the town square.
 To the east is the weapons and armour shop.
-To the south is the tavern.
+To the south is the hall.
 Goneril Mountain looms to the north."""
 
 def enter(room, player):
@@ -14,7 +14,7 @@ def enter(room, player):
     while True:
         interface.get_game_command(player, room, ["move"])
 
-        places_to_move = ["tavern", "town square"]
+        places_to_move = ["hall", "town square"]
 
         if player.talked_to_cordelia:
             places_to_move.append("shop")
@@ -24,9 +24,9 @@ def enter(room, player):
 
         move_location = move(places_to_move)
 
-        if move_location == "tavern":
-            from .tavern import room as tavern
-            tavern.enter(player)
+        if move_location == "hall":
+            from .hall import room as hall
+            hall.enter(player)
 
         if move_location == "town square":
             from .town_square import room as town_square

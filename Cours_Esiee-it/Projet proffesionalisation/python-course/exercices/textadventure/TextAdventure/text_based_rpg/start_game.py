@@ -1,7 +1,7 @@
 from . import interface
 from .battle.battle_util import PlayerHasDiedError
 from .create_player import create_player
-from .rooms.tavern import room as tavern
+from .rooms.hall import room as hall
 from .util import GameOver
 from .rooms.reset import reset as reset_rooms
 
@@ -10,7 +10,7 @@ def start_game():
     player = create_player()
 
     try:
-        tavern.enter(player)
+        hall.enter(player)
     except (PlayerHasDiedError, GameOver) as exception:
         if isinstance(exception, PlayerHasDiedError):
             interface.print_multiple_lines(
@@ -58,7 +58,7 @@ def start_game():
                     "There is no island of Albany.",
                     "There is no kingdom of Cornwall.",
                     "In fact, those are all just names ripped from King Lear.",
-                    "There was no tavern.",
+                    "There was no hall.",
                     "There was no shop.",
                     "There were no bears.",
                     "You thought that lion was weird because it was weird.",
