@@ -29,10 +29,6 @@ public class Question1 {
             if (choice != 1) {
                 restart = false;
             }
-            else {
-                sc.close();
-                Scanner sc = new Scanner(System.in);
-            }
         }
     }
 }
