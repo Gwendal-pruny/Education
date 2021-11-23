@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Firstname NAME">
+        <meta name="description" content="Application web interne à une entreprise.">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="3-form.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+        <link rel="shortcut icon" href="assets/favicon.png">
+
+        <title>Formulaire - Webapp</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/favicon.svg" height="32" alt="Logo">
+                        Webapp
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h2>Contact</h2>
+                    <p>
+                        Ce formulaire est similaire à celui du fichier <code>/html-css-101/2-form.html</code>
+                    </p>
+                    <form action="#" method="get">
+                        <!-- Les champs restent groupés dans des <div>, auxquelles on ajoute une
+                        classe utilitaire "mb-3" qui va rajouter une marge inférieure pour aérer le tout -->
+                        <div class="mb-3">
+                            <!-- Les <label> reçoivent la classe "form-label" -->
+                            <label class="form-label" for="name">Votre nom :</label>
+                            <!-- Et les <input> et <textarea> reçoivent la classe "form-control" -->
+                            <input class="form-control" type="text" name="usr_name" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Votre adresse e-mail :</label>
+                            <input class="form-control" type="email" name="usr_email" id="email" placeholder="test@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="phone">Votre téléphone :</label>
+                            <!-- L'input group permet d'aligner sur une ligne des champs et des morceaux de texte par exemple -->
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon3">+33</span>
+                                <input class="form-control" type="phone" name="usr_phone" id="phone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="brand">Votre marque préférée :</label>
+                            <!-- Styliser un <select> se fait à l'aide de la classe "form-select" -->
+                            <select class="form-select" name="usr_brand" id="brands">
+                                <option value="">---- Choisissez une option ----</option>
+                                <option value="apple">Apple</option>
+                                <option value="google">Google</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="xiaomi">Xiaomi</option>
+                                <option value="oneplus">OnePlus</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="brand">Raison de votre contact :</label>
+                            <!-- Pour les radio, on rajoute d'abord la classe "form-check" -->
+                            <div class="form-check">
+                                <!-- Ensuite, l'input et le label reçoivent chacun une classe spécifique -->
+                                <input class="form-check-input" type="radio" name="reason" value="embauche" id="raison_1">
+                                <label class="form-check-label" for="raison_1">Embauche</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reason" value="partrenariat" id="raison_2" checked>
+                                <label class="form-check-label" for="raison_2">Partenariat</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="message">Votre message :</label>
+                            <textarea class="form-control" id="message" name="user_message"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="brand">Puis-je vous recontacter...</label>
+                            <!-- Pour les checkbox, les classes à utiliser sont les mêmes qu'avec les radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="contact" id="moyen_1" value="phone">
+                                <label class="form-check-label" for="moyen_1">Par téléphone</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="contact" id="moyen_2" value="mail">
+                                <label class="form-check-label" for="moyen_2">Par email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg text-center">
+                        <p>2021 © Entreprise Inc.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Pour utiliser certains composants de Bootstrap, il faut inclure sa partie Javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

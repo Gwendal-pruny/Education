@@ -1,0 +1,88 @@
+
+h1 {
+    margin: 3rem 0;
+}
+
+#tablet {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    height: 400px;
+    /* Photo de Bruno Thethe provenant de Pexels */
+    background: url("assets/home.jpg");
+    background-size: cover;
+    border-radius: 25px;
+    border: 15px solid black;
+}
+
+#tablet .icon {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    transform-origin: center;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+}
+
+#tablet .icon.shaking {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 30px black;
+}
+
+#tablet .icon.green {
+    background: linear-gradient(0deg, #19b537 0%, #50da67 100%);
+}
+
+#tablet .icon.blue {
+    background: linear-gradient(0deg, #007bff 0%, #00b9ff 100%);
+}
+
+#tablet .icon.pink {
+    background: linear-gradient(0deg, #ff2676 0%, #ff2d55 100%);
+}
+
+#tablet-back {
+    display: none;
+    height: 400px;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(13deg, #757F9A 0%, #D7DDE8 100%);
+}
+
+#tablet-back #camera {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border-radius: 50%;
+    background: #2b2b2b;
+    box-shadow: 2px 2px 3px black;
+    border: 3px solid #D7DDE8;
+}
+
+#tablet-back p {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+@keyframes shake {
+    25% {
+        transform: translate3d(-1px, 0, 0) rotateZ(2deg);
+    }
+    75% {
+        transform: translate3d(1px, 0, 0) rotateZ(-2deg);
+    }
+}

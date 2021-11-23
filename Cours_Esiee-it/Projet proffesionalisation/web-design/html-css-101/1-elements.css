@@ -1,0 +1,116 @@
+
+/* Il faut toujours préciser à quoi l'on veut appliquer les 
+propriétés qui suivront à l'aide d'un sélecteur. Ici, c'est
+tout simplement "l'élément HTML ayant le tag <body>" */
+body {
+    /* Lorsque la valeur est la même pour les 4 côtés, on peut en n'écrire qu'une seule */
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    /* Ici, on écrit une couleur au format RGB */
+    background: rgb(229, 243, 251);
+}
+
+/* Pour appliquer les mêmes propriétés à plusieurs sélecteurs,
+on peut les faire se suivre à l'aide des virgules */
+header, main, footer {
+    width: auto;
+    /* 2rem correspond donc 2 fois la taille de la racine du document donc 2 x 16 = 32px */
+    padding: 2rem;
+    background-color: white;
+}
+
+h1 {
+    /* Passer deux valeurs correspond à passer une valeur pour
+    les côtés haut/bas et une pour les côtés gauche/droit */
+    padding: 0 1rem;
+    color: white;
+    /* Ici, on écrit une couleur au format hexadécimal */
+    background-color: #196b9a;
+}
+
+/* On sélectionne uniquement les éléments <ul> qui sont
+directement enfants des éléments <nav> */
+nav > ul {
+    /* Passer quatre valeurs correspond dans l'ordre aux côtés
+    haut, droite, bas, gauche. Ici on remets donc tout à zéro,
+    sauf le côté gauche qui a une nouvelle valeur */
+    padding: 0 0 0 1rem;
+}
+
+/* On sélectionne tous les éléments <a> qui sont à l'intérieur
+de l'élément <nav>, qu'importe le nombre d'élément les séparant */
+nav a {
+    color: #196b9a;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+}
+
+main {
+    /* On peut aussi ne passer qu'une valeur à des propriétés comme
+    margin ou padding (entre autres) en précisant le côté voulu
+    dans le nom de la propriété */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #196b9a;
+}
+
+/* Sélection d'un élément HTML à partir de son ID */
+#illu {
+    /* Sa largeur sera égale à 40% de la largeur de son élément parent */
+    width: 40%;
+    /* Utiliser la valeur "auto" pour les marges gauche et droit
+    permet de centrer horizontalement un bloc */
+    margin: 0 auto;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+/* Sélection d'un élément HTML à partir d'un classe qu'il possède */
+.note {
+    text-align: center;
+}
+
+hr {
+    margin: 3rem 0;
+}
+
+article {
+    padding: 1rem;
+    /* Certaines propriétés comme border sont des raccourcis, permettant
+    de passer plusieurs valeurs à la suite (taille, type, couleur) */
+    border: 1px solid #dedede;
+    border-radius: 1rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+figcaption {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Ceci est une "media queries", qui permet de réserver certaines
+déclarations CSS selon les caractéristiques de l'appareil qui va
+interpréter le fichier CSS. Ici, on prévoit des règles destinées
+aux appareils ayant un écran d'au moins 768 pixels de large (PC) */
+@media screen and (min-width: 768px) {
+    header, main, footer {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

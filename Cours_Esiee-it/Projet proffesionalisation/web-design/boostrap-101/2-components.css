@@ -1,0 +1,45 @@
+
+.navbar-brand {
+    /* On fait correspondre la "hauteur de ligne" du nom de l'application
+    pour qu'il soit bien aligné verticalement avec le logo qui est à sa gauche */
+    line-height: 32px;
+    font-weight: bold;
+}
+
+/* Mobile first oblige, on applique ici une règle que l'on souhaite
+uniquement sur un viewport étroit */
+.navbar-text {
+    display: block;
+    border-top: 2px solid white;
+}
+
+#presentation {
+    padding: 5rem 0;
+}
+
+#presentation h1 {
+    font-weight: bold;
+}
+
+#presentation p {
+    font-size: 1.5rem;
+}
+
+#cards {
+    margin: 3rem 0;
+}
+
+footer p {
+    padding: 1.5rem 0;
+    color: #999;
+}
+
+/* Media query dont les règles s'appliqueront lorsque la largeur du viewport
+est supérieure au breakpoint "large" */
+@media (min-width: 992px) {
+    /* On annule le style précédemment appliqué dont on ne souhaite pas
+    sur un viewport large */
+    .navbar-text {
+        border: none;
+    }
+}

@@ -1,0 +1,23 @@
+
+h1 {
+    margin: 3rem 0;
+}
+
+#list {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.message {
+    margin: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.message .name {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,191 @@
+
+:root {
+    /* En restant sur les couleurs, voyons l'intérêt d'utiliser le format HSL (Teinte Saturation Luminosité) */
+    /* Stockons d'abord la valeur de la teinte correspondant à notre bleu, c'est à dire 202 */
+    --website-hue: 202;
+    /* Grâce aux variables, on peut faire dériver toutes nos couleurs de cette teinte. */
+    /* Ainsi, si la variable de teinte change, toutes les couleurs changeront également de teinte ! */
+    --website-background: hsl(var(--website-hue), 73%, 94%);
+    --website-color: hsl(var(--website-hue), 72%, 35%);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    background: var(--website-background);
+}
+
+header, main, footer {
+    width: auto;
+    padding: 2rem;
+    background-color: white;
+}
+
+h1 {
+    padding: 0 1rem;
+    color: white;
+    background-color: var(--website-color);
+}
+
+nav > ul {
+    padding: 0 0 0 1rem;
+}
+
+nav a {
+    color: var(--website-color);
+    font-size: 1.2rem;
+    font-variant: small-caps;
+}
+
+main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    color: var(--website-color);
+}
+
+p {
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+/* Commençons par mettre en commun des propriétés
+appliquées à plusieurs listes à l'aide d'une classe. */
+.liste {
+    margin: 1rem 0;
+    border: 1px solid #AAAAAA;
+}
+
+/* Pour chaque div directement enfant d'une .liste */
+.liste > div {
+    background-color: var(--website-color);
+    border-radius: 1rem;
+}
+
+#liste-1 {
+    /* C'est ici que l'on demande à notre élément de prendre le comportement d'un conteneur "flexbox" */
+    display: flex;
+    /* Dans une direction "row" (en ligne), les éléments enfants sont alignés de gauche à droite
+    jusqu'à finir par former plusieurs lignes l'une en dessous de l'autre si nécessaire */
+    flex-direction: row;
+    /* Cette propriété indique comment espacer le éléments enfant s'ils ne sont pas assez grands
+    pour remplir toute la largeur. Ici, on a choisi de les répartir équitablement avec "space-evenly" */
+    justify-content: space-evenly;
+}
+
+/* En utilisant la pseudo-classe :first-child, on indique ici que parmi toutes les div qui sont
+directement des enfants de #liste-1, on veut y sélectionner juste la première div */
+#liste-1 > div:first-child {
+    background-color: orange;
+}
+
+#liste-2 {
+    display: flex;
+    /* La direction "column" indique que les éléments enfants seront alignés l'un sous l'autre,
+    jusqu'à ce qu'un éventuel manque d'espace finisse par créer des colonnes pour continuer l'alignement */
+    flex-direction: column;
+    align-items: center;
+}
+
+#liste-2 > div {
+    /* Pour séparer visuellement chaque élément, on ajoute une petite marge inférieure */
+    margin-bottom: 1em;
+}
+
+/* Comme avec :first-child, on veut sélectionner ici la dernière div
+qui soit directement un enfant de la #liste-2 */
+#liste-2 > div:last-child {
+    /* On supprime la marge inférieure car, ceci étant le dernier élément,
+    plus besoin de créer un espace pour séparer de l'élément suivant */
+    margin-bottom: 0;
+    background-color: red;
+}
+
+/* Pour l'élément #colonnes, on souhaite que nos éléments soient alignés côte à côte,
+mais vu que l'on considère notre fichier CSS comme "mobile first", on commence par aligner
+l'un en dessous de l'autre, d'où la direction "column" pour l'instant */
+#colonnes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Si l'on veut sélectionner n'importe quel élément HTML, sans ID ou classe, on peut utiliser l'étoile *
+Ici, on sélectionne donc tout élément qui soit enfant direct d'un élément avec l'id "colonnes" */
+#colonnes > * {
+    /* On ajoute un peu de marge pour séparer visuellement chaque élément enfant */
+    margin: 0 0 1rem 0;
+    /* La marge intérieure évite que le contenu soit collé aux bords de l'élément */
+    padding: 0.5rem;
+    /* Indique si l'élément peut "remplir l'espace disponible" : donner une valeur de 1
+    à chaque élément enfant mène donc à une répartition équivalente de l'espace disponible */
+    flex-grow: 1;
+    background-color: #DDD;
+}
+
+/* On supprime les marges du dernier enfant */
+#colonnes > *:last-child {
+    margin: 0;
+}
+
+figcaption {
+    padding: 0.5rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Histoire que nos lecteurs audio/vidéo aient la même largeur que leur élément parent */
+audio, video {
+    width: 100%;
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+    /* Des marges latérales automatiques pour aligner notre bloc au centre */
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* Pour rappel, ces règles s'appliquent pour les écrans larges (tablette, PC...) */
+@media screen and (min-width: 768px) {
+    header, main, footer {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #colonnes {
+        /* On passe enfin notre élément en direction "row" pour avoir ses
+        éléments enfants placés côte-à-côte, comme des colonnes */
+        flex-direction: row;
+    }
+
+    #colonnes > * {
+        /* Vu que les éléments sont désormais côte-à-côte, il nous
+        faut une marge à droite plutôt qu'une marge à bas */
+        margin: 0 1rem 0 0;
+    }
+
+    #colonnes > *:last-child {
+        /* Pour le dernier élément uniquement, on retire toute marge */
+        margin: 0;
+    }
+}

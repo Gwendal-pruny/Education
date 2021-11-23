@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Firstname NAME">
+        <meta name="description" content="Application web interne à une entreprise.">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="2-components.css">
+        <!-- Bien qu'optionnel, on décide d'utiliser les icônes officielles de Bootstrap en utilisant ce fichier CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+        <link rel="shortcut icon" href="assets/favicon.png">
+
+        <title>Components - Webapp</title>
+    </head>
+    <body>
+        <header>
+            <!-- Ceci est le composant "Navbar" servant à avoir une belle barre de navigation.
+                On demande à avoir le menu transformé en menu déroulant lorsque l'écran est plus
+                petit que le breakpoint "lg" (large) -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <!-- Vu que l'on veut centrer horizontalement notre contenu, on utilise un container -->
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/favicon.svg" height="32" alt="Logo">
+                        Webapp
+                    </a>
+                    <!-- Ce bouton n'apparaîtra que sur les viewports étroits afin d'afficher les liens du menu.
+                        Les attributs "aria" sont en rapport avec l'accessibilité. -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#websiteMenu" aria-controls="websiteMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Ce qui va contenir les liens de notre menu -->
+                    <div class="collapse navbar-collapse" id="websiteMenu">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Stocks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Clients</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            ⚙️ Version 2021-04-19r5
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <!-- Cette rangée aura son ordre inversée lorsque le viewport est plus large que
+                le breakpoint "lg", et les colonnes sont verticalement alignées. -->
+            <div id="presentation" class="row flex-lg-row-reverse align-items-center">
+                <div class="col-lg-6">
+                    <img src="assets/dashboard.svg" class="img-fluid" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1>Bienvenue</h1>
+                    <p>Texte de présentation de l'application web.</p>
+                    <!-- Pour rendre un lien visible, on peut lui appliquer le style d'un bouton,
+                        ici avec la couleur primaire proposée par Bootstrap -->
+                    <a class="btn btn-primary" href="#" role="button">Se connecter</a>
+                    <!-- Et ici, avec un style "outline" et la couleur secondaire -->
+                    <a class="btn btn-outline-secondary" href="#" role="button">Créer un compte</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Les alertes sont un bon moyen d'afficher des messages censés être visibles -->
+                    <div class="alert alert-warning" role="alert">
+                        Une migration des systèmes aura lieu le 5 Mai et l'application sera inaccessible toute la journée.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    <!-- Les icônes Bootstrap s'utilisent facilement à l'aide d'éléments <i> -->
+                    <h2><i class="bi bi-hdd-network-fill"></i> Datacenters disponibles</h2>
+                    <p>L'élément ci-dessous est un <a href="https://getbootstrap.com/docs/5.0/components/list-group/">list group</a>.</p>
+                    <!-- Un exemple de composant pour lister des éléments -->
+                    <ul class="list-group">
+                        <li class="list-group-item">Paris, France</li>
+                        <li class="list-group-item">Düsseldorf, Allemagne</li>
+                        <li class="list-group-item disabled" aria-disabled="true">Montréal, Canada (En maintenance)</li>
+                    </ul>
+                </div>
+                <div class="col-lg">
+                    <!-- Les badges peuvent être utiles pour labelliser un texte -->
+                    <h2><i class="bi bi-upc-scan"></i> Code-barres <span class="badge bg-primary">Nouveau</span></h2>
+                    <p>L'application permet désormais le suivi de produits en scannant leur code-barres.</p>
+                    <h2><i class="bi bi-envelope-fill"></i> E-mails <span class="badge bg-danger">Bug</span></h2>
+                    <p>Les nouveaux comptes peuvent avoir à attendre jusqu'à une semaine pour recevoir les e-mails d'alerte, le bug est en cours de correction.</p>
+                </div>
+            </div>
+            <div id="cards" class="row">
+                <div class="col-lg">
+                    <!-- L'élément carte permet de présenter joliement du contenu-->
+                    <div class="card">
+                        <img src="assets/storage.jpg" class="card-img-top" alt="Photo d'usine">
+                        <div class="card-body">
+                            <h5 class="card-title">Inventaire des produits</h5>
+                            <p class="card-text">Photo by <a href="https://instagram.com/Cleyder_Duque">Cleyder Duque</a> from Pexels</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="card border-warning">
+                        <!-- On peut utiliser un titre plutôt qu'une image -->
+                        <h5 class="card-header">Information</h5>
+                        <div class="card-body">
+                            <p class="card-text">
+                                N'oubliez pas de vérifier votre adresse e-mail après la création d'un compte.<br>
+                                Pour plus d'options sur les card, consultez la <a href="https://getbootstrap.com/docs/5.0/components/card/">documentation</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg text-center">
+                    <p>Chargement...</p>
+                    <div class="spinner-border" role="status"></div>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg text-center">
+                        <p>2021 © Entreprise Inc.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- Pour utiliser certains composants de Bootstrap, il faut inclure sa partie Javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

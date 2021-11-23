@@ -1,0 +1,223 @@
+:root {
+    /* En restant sur les couleurs, voyons l'intérêt d'utiliser le format HSL (Teinte Saturation Luminosité) */
+    /* Stockons d'abord la valeur de la teinte correspondant à notre bleu, c'est à dire 202 */
+    --website-hue: 150;
+    /* Grâce aux variables, on peut faire dériver toutes nos couleurs de cette teinte. */
+    /* Ainsi, si la variable de teinte change, toutes les couleurs changeront également de teinte ! */
+    --website-background: hsl(var(--website-hue), 73%, 94%);
+    --website-color: hsl(var(--website-hue), 72%, 35%);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    background: var(--website-background);
+}
+
+header, main, footer {
+    width: auto;
+    padding: 2rem;
+    background-color: white;
+}
+
+h1 {
+    padding: 0 1rem;
+    color: white;
+}
+
+nav > ul {
+    padding: 0 0 0 1rem;
+}
+
+nav a {
+    font-size: 1.2rem;
+    font-variant: small-caps;
+}
+
+main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    color: var(--website-color);
+}
+
+p {
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+header {
+    background-image: url('assets/osaka.jpg');
+    /* Avec la taille "cover", l'image de fond s'étirera le plus possible
+    mais tout en conservant ses proportions */
+    background-size: cover;
+    /* Pour compléter la taille "cover" on aligne souvent l'image
+    de façon verticale et horizontale par rapport à son conteneur */
+    background-position: center;
+}
+
+h1 {
+    /* Il est possible d'utiliser des dégradés comme fond, évitant ainsi
+    l'usage d'images créées à l'avance. Ce dégradé là précise que l'on part
+    du haut vers le bas, avec une première couleur bleue et une seconde couleur rose */
+    background: linear-gradient(to bottom, #3f5efb 0%, #fc466b 100%);
+}
+
+header ul {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    /* On peut supprimer les puces par défaut d'une liste avec cette propriété */
+    list-style: none;
+}
+
+/* Le pseudo-élément ::before permet d'ajouter du contenu simple juste avant
+un élément HTML, tout comme ::after permet de faire pareil après un élément */
+header li::before {
+    /* On veut afficher une flèche juste avant  */
+    content: "➔";
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    color: var(--website-color);
+}
+
+code {
+    padding: 0.25rem;
+    color: white;
+    background: #333;
+}
+
+.special-image {
+    /* Pour positionner des éléments de façon absolue, il faut généralement
+    définir un élément parent comme étant leur contenant */
+    position: relative;
+}
+
+.special-image span {
+    /* Notre fichier CSS étant mobile-first, on écrit d'abord le positionnement
+    absolu souhaité pour notre légende : en bas, collée à gauche et à droite,
+    pour prendre toute la largeur disponible */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.sticky {
+    /* Cet élément n'ayant aucun parent défini comme position relative, il sera
+    placé par rapport au <body> de notre page, mais la position sticky fait en
+    sorte qu'il garde sa position par rapport à l'écran même en le faisant défiler */
+    position: sticky;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 1rem;
+    background: white;
+}
+
+
+
+
+
+
+
+/* Pour rappel, ces règles s'appliquent pour les écrans larges (tablette, PC...) */
+@media screen and (min-width: 768px) {
+    header, main, footer {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .special-image span {
+        /* Notre légende sera placée de façon absolue à 20px du côté droit
+        et à 20px du côté inférieur, donc dans le coin bas-droite d'un élément
+        parent ayant sa position comme relative. Vu qu'une valeur était précédemment
+        passée pour le côté gauche, on la réinitialise avec "auto" */
+        position: absolute;
+        bottom: 20px;
+        left: auto;
+        right: 20px;
+        border-radius: 5px;
+    }
+}
+
+/* Une media query intéressante permet de n'appliquer des règles que lorsque
+l'on va essayer d'imprimer notre site web : quelque chose de très important
+par exemple pour les pages confirmations de commande, de récapitulatif, etc */
+@media print {
+    /* Le système d'impression s'occupant d'appliquer une marge sur la feuille,
+    on peut supprimer nos propres marges */
+    header, h1, main, footer {
+        padding: 0;
+    }
+
+    /* Pour définir visuellement l'en-tête, une bordure sobre suffira */
+    header {
+        border-bottom: 5px solid black;
+    }
+
+    /* Les couleurs et images de fond sont systématiquement supprimées lors
+    d'une impression, on peut donc s'adapter pour garder la couleur du site */
+    header h1 {
+        color: var(--website-color);
+        /* On peut également se permettre de réduire certaines tailles */
+        font-size: 2rem;
+    }
+
+    /* Pour économiser de l'encre et de l'espace, on peut limiter la taille de
+    nos images, l'unité en centimètres trouvant ici tout son intérêt */
+    img {
+        max-height: 8cm;
+    }
+
+    /* Certaines choses méritent d'avoir leur lisibilité de grandement améliorée
+    par rapport à le style qui leur est appliqué par défaut en mode impression */
+    code {
+        color: black;
+        font-weight: bold;
+        border: 1px solid #999;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        border-top: 5px solid black;
+    }
+}
+
+/* Media query assez récente, elle permet d'adapter les couleurs de son site web
+pour les appareils qui ont leur système d'exploitation configurés en thème "foncé" ou "clair".
+Ci-dessous, les règles s'appliqueront si le visiteur a choisi le thème foncé pour son appareil */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: hsl(var(--website-hue), 15%, 15%);
+    }
+}
