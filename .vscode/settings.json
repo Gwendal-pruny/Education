@@ -17,5 +17,6 @@
             "addWords": true,
             "scope": "workspace"
         }
-    }
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
 }
