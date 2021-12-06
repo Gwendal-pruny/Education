@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch evaluation",
+            "request": "launch",
+            "mainClass": "evaluation",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
             "name": "Launch Question1",
             "request": "launch",
             "mainClass": "TinyCar4.Question1",

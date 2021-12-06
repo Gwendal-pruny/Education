@@ -86,6 +86,7 @@ class Question3  {
         else if (choice.equals("accessoire")){
             System.out.println("Merci d'indiquer le nombre de produits a ajouter:");
             int i = sc.nextInt();
+
             System.out.println("Merci d'indiquer un prix ainsi que un nom pour chaqu'un des produits à venir :");
             for(int I = 0; I<i ; I++) {
                 System.out.println(acces[i] + "  ------->  " + accesprix[i]);
@@ -103,7 +104,7 @@ class Question3  {
         }
         else {
             System.out.println("Saisi incorrect - chiao");
-
+        
         }
     }
 }
