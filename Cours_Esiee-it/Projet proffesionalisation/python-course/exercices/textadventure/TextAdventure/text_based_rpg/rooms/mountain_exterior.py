@@ -52,8 +52,8 @@ def enter(room, player):
             center_of_town.enter(player)
 
         if place_to_move == "cave":
-            from .first_room import room as first_room
-            first_room.enter(player)
+            from .hall import room as hall
+            hall.enter(player)
 
 room = Room(
     map_=map_,

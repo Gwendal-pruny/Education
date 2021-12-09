@@ -59,11 +59,11 @@ def enter(room, player):
                 )
 
         if command == "move":
-            place_to_move = move(["first room", "final chamber"])
+            place_to_move = move(["hall", "final chamber"])
 
             if place_to_move == "first room":
-                from .first_room import room as first_room
-                first_room.enter(player)
+                from .hall import room as hall
+                hall.enter(player)
 
             if place_to_move == "final chamber":
                 raise GameOver

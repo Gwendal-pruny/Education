@@ -1,14 +1,14 @@
 {
     "prefixes": {
-        "player": "You",
-        "enemy": "The enemy"
+        "player": "Tu",
+        "enemy": "Enemie"
     },
 
     "templates": {
-        "start_of_each_turn_stamina_regeneration": "restored {} stamina.",
-        "start_of_each_turn_mana_regeneration": "restored {} mana.",
+        "start_of_each_turn_stamina_regeneration": "récuperer {} de stamina.",
+        "start_of_each_turn_mana_regeneration": "récuperer {}} mana.",
 
-        "commands": "can {}.",
+        "commands": "TU peut {}.",
 
         "rested_and_restored_stamina": "rested and restored {} stamina.",
         "rested_and_restored_mana": "rested and restored {} mana.",

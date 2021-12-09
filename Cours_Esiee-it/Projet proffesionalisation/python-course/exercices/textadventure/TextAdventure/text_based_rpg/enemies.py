@@ -33,9 +33,9 @@ def bear():
         critical_hit_chance=2
     )
 
-def first_boss():
+def maeva():
     return CombatEntity(
-        display_name="Even larger bear",
+        display_name="maeva",
         attacks=[
             attack.Attack(
                 name="slash",
@@ -46,11 +46,11 @@ def first_boss():
                 stamina_cost=3
             ),
             attack.Attack(
-                name="bite",
-                display_name="Bite",
+                name="punch dash",
+                display_name="Punch dash",
                 type_=attack.MELEE,
                 damage=6,
-                description_of_being_used="bite",
+                description_of_being_used="Punch dash",
                 stamina_cost=4
             )
         ],

@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-
 class evaluation {
     public static void main(String[] args) {
         
@@ -38,10 +35,19 @@ class evaluation {
                 System.out.println("Résuletat de vos atributions :");
                 for(int NumberOfCargo = 0; NumberOfCargoRep > NumberOfCargo; NumberOfCargo++) {
                     System.out.println("Cargaison :"+cargo[NumberOfCargo] + "  ------->  " + tonnage[NumberOfCargo]+ " Tonnes");
-                    int lourd =   
-                    
-                    i = 11;
                 }
+                int maxNum = tonnage[0];
+                for (int o : tonnage) {
+                    if (o > maxNum)
+                        maxNum = o;
+                }
+                int somme = 0, moy;
+                System.out.println("Poids le plus lourd :" + maxNum);
+                for(int m = 0; m < tonnage.length; m++)
+                    somme += tonnage[m];
+                    moy = somme / tonnage.length; 
+                System.out.println("La moyenne est: " + moy);
+                i = 11;
             }
         }
     }

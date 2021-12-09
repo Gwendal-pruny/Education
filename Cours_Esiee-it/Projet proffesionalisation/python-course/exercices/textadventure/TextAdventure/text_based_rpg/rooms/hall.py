@@ -11,113 +11,78 @@ def enter(room, player):
             lines=[
                 "Tu est dans le hall d’entrée de AU Academy, il y a beaucoup d’élèves!"
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
 
         interface.print_multiple_lines(
             lines=[
-                "You enter the first room of the caves under Goneril Mountain.",
-                "There is a large metal door, presumably leading to the room after this one.",
-                "However, it has a comically large lock on it.",
-                "To the side of the room, there is a chest.",
-                "You figure the chest contains the key.",
-                "However, there is an even larger bear blocking the path to it.",
-                "To open the chest and get the key, you will have to deal with the bear."
+                "Tu viens d’entrée dans le hall de AU Academy, .",
+                "bizarement il n’y a aucun élève,"
+                "seulement une dame a l’acceuille et des crie de joie ou de pleure d’une foule au loin que tu n’arrive pas a disserner.",
             ],
-            delay=4
+            delay=0
         )
 
     while True:
-        additional_commands = ["attack"]
-
-        if player.first_boss_defeated:
-            additional_commands = ["move"]
+        additional_commands = ["talk", "move"]
 
         command = interface.get_game_command(player, room, additional_commands)
 
-        if command == "attack":
-            target = interface.get_command(["bear", "cancel"], True)
+        if command == "move":
+            if hasattr(player, 'talked_to_proviseur'):
+                place_to_move = move(["bureau du proviseur", "exterieur"])
+            else :
+                place_to_move = move(["bureau du proviseur"])
 
-            if target == "bear":
-                battle = Battle(player, enemies.first_boss())
-                battle.run()
-
-                player.first_boss_defeated = True
-                interface.sleep(5)
-                interface.print_()
-
-                interface.print_multiple_lines(
-                    lines=[
-                        "Opening the chest, you find the comically large key for the comically large lock.",
-                        "You unlock the door, allowing you to progress to the next room.",
-                        "In the chest you also find better versions of your current equipment."
-                    ],
-                    delay=4
+            if place_to_move == "bureau du proviseur":
+                from .bureau_du_proviseur import room as bureau_du_proviseur
+                bureau_du_proviseur.enter(player)
+            if place_to_move == "exterieur":
+                from .exterieur import room as exterieur
+                exterieur.enter(player)
+            
+        if command == "talk":
+            if room.has_been_entered_before: 
+                npc = interface.get_command(
+                    ["acceuil", "garcons", "cancel"],
+                    True
+                )
+            else:
+                npc = interface.get_command(
+                    ["evelyn", "cancel"],   
+                    True
                 )
 
-                if player.class_ == "warrior":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "A steel sword has been added to your inventory.",
-                            "A steel helmet has been added to your inventory.",
-                            "A steel platebody has been added to your inventory.",
-                            "A set of steel platelegs has been added to your inventory."
+
+            if npc == "evelyn" or "acceuil":
+                interface.print_multiple_lines(
+                    lines=[
+                        "Vous : Bonjour je m’apppel ???, je suis la pour m’inscrire a AU vous pouvez maider, je suis au bonne endroit ?",
+                        "???  : Hey, je t’attendait, le proviseur veut te voir sont bureau est derrière tu peut y allez mais avent je te conseil d’allez voir le jeune garcons si tu ne la pas déjà fait,",
+                        "Vous : Merci evelyn",
                         ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.steel_sword,
-                        items.steel_helmet,
-                        items.steel_breastplate,
-                        items.steel_platelegs
-                    ])
-
-                if player.class_ == "archer":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "A willow bow has been added to your inventory.",
-                            "A bear hide body has been added to your inventory.",
-                            "A set of bear hide legs has been added to your inventory."
+                    delay=0
+                )
+                interface.print_()
+                talked_to_evelyn = True
+                
+            if npc == "garcons":
+                interface.print_multiple_lines(
+                    lines=[
+                        "Vous : B-Bonjour ??",
+                        "??? : ….",
+                        "Vous : Vous allez bien ?",
+                        "??? : n’entre SURTOUT pas dans le bureau du proviseur ils sont tousse FOU !!!!!",
+                        "Vous : Que c’est-il passez ?",
+                        "??? : Laisse moi tranquille !!! Dégage !! sort d’ici !",
                         ],
-                        delay=4
-                    )
+                    delay=0
+                )
+                interface.print_()
+                talked_to_garcons = True
 
-                    player.inventory.extend([
-                        items.willow_bow,
-                        items.bear_hide_body,
-                        items.bear_hide_legs
-                    ])
-
-                if player.class_ == "mage":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "A fire staff has been added to your inventory.",
-                            "A battle hood has been added to your inventory.",
-                            "A battle robe has been added to your inventory."
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.fire_staff,
-                        items.battle_hood,
-                        items.battle_robe
-                    ])
-
-        if command == "move":
-            place_to_move = move(["Couloir du 1er étage"])
-
-            #a changer
-            if place_to_move == "Couloir du 1er étage":
-                from .mountain_exterior import room as mountain_exterior
-                mountain_exterior.enter(player)
-
-            if place_to_move == "second room":
-                from .second_room import room as second_room
-                second_room.enter(player)
 
 room = Room(
     map_=map_,
