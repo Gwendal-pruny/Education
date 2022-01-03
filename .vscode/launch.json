@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Etape1",
+            "request": "launch",
+            "mainClass": "Etape1",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question13",
+            "request": "launch",
+            "mainClass": "Question13",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question1",
+            "request": "launch",
+            "mainClass": "Question1",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Question13",
+            "request": "launch",
+            "mainClass": "Question13.Question13",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
             "name": "Launch evaluation",
             "request": "launch",
             "mainClass": "evaluation",
