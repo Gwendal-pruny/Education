@@ -50,6 +50,102 @@
                     <img src="assets/img/nav-light.png" alt="" class="nav__img">
                 </div>
                 <div class="nav__btns">
+                    <!-- cart -->
+                    <nav id="main-nav">
+                        <a class="cart-button" href="#">
+                            <span class="bag-count">3</span>
+                            <span class="bag-icon">Bag</span>
+                            <span class="bag-label">View Bag</span>
+                        </a>
+                    </nav>
+                    <aside id="sidebar-cart">
+                        <main>
+                            <a href="#" class="close-button"><span class="close-icon">X</span></a>
+                            <h2>Shopping Bag <span class="count">2</span></h2>
+                            <ul class="products">
+                                <li class="product">
+                                    <a href="#" class="product-link">
+                                        <span class="product-image">
+                                            <img src="https://via.placeholder.com/75x50/ffffff/cccccc?text=PHOTO" alt="Product Photo">
+                                        </span>
+                                        <span class="product-details">
+                                            <h3>Very Cool Product One</h3>
+                                            <span class="qty-price">
+                                                <span class="qty">
+                                                    <button class="minus-button" id="minus-button-1">-</button>
+                                                    <input type="number" id="qty-input-1" class="qty-input" step="1" min="1" max="1000" name="qty-input" value="1" pattern="[0-9]*" title="Quantity" inputmode="numeric">
+                                                    <button class="plus-button" id="plus-button-1">+</button>
+                                                    <input type="hidden" name="item-price" id="item-price-1" value="12.00">
+                                                </span>
+                                                <span class="price">$16.00</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                                </li>
+                                <li class="product">
+                                    <a href="#" class="product-link">
+                                        <span class="product-image">
+                                            <img src="https://via.placeholder.com/75x50/ffffff/cccccc?text=PHOTO" alt="Product Photo">
+                                        </span>
+                                        <span class="product-details">
+                                            <h3>Very Cool Product Two with Long Title</h3>
+                                            <span class="qty-price">
+                                                <span class="qty">
+                                                    <button class="minus-button" id="minus-button-1">-</button>
+                                                    <input type="number" id="qty-input-2" class="qty-input" step="1" min="1" max="1000" name="qty-input" value="1" pattern="[0-9]*" title="Quantity" inputmode="numeric">
+                                                    <button class="plus-button" id="plus-button-1">+</button>
+                                                    <input type="hidden" name="item-price" id="item-price-2" value="12.00">
+                                                </span>
+                                                <span class="price">$28.00</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                                </li>
+                                <li class="product">
+                                    <a href="#" class="product-link">
+                                        <span class="product-image">
+                                            <img src="https://via.placeholder.com/75x50/ffffff/cccccc?text=PHOTO" alt="Product Photo">
+                                        </span>
+                                        <span class="product-details">
+                                            <h3>Very Cool Product Three</h3>
+                                            <span class="qty-price">
+                                                <span class="qty">
+                                                    <form action="#" name="qty-form" id="qty-form-1">
+                                                        <button class="minus-button" id="minus-button-1">-</button>
+                                                        <input type="number" id="qty-input-3" class="qty-input" step="1" min="1" max="1000" name="qty-input" value="1" pattern="[0-9]*" title="Quantity" inputmode="numeric">
+                                                        <button class="plus-button" id="plus-button-1">+</button>
+                                                        <input type="hidden" name="item-price" id="item-price-3" value="12.00">
+                                                    </form>
+                                                </span>
+                                                <span class="price">$12.00</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                                </li>
+                            </ul>
+                            <div class="totals">
+                                <div class="subtotal">
+                                    <span class="label">Subtotal:</span> <span class="amount">$54.00</span>
+                                </div>
+                                <!-- <div class="shipping">
+                                    <span class="label">Shipping:</span> <span class="amount">$7.95</span>
+                                </div>
+                                <div class="tax">
+                                    <span class="label">Tax:</span> <span class="amount">$71.95</span>
+                                </div> -->
+                            </div>
+                            <div class="action-buttons">
+                                <a class="view-cart-button" href="#">Cart</a><a class="checkout-button" href="#">Checkout</a>
+                            </div>
+                        </main>
+                    </aside>
+                    <div id="sidebar-cart-curtain"></div>
+                    <!-- carte -->
+
+
                     <!-- Theme change button -->
                     <i class='bx bx-moon change-theme' id="theme-button"></i>
 
@@ -73,61 +169,7 @@
 
             </nav>
         </header>
-        <!--==================== PRODUCT DETAIL ====================-->
-
-        <div class="detailcontainer">
-            <div class="spehead__section">
-              <i class="fi-rr-arrow-small-left"></i>
-              <span class="logo">Joyeux noël</span>
-              <i class="fi-sr-heart"></i>
-            </div>
-            <div class="discount">
-              30%
-            </div>
-            <div class="display__product">
-              <img src="https://freepngimg.com/thumb/shoes/55582-9-sneakers-download-free-image-thumb.png" alt="">
-              <div class="slider">
-                <span></span>
-                <span></span>
-                <span class="active"></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="product__details">
-              <div class="title__section">
-                <div class="title">
-                  <h2>Nike Air Max 200</h2>
-                  <p>Built for natural motion</p>
-                </div>
-                <span>
-                  <i class="fi-sr-star"></i>
-                  <p>(4.5)</p>
-                </span>
-              </div>
-              <div class="product__size">
-                <p>size:</p>
-                <ul>
-                  <li>US 7</li>
-                  <li>US 8</li>
-                  <li>US 9</li>
-                  <li>US 10</li>
-                </ul>
-              </div>
-              <div class="product__colors">
-                <p>Available Colors:</p>
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-              <div class="product__add">
-                <span class="price">$249</span>
-                <button><i class="fi-sr-shopping-cart-add"></i>Add To Cart</button>
-              </div>
-            </div>
-          </div>
+        
 
         <!--==================== MAIN ====================-->
         <main class="main">
@@ -305,7 +347,8 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-            </section>
+            </section>>
+
 
             <!--==================== MESSAGE ====================-->
             <section class="message section container">
