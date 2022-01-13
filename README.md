@@ -38,13 +38,7 @@ Error 418
 
 **Suis-je un adulte ?**
 
-/!\ Subjectif /!\
-
-<img src="https://imgur.com/B2xdg05.gif" width="200" height="200" />
-
-*Biologiquement : Oui* /
-*Psychologiquement : Oui* /
-*Mentalement : Je souhaite rester encor un ado =) mon entourage n'est pas encore adulte, l'être et être seul n'est pas intéressant.*
+Non
 
 **Entreprise :**
 
