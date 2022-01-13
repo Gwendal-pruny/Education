@@ -43,3 +43,36 @@
 | sudo passwd -l 'username'  | To change the password of a user |
 | sudo userdel -r 'username'  | To remove a newly created user |
 </details>
+
+Exercice 1:
+
+    Exercice 1 :
+    /home/bob/music/rock/track1.mp3
+
+    Exercice 2 :
+    music/rock/track1.mp3
+
+    Exercice 3 :
+    ../music/rock/track1.mp3
+
+    Exercice 4 :
+    ../../music/rock/track1.mp3
+
+    Exercice 5 :
+    cd rock
+
+    Exercice 6 :
+    cd ../tmp/tests
+
+    Exercice 7 :
+    cd ..
+
+    Exercice 8 :
+    cd ; cd etc
+
+ Exercice 2 :
+
+cd ; ls
+mkdir .gitingore
+ls -al
+ls -a -al
