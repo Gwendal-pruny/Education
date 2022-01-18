@@ -44,33 +44,20 @@
 | sudo userdel -r 'username'  | To remove a newly created user |
 </details>
 
+
+<details><summary>Exercices</summary>
 Exercice 1:
 
-    Exercice 1 :
     /home/bob/music/rock/track1.mp3
-
-    Exercice 2 :
     music/rock/track1.mp3
-
-    Exercice 3 :
     ../music/rock/track1.mp3
-
-    Exercice 4 :
     ../../music/rock/track1.mp3
-
-    Exercice 5 :
     cd rock
-
-    Exercice 6 :
     cd ../tmp/tests
-
-    Exercice 7 :
     cd ..
-
-    Exercice 8 :
     cd ; cd etc
 
- Exercice 2 :
+Exercice 2 :
 
 cd ; ls
 mkdir .gitingore
@@ -82,3 +69,31 @@ cp -v *.html archive
 mv style.css monsite.css
 rm monsite/Index.html monsite/Index2.html
 rm -fr monsite
+
+Exercice 3 :
+
+mkdir exo3
+cd exo3
+touch moi.txt
+echo Je suis en BTS SIO
+echo Et j’aime ça ! >> moi.txt
+
+
+
+rm rois.txt roisFrance.txt
+mv !(roi.txt) ~/home/personal
+cd 
+find ~/home* -ctime +60 -exec rm {} \;
+rm exo3
+clear
+
+
+Exercice 4:
+
+cd personal
+mkdir bin
+printenv
+whoami
+export PATH=$PATH:/bin
+aliase ll='ls -al'
+</details>
