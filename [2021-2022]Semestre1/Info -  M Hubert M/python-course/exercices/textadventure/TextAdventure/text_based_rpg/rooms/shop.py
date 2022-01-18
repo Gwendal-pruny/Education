@@ -60,11 +60,11 @@ def enter(room, player):
                     delay=4
                 )
 
-                if player.class_ == "warrior":
+                if player.class_ == "guerrier":
                     interface.print_multiple_lines(
                         lines=[
-                            "You tell him that you are a warrior.",
-                            "\"A warrior, eh? You're in luck. I have plenty of weapons and armour.\"",
+                            "You tell him that you are a guerrier.",
+                            "\"A guerrier, eh? You're in luck. I have plenty of weapons and armour.\"",
                             "\"In fact, I think this sword is as sharp as it's going to get. You should have it.\"",
                             "An iron sword has been added to your inventory.",
                             "An iron helmet has been added to your inventory.",
@@ -82,11 +82,11 @@ def enter(room, player):
                         items.iron_platelegs
                     ])
 
-                if player.class_ == "archer":
+                if player.class_ == "assassin":
                     interface.print_multiple_lines(
                         lines=[
-                            "You tell him that you are an archer.",
-                            "\"An archer, eh? You're in luck. I have plenty of bows and hide armour.\"",
+                            "You tell him that you are an assassin.",
+                            "\"An assassin, eh? You're in luck. I have plenty of bows and hide armour.\"",
                             "An oak bow has been added to your inventory.",
                             "A cow hide body has been added to your inventory.",
                             "A set of cow hide legs has been added to your inventory."
@@ -101,11 +101,11 @@ def enter(room, player):
                         items.cow_hide_legs
                     ])
 
-                if player.class_ == "mage":
+                if player.class_ == "magicien":
                     interface.print_multiple_lines(
                         lines=[
-                            "You tell him that you are a mage.",
-                            "\"A mage, eh? You're in luck. I have an assortment of staves and robes.\"",
+                            "You tell him that you are a magicien.",
+                            "\"A magicien, eh? You're in luck. I have an assortment of staves and robes.\"",
                             "An ice staff has been added to your inventory.",
                             "A hood has been added to your inventory.",
                             "A robe has been added to your inventory.",
@@ -131,7 +131,7 @@ def enter(room, player):
                 for _ in range(3):
                     player.inventory.append(items.health_potion())
 
-                if player.class_ in ["warrior", "archer"]:
+                if player.class_ in ["guerrier", "assassin"]:
                     interface.print_("Three stamina potions have been added to your inventory.")
 
                     for _ in range(3):

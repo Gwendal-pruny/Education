@@ -1,3 +1,4 @@
+from tkinter.font import ROMAN
 from .. import interface, enemies, items
 from ..util import move
 from ..room import Room
@@ -11,18 +12,18 @@ def enter(room, player):
             lines=[
                 "Tu est dans le hall d’entrée de AU Academy, il y a beaucoup d’élèves!"
             ],
-            delay=0
+            delay=5
         )
     else:
         room.has_been_entered_before = True
 
         interface.print_multiple_lines(
             lines=[
-                "Tu viens d’entrée dans le hall de AU Academy, .",
+                "Tu viens d’entrée dans le hall de AU Academy,",
                 "bizarement il n’y a aucun élève,"
                 "seulement une dame a l’acceuille et des crie de joie ou de pleure d’une foule au loin que tu n’arrive pas a disserner.",
             ],
-            delay=0
+            delay=4
         )
 
     while True:
@@ -44,16 +45,20 @@ def enter(room, player):
                 exterieur.enter(player)
             
         if command == "talk":
-            if room.has_been_entered_before: 
+            if room.has_been_entered_before == False: 
                 npc = interface.get_command(
                     ["acceuil", "garcons", "cancel"],
                     True
                 )
             else:
+                room.has_been_entered_before = True
+                
                 npc = interface.get_command(
                     ["evelyn", "cancel"],   
                     True
                 )
+                
+                
 
 
             if npc == "evelyn" or "acceuil":
@@ -63,7 +68,7 @@ def enter(room, player):
                         "???  : Hey, je t’attendait, le proviseur veut te voir sont bureau est derrière tu peut y allez mais avent je te conseil d’allez voir le jeune garcons si tu ne la pas déjà fait,",
                         "Vous : Merci evelyn",
                         ],
-                    delay=0
+                    delay=4
                 )
                 interface.print_()
                 talked_to_evelyn = True
@@ -81,7 +86,6 @@ def enter(room, player):
                     delay=0
                 )
                 interface.print_()
-                talked_to_garcons = True
 
 
 room = Room(

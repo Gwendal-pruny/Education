@@ -3,10 +3,10 @@ This module contains constants and methods relating to commands that can be used
 in the battle.
 """
 
-ATTACK = "attack"
-REST = "rest"
-USE_ITEM = "use item"
-GO_BACK = "back"
+ATTACK = "Attaquer"
+REST = "Attendre"
+USE_ITEM = "Utiliser un objet"
+GO_BACK = "retour"
 TURN_COMMANDS = [ATTACK, REST, USE_ITEM]
 
 def get_player_attack_commands(battle):

@@ -18,18 +18,18 @@ def enter(room, player):
 
         interface.print_multiple_lines(
             lines=[
-                "Vous : Je ne comprend pas, pourquoi me demander de me battre alors que je n’es strictement aucune chance, il le savait, j’en suis sur, c’est un sadique ce type !",
+                "Vous : *** Je ne comprend pas, pourquoi me demander de me battre alors que je n’es strictement aucune chance, il le savait, j’en suis sur, c’est un sadique ce type ! ***",
                 "??? : Heyy ! ..",
                 "??? : Toi la ! T’es le prochain adversere de maeva non ? Le proviseur m’a parler de toi, t’a intérèt a y allez mollot avec elle, sinon t’aura affaire a moi !",
                 "??? : Au fait je m’appelle Pierre je suis l’oganisateur membre directionel du BDE de UA Academy Pierre !",
-                "Vous : Tu t’es répéter, et t’es juste un élève non ?",
-                "Pierre : Juste ? Heu oui je suis aussi un élève.. Enfin bref tu comprendra bientôt, hésite pas a parler a meava",
+                "Vous : Euh ok ? et comment ca mollot ?",
+                "Pierre : Enfin bref tu comprendra bientôt, hésite pas a parler a meava avent de la déf.. Hum.. battre",
                 "avent le combat et dès que tu est prêt vien me voir je te donnerai un conseil.",
                 "Vous : c’est pas assez scénariser si tu me le dit maintenant ?",
                 "Pierre : Oui",
                 "Vous : Vous êtes tousse bizarre  ici .."
             ],
-            delay=0
+            delay=5
         )
 
     while True:
@@ -52,9 +52,11 @@ def enter(room, player):
                 interface.sleep(5)
                 interface.print_multiple_lines(
                         lines=[
-                            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX WIN THE BATTLE",
+                            "Maeva : Quelle endurance ! Tu tappe comme une fillete mais qu'es que tu sait endurer les coups.. tu m'a eu d'épuisement ce n'est que partie remise",
+                            "Vous : Pierre m'as dit d'y allez mollot, je ne voulais pas vous blesser.**Et je ne pensait pas te battre aussi facilement**"
+                            "Maeva : Tien prend ca et va voir le proviseur le chanceux, la prochaine fois tu rigoleras moins."
                             ],
-                        delay=0
+                        delay=3
                     )
                 interface.print_()
 
@@ -87,7 +89,7 @@ def enter(room, player):
                             "Vous : Pour moi ?",
                             "Maeva : allez cesson de tergiverser , affronte-moi !",
                             ],
-                        delay=0
+                        delay=3
                     )
                     interface.print_()
                     player.talked_to_maeva = True
@@ -102,7 +104,7 @@ def enter(room, player):
                         "Pierre : pour rien bonne chance pour ton combat, mon conseil c'est d'enfiler t'a super armure CHIAO !",
                         "Vous : vraiment bizzarre ce type..",
                         ],
-                    delay=0
+                    delay=3
                 )
                 interface.print_()
                 player.talked_to_pierre = True
@@ -112,16 +114,13 @@ def enter(room, player):
                     "Tu enfile ton équipement, respire un bon coup. Ta fièrter te pousse devant toute cette foule."
                     "Cependant tu est tout tramblant de peur, problème tu ne sait pas te battre..",
                 ],
-                delay=0
+                delay=4
                 )
-                if player.class_ == "warrior":
+                if player.class_ == "guerrier":
                     interface.print_multiple_lines(
                         lines=[
-                            "A steel sword has been added to your inventory.",
-                            "A steel helmet has been added to your inventory.",
-                            "A steel platebody has been added to your inventory.",
-                            "A set of steel platelegs has been added to your inventory."
-                        ],
+                            "Un super équipement a été rajouter a votre inventaire équiper le !",
+                            ],
                         delay=4
                     )
 
@@ -132,12 +131,10 @@ def enter(room, player):
                         items.steel_platelegs
                     ])
 
-                if player.class_ == "archer":
+                if player.class_ == "assassin":
                     interface.print_multiple_lines(
                         lines=[
-                            "A gun has been added to your inventory.",
-                            "A bear hide body has been added to your inventory.",
-                            "A set of bear hide legs has been added to your inventory."
+                            "Un super équipement a été rajouter a votre inventaire équiper le !",
                         ],
                         delay=4
                     )
@@ -148,12 +145,10 @@ def enter(room, player):
                         items.bear_hide_legs
                     ])
 
-                if player.class_ == "mage":
+                if player.class_ == "magicien":
                     interface.print_multiple_lines(
                         lines=[
-                            "A fire staff has been added to your inventory.",
-                            "A battle hood has been added to your inventory.",
-                            "A battle robe has been added to your inventory."
+                            "Un super équipement a été rajouter a votre inventaire équiper le !",
                         ],
                         delay=4
                     )

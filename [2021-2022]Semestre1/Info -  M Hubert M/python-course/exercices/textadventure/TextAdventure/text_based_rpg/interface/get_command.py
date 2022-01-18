@@ -38,23 +38,24 @@ def get_command(commands, list_options=False):
             # )
             questions = [
                 inquirer.List(
-                    "size",
+                    "choice",
                     message="Vous choissisez : ",
-                    choices=[generate_readable_list(SUPER_COMMANDS)],
+                    choices=[generate_readable_list(commands)],
                 ),
             ]
         questions = [
             inquirer.List(
-                'size',
-                message="Vous choissisez : ",
-                choices= ["play", "help", "quit"],
+                "choice",
+                message= "Vous choissisez : ",
+                choices= commands,
             ),
         ]
-        # answers = inquirer.prompt(questions)
-        received_input = inquirer.prompt(questions)
-    # received_input = get_input()
-
-        print_()
+        
+        received_input = inquirer.prompt(questions)        
+        print_()        
 
         if received_input in commands:
             return received_input
+
+
+        

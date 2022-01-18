@@ -10,29 +10,29 @@
 
         "commands": "TU peut {}.",
 
-        "rested_and_restored_stamina": "rested and restored {} stamina.",
-        "rested_and_restored_mana": "rested and restored {} mana.",
+        "rested_and_restored_stamina": "a récuperer {} stamina.",
+        "rested_and_restored_mana": "a récuperer {} mana.",
 
-        "fled": "successfully fled from the battle.",
-        "unable_to_flee": "were unable to flee from the battle.",
+        "fled": "a réussi à fuir la bataille.",
+        "unable_to_flee": "ont été incapables de fuir la bataille.",
 
-        "not_enough_stamina": "do not have enough stamina for that attack.",
-        "not_enough_mana": "do not have enough mana for that attack.",
+        "not_enough_stamina": "n’ont pas assez d’endurance pour cette attaque.",
+        "not_enough_mana": "n’ont pas assez de mana pour cette attaque.",
 
-        "player_attack_evaded": "evaded your attack!",
-        "enemy_attack_evaded": "evaded the enemy's attack!",
+        "player_attack_evaded": "vous avez échappé à l’attaque !",
+        "enemy_attack_evaded": "a échappé à l’attaque ennemie !",
 
-        "critical_hit": "landed a critical hit!",
-        "damage_dealt": "{attack_description} {opponent}, dealing {damage} damage.",
+        "critical_hit": "a reçu un coup critique !",
+        "damage_dealt": "{attack_description} {opponent}, Inflige {damage} dommages.",
 
-        "victory": "have won the battle!"
+        "victory": "Vous avez gagner la bataille!"
     },
 
     "values_view_divider_character": "=",
 
     "list_of_attacks": {
-        "stamina_cost_template": "Stamina cost: {}.",
-        "mana_cost_template": "Mana cost: {}."
+        "stamina_cost_template": "Cout en Stamina : {}.",
+        "mana_cost_template": "Cout en Mana : {}."
     },
 
     "rest_multiplier": 4

@@ -11,9 +11,9 @@ from . import attack
 _ENTITY_DISPLAY_NAME = "You"
 _CRITICAL_HIT_CHANCE = 4
 
-_WARRIOR = "warrior"
-_ARCHER = "archer"
-_MAGE = "mage"
+_WARRIOR = "guerrier"
+_ARCHER = "assassin"
+_MAGE = "magicien"
 _CLASSES = [_WARRIOR, _ARCHER, _MAGE]
 
 _PUNCH_ATTACK = attack.Attack(
@@ -73,19 +73,19 @@ def create_player():
         The Player instance representing the player.
     """
     interface.print_multiple_lines([
-        "On your adventure you may be a warrior, an archer, or a mage.",
-        "Which do you choose?"
+        "Voulez-vous être un guerrier ? un magicien ? un assassin ?.",
+        "Que va tu choisire ?"
     ])
 
     command = interface.get_command(_CLASSES)
 
-    interface.print_("You have chosen the role of a {}.".format(command))
+    interface.print_("Vous avez choisit le rôle de {}.".format(command))
     interface.print_()
 
     if command == _WARRIOR:
-        return Player(_WARRIOR_ENTITY, "warrior")
+        return Player(_WARRIOR_ENTITY, "guerrier")
 
     if command == _ARCHER:
-        return Player(_ARCHER_ENTITY, "archer")
+        return Player(_ARCHER_ENTITY, "assassin")
 
-    return Player(_MAGE_ENTITY, "mage")
+    return Player(_MAGE_ENTITY, "magicien")

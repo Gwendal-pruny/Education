@@ -9,7 +9,7 @@ def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "Le proviseur a l'air occuper."
+                "Le proviseur a l'air occuper..."
             ],
             delay=0
         )

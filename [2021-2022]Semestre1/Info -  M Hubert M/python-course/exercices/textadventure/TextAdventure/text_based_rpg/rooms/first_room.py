@@ -60,7 +60,7 @@ def enter(room, player):
                     delay=4
                 )
 
-                if player.class_ == "warrior":
+                if player.class_ == "guerrier":
                     interface.print_multiple_lines(
                         lines=[
                             "A steel sword has been added to your inventory.",
@@ -78,7 +78,7 @@ def enter(room, player):
                         items.steel_platelegs
                     ])
 
-                if player.class_ == "archer":
+                if player.class_ == "assassin":
                     interface.print_multiple_lines(
                         lines=[
                             "A willow bow has been added to your inventory.",
@@ -94,7 +94,7 @@ def enter(room, player):
                         items.bear_hide_legs
                     ])
 
-                if player.class_ == "mage":
+                if player.class_ == "magicien":
                     interface.print_multiple_lines(
                         lines=[
                             "A fire staff has been added to your inventory.",
