@@ -11,7 +11,8 @@ def enter(room, player):
         interface.print_multiple_lines(
             lines=[
                 "Tu est dans le hall d’entrée de AU Academy, il y a beaucoup d’élèves!"
-            ],
+    """[summary]
+    """            ],
             delay=5
         )
     else:

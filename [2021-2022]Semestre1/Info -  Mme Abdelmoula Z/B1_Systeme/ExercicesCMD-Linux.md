@@ -76,3 +76,9 @@ cd ; ls
 mkdir .gitingore
 ls -al
 ls -a -al
+cp Index1.html Index2.html
+cd monsite ; mkdir archive
+cp -v *.html archive
+mv style.css monsite.css
+rm monsite/Index.html monsite/Index2.html
+rm -fr monsite
