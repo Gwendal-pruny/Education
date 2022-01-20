@@ -2,7 +2,7 @@
 #### [Gwendal PRUNY](mailto:gwendal.pruny@gmail.com), ESIEE-IT
 #### Cours Bloc1 Système (BTS - SIO) - 20/01/2022
 
-<summary>Windows command</summary>
+#### <summary>Windows command</summary>
 
 | command | Description |
 | ------- | ----------- |
@@ -22,8 +22,7 @@
 | ROBOCOPY | Uses an advanced tool to copy files and directories |
 | TREE | Shows directory structure of a disk or folder |
 | TYPE | Dislays the contents of text files |
-| OPENFILES | Manages opened local or network files |
-+----------------------------------------------------------------
+| OPENFILES | Manages opened local or networ files |
 | XCOPY | Copies files and directory trees |
 | Applications and Processes | Description |
 | SCHTASKS | Executes a command or start a scheduled application (Task Scheduler) |
@@ -35,48 +34,12 @@
 | Disks Management | Description |
 | CHKDISK | Checks disk and shows statistics |
 | DEFRAG | Starts disk defragmentation |
-| CHKNTFS | Displays or changes execution of disk check at boot |
-| COMPACT | Displays and change the compression of files in NTFS partitions |
-| CONVERT | Converts FAT disk volume to NTFS |
-| DISKPART | Displays and adjusts disk partition properties |
-| FORMAT | Formats the disk | Description |
-| FSUTIL | Displays and configures file system properties |
-| LABEL | Creates, changes, or deletes a disk volume label |
-| RECOVER | Recovers data from a bad or damaged disk |
-| VOL | Displays volume label and serial number for the disk |
-| System Information | Description |
-| DATE | Outputs or sets the current date |
-| TIME | Displays or sets the system time |
-| DRIVERQUERY | Displays the current state and properties of the device driver |
-| HOSTNAME | Displays name of the computer |
-| SYSTEMINFO | Shows configuration information about your computer |
-| VER | Allows you to view the Windows version |
-| GPRESULT | Displays current applied group policies (RSoP) |
-| GPUPDATE | Updates group policies |
-| Network | Description |
-| IPCONFIG | Shows information about network interfaces |
-| PING | Sends ICMP requests to the target host, checks host availability |
-| TRACERT | Finds the path for packets traveling over the network |
-| NSLOOKUP | Finds IP address by resource name |
-| ROUTE | Displays network route tables |
-| ARP | Shows a table with IP addresses converted into physical addresses |
-| NETSH | Starts is a network settings control program |
-| GETMAC | Shows the MAC address of the network adapter |
-| TFTP | Starts TFTP client in console |
-| Command Line Setup | Description |
-| CLS | Clears screen |
-| CMD | Displays another command prompt |
-| COLOR | Sets the text and background color |
-| PROMPT | Changes the command line prompt |
-| TITLE | Assigns a title for the current session |
-| HELP | Launches CMD help |
-| EXIT | Exits the command line |
+| PRINT | Prints out the text file contents |
 
+#### <summary>Linux command</summary>
 
-<summary>Linux command</summary>
-
-| command | Description |
-| ------- | ----------- |
+| command                                    | Description                              |
+| ------------------------------------------ | ---------------------------------------- |
 | ls | Lists all files and directories in the present working directory |
 | ls-R | Lists all files and directories in the present working directory |
 | ls-a | Lists hidden files as well |
@@ -101,20 +64,10 @@
 | pr -x | Divides the file into x columns |
 | pr -h | Assigns a header to the file |
 | pr -n | Denotes the file with Line Numbers |
-| apt-get | Command used to install and update packages
+| apt-get | Command used to install and update packages |
 | ls-l | to show file type and access permission |
 | r | read permission |
 | w | write permission |
 | x | execute permission |
-| x | no permission |
-| -= | no permission |
-| Chown user | For changing the ownership of a file/directory |
-|  Chown user:group filename | change the user as well as group for a file or directory |
-| echo $VARIABLE  |  To display value of a variable |
-| env |  Displays all environment variables |
-| VARIABLE_NAME= variable_value | Create a new variable |
-| export Variable=value | o set value of an environment variable |
-| sudo adduser username | To add a new user |
-| sudo passwd -l 'username'  | To change the password of a user |
-| sudo userdel -r 'username'  | To remove a newly created user |
+
 
