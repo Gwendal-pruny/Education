@@ -1,3 +1,8 @@
+# Linux -> Cheatsheet
+#### [Gwendal PRUNY](mailto:gwendal.pruny@gmail.com), ESIEE-IT
+#### Cours Bloc1 Système (BTS - SIO) - 20/01/2022
+
+
 <details><summary>Linux command</summary>
 
 | command | Description |
