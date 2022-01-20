@@ -175,7 +175,10 @@ Windows 11 last ver
 - Ecouteur bluetooth JBL
 - 2 Enceinte Cabasse à 750 watt respectif ( 1k500 WATT )
 - Amplificateur Skytech 1500 w
-
+- Synthétiseur 
+- Carte son 
+- Carte audio 
+- Katana
 
 </details>
 
