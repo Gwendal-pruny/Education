@@ -3,7 +3,7 @@
 from . import item, attack
 
 iron_sword = item.Item(
-    display_name="Iron sword",
+    display_name="Epé",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="strength", modifier=5), item.ItemEffect(stat="dexterity", modifier=-2)],
@@ -28,7 +28,7 @@ iron_sword = item.Item(
 )
 
 iron_helmet = item.Item(
-    display_name="Iron helmet",
+    display_name="Casque",
     type_=item.EQUIPPABLE,
     equip_location="head",
     effects=[
@@ -39,21 +39,21 @@ iron_helmet = item.Item(
 )
 
 iron_breastplate = item.Item(
-    display_name="Iron breastplate",
+    display_name="Plastron",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=6), item.ItemEffect(stat="strength", modifier=2), item.ItemEffect(stat="dexterity", modifier=-2)]
 )
 
 iron_platelegs = item.Item(
-    display_name="Iron platelegs",
+    display_name="Jambière",
     type_=item.EQUIPPABLE,
     equip_location="legs",
     effects=[item.ItemEffect(stat="defence", modifier=5), item.ItemEffect(stat="strength", modifier=1), item.ItemEffect(stat="dexterity", modifier=-1)]
 )
 
 oak_bow = item.Item(
-    display_name="Oak bow",
+    display_name="Arc",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="archery", modifier=5), item.ItemEffect(stat="dexterity", modifier=-1)],
@@ -70,21 +70,21 @@ oak_bow = item.Item(
 )
 
 cow_hide_body = item.Item(
-    display_name="Cow hide body",
+    display_name="Camouflage haut de vache",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=5), item.ItemEffect(stat="archery", modifier=3)]
 )
 
 cow_hide_legs = item.Item(
-    display_name="Cow hide legs",
+    display_name="Camouflage bas de vache",
     type_=item.EQUIPPABLE,
     equip_location="legs",
     effects=[item.ItemEffect(stat="defence", modifier=4), item.ItemEffect(stat="archery", modifier=2)]
 )
 
 ice_staff = item.Item(
-    display_name="Ice staff",
+    display_name="Pistolet de glace",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="magic", modifier=5), item.ItemEffect(stat="dexterity", modifier=-2)],
@@ -115,7 +115,7 @@ hood = item.Item(
 )
 
 steel_sword = item.Item(
-    display_name="Steel sword",
+    display_name="Epé magique",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="strength", modifier=10), item.ItemEffect(stat="dexterity", modifier=-4)],
@@ -140,7 +140,7 @@ steel_sword = item.Item(
 )
 
 steel_helmet = item.Item(
-    display_name="Steel helmet",
+    display_name="Casque megique",
     type_=item.EQUIPPABLE,
     equip_location="head",
     effects=[
@@ -151,21 +151,21 @@ steel_helmet = item.Item(
 )
 
 steel_breastplate = item.Item(
-    display_name="Steel breastplate",
+    display_name="Plastron magique",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=12), item.ItemEffect(stat="strength", modifier=4), item.ItemEffect(stat="dexterity", modifier=-4)]
 )
 
 steel_platelegs = item.Item(
-    display_name="Steel platelegs",
+    display_name="Jambière magique",
     type_=item.EQUIPPABLE,
     equip_location="legs",
     effects=[item.ItemEffect(stat="defence", modifier=10), item.ItemEffect(stat="strength", modifier=2), item.ItemEffect(stat="dexterity", modifier=-2)]
 )
 
 willow_bow = item.Item(
-    display_name="Willow bow",
+    display_name="Arc magique",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="archery", modifier=10), item.ItemEffect(stat="dexterity", modifier=-2)],
@@ -196,7 +196,7 @@ bear_hide_legs = item.Item(
 )
 
 fire_staff = item.Item(
-    display_name="Fire staff",
+    display_name="Pistolet enflamer",
     type_=item.EQUIPPABLE,
     equip_location="arms",
     effects=[item.ItemEffect(stat="magic", modifier=10), item.ItemEffect(stat="dexterity", modifier=-4)],
@@ -213,14 +213,14 @@ fire_staff = item.Item(
 )
 
 battle_robe = item.Item(
-    display_name="Battle robe",
+    display_name="Robe de combat",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=8), item.ItemEffect(stat="magic", modifier=8)]
 )
 
 battle_hood = item.Item(
-    display_name="Battle hood",
+    display_name="hood de combat",
     type_=item.EQUIPPABLE,
     equip_location="head",
     effects=[item.ItemEffect(stat="defence", modifier=6), item.ItemEffect(stat="magic", modifier=6)]
@@ -228,21 +228,21 @@ battle_hood = item.Item(
 
 def health_potion():
     return item.Item(
-        display_name="Health potion",
+        display_name="Ramen",
         type_=item.CONSUMABLE,
         effects=[item.ItemEffect(stat="health", modifier=10)]
     )
 
 def stamina_potion():
     return item.Item(
-        display_name="Stamina potion",
+        display_name="Redbull",
         type_=item.CONSUMABLE,
         effects=[item.ItemEffect(stat="stamina", modifier=10)]
     )
 
 def mana_potion():
     return item.Item(
-        display_name="Mana potion",
+        display_name="Saké",
         type_=item.CONSUMABLE,
         effects=[item.ItemEffect(stat="mana", modifier=10)]
     )

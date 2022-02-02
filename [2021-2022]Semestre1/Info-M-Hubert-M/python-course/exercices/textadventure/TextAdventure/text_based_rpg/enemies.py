@@ -62,6 +62,36 @@ def maeva():
         composure=7,
         critical_hit_chance=4
     )
+    
+def forgerone():
+    return CombatEntity(
+        display_name="forgerone",
+        attacks=[
+            attack.Attack(
+                name="Coup de marteau",
+                display_name="Hammer",
+                type_=attack.MELEE,
+                damage=5,
+                description_of_being_used="Hammer",
+                stamina_cost=3
+            ),
+            attack.Attack(
+                name="Hammer earthquakes",
+                display_name="Hammer earthquakes",
+                type_=attack.MELEE,
+                damage=8,
+                description_of_being_used="Hammer earthquakes",
+                stamina_cost=4
+            )
+        ],
+        maximum_health=35,
+        maximum_stamina=30,
+        strength=12,
+        defence=15,
+        dexterity=3,
+        composure=7,
+        critical_hit_chance=4
+    )
 
 def second_boss():
     return CombatEntity(

@@ -15,7 +15,6 @@ def enter(room, player):
         )
     else:
         room.has_been_entered_before = True
-
         interface.print_multiple_lines(
             lines=[
                 "Quand tu entre dans la pièce, tu vois seulement de dos le proviseur assis sur ca chaisse.",
@@ -28,6 +27,7 @@ def enter(room, player):
         additional_commands = ["talk", "move"]
 
         command = interface.get_game_command(player, room, additional_commands)
+        
 
         if command == "move":
             place_to_move = move(["hall"])
@@ -45,7 +45,7 @@ def enter(room, player):
                 )
             else:
                 npc = interface.get_command(
-                    ["cancel"],
+                    ["proviseur", "cancel"],
                 True
                 )
 
@@ -67,6 +67,22 @@ def enter(room, player):
                 )
                 interface.print_()
                 player.talked_to_proviseur = True
+            
+            if npc == "proviseur":
+                if hasattr(player, "first_boss_defeated"):
+                    interface.print_multiple_lines(
+                        lines=[
+                            "HaHA tu a gagner ! J'en était sur tu est prométteur, même si sans tes vrai pouvoir tu n'ira pas loin... ",
+                            "Enfin bref, voici ton premier badge, collect en 3 en combattent un peut prêt qui tu veut.",
+                            "Une fois collecter tu te rendra dans la classe 1-A qui t'es normalement prédestiner pour les rendre"
+                            "Et tu sera ensuite classer celon la note de ces combat.",
+                            "Commance par te remettre de ton combat en mangant un bout ! La caffet est le batiment en face de la zone de combat"
+                            "Quoi de mieux que de regarder des combat en mangeant HAHa..ha . . . . allez file ! bonne chance jeune pousse"
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
+            
                 
 
 room = Room(

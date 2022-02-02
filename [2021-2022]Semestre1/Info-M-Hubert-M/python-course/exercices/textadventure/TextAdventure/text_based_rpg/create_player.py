@@ -62,7 +62,6 @@ _MAGE_ENTITY = CombatEntity(
     composure=12,
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )
-
 def create_player():
     """
     Display an interface that allows the player to create their character.

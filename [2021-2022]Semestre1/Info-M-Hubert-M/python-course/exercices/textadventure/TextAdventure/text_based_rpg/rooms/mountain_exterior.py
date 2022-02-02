@@ -3,57 +3,113 @@ from ..util import move
 from ..room import Room
 from ..battle import Battle
 
-map_ = """You are outside Goneril Mountain, at the entrace of the caves.
-To the south is the town of Regan."""
+map_ = """Une naine personne mistérieuse et plein de mystère dans l'endroit le plus reculler de l'école."""
 
 def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "You are at the entrace to the caves under Goneril Mountain.",
-                "Besides for the faint chirping of birds in the distance, the area is deserted."
+                "Vous tomber sur la forgeronne d'arme de la dernière fois.",
+                "Elle ne semble plus proposer d'équipement."
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
 
         interface.print_multiple_lines(
             lines=[
-                "You have left the town of Regan and are walking through the wilderness north to Goneril Mountain.",
-                "Besides for the chriping of birds, and the faint trickling of the river, it is silent.",
-                "As you are climbing over some rocks, you fail to see a bear sleeping behind them.",
-                "You forcefully step on the bear, waking it up and making it very angry."
+                "Intiger par un attroupement et en recherche de badge vous tomber sur une forgeronne d'arme.",
+                "Dès qu'elle vous voit elle vous prend a partie"
+                "Forgerone : Prend ca et prépare toi au combat le chanceux !"
+                "Vous : Le chanceux ? On ce connais ?"
+                "Forgerone : Cesse de te dégonfler enfile ca et vite !"
             ],
-            delay=4
+            delay=0
         )
+        
+        
+        if player.class_ == "guerrier":
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Forgerone : Equipement de guerrier, épé, casque.. plastron jambière et voila ."
+                        ],
+                        delay=0
+                    )
 
-        battle = Battle(player, enemies.bear())
-        battle.run()
+                    player.inventory.extend([
+                        items.iron_sword,
+                        items.iron_helmet,
+                        items.iron_breastplate,
+                        items.iron_platelegs
+                    ])
+
+        if player.class_ == "assassin":
+            interface.print_multiple_lines(
+                lines=[
+                    "Forgerone : Equipement d' asssasin, arc, haut et bas de combat tactic.. et voila."
+                ],
+                delay=0
+            )
+
+            player.inventory.extend([
+                items.oak_bow,
+                items.cow_hide_body,
+                items.cow_hide_legs
+            ])
+
+        if player.class_ == "magicien":
+            interface.print_multiple_lines(
+                lines=[
+                    "Forgerone : Pistolet magique pour les mage avec une robe et un bonus"
+                ],
+                delay=0
+            )
+
+            player.inventory.extend([
+                items.ice_staff,
+                items.hood,
+                items.robe
+            ])
+
+        interface.print_multiple_lines(
+            lines=[
+                "Forgerone : maintenant équipe le ! et affronte moi !",
+            ],
+            delay=0
+        )
 
         interface.sleep(5)
         interface.print_()
-        
-        interface.print_multiple_lines(
-            lines=[
-                "Finally, you are at the entrace to the caves under Goneril Mountain.",
-                "Besides for the faint chirping of birds in the distance, the area is deserted."
-            ],
-            delay=4
-        )
 
     while True:
-        command = interface.get_game_command(player, room, ["move"])
+        additional_commands = ["attack", "move"]
+        command = interface.get_game_command(player, room, additional_commands)
+        if command == "attack":
+            target = interface.get_command(["lion", "cancel"], True)
+            if target == "Forgerone":
+                battle = Battle(player, enemies.forgerone())
+                battle.run()
+                
+                player.forgerone_defeated = True
+                interface.sleep(5)
+                interface.print_()
 
-        place_to_move = move(["regan", "cave"])
+                interface.print_multiple_lines(
+                    lines=[
+                        "Bravo, tu fais belle usage de ce que je t'es confier, bravo...",
+                        "Voici un badge."
+                    ],
+                    delay=0
+                )
+                
+                    
+        place_to_move = move(["exterieur"])
 
-        if place_to_move == "regan":
-            from .center_of_town import room as center_of_town
-            center_of_town.enter(player)
+        if place_to_move == "exterieur":
+            from .exterieur import room as exterieur
+            exterieur.enter(player)
 
-        if place_to_move == "cave":
-            from .hall import room as hall
-            hall.enter(player)
 
 room = Room(
     map_=map_,

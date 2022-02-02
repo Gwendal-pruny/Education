@@ -2,29 +2,24 @@ from .. import interface, items
 from ..util import move
 from ..room import Room
 
-map_ = """You are in the weapons and armour shop in Regan.
-Outside is the center of town, from where the hall and the town square can be accessed.
-Goneril Mountain looms in the distance."""
+map_ = """Caféteria, très animer et plein de vie, et une bonne odeur de nourriture japonaise"""
 
 def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "You are in the weapons and armour shop in Regan.",
-                "Normally there would be at least someone here browsing, but right now, it is deserted."
+                "Caféteria, très animer et plein de vie, et une bonne odeur de nourriture japonaise",
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
 
         interface.print_multiple_lines(
             lines=[
-                "You enter the weapons and armour shop in Regan.",
-                "The shelves and walls are adorned with different items for adventurers like yourself.",
-                "A blacksmith is sharpening a sword behind the counter."
+                "Caféteria, très animer et plein de vie, et une bonne odeur de nourriture japonaise",
             ],
-            delay=4
+            delay=0
         )
 
     while True:
@@ -41,108 +36,39 @@ def enter(room, player):
 
         if command == "talk":
             npc = interface.get_command(
-                ["shopkeeper", "cancel"],
+                ["Restaurateur", "cancel"],
                 True
             )
 
-            if npc == "shopkeeper":
+            if npc == "Restaurateur":
                 interface.print_multiple_lines(
                     lines=[
-                        "You approach the counter.",
-                        "The blacksmith stops sharpening the sword, and turns around.",
-                        "\"Why hello there!\" the blacksmith exclaims. \"You must be an adventurer! What quest are you going on?\"",
-                        "You tell him about the ghost stories, and how you want to get to the bottom of it.",
-                        "\"Oh thank you, thank you! You would be doing the whole town a tremendous favour!\"",
-                        "\"I recommend you investigate the caves under Goneril Moutanin. They've always creeped me out!\"",
-                        "\"If you are going to go on such a perilous quest, you are going to need equipment! Because you are doing a service for town, I will provide it to you for free!\"",
-                        "\"What equipment would you be after?\""
+                        "Bonjour ! je ne t'avais jamais vue ici avent ?",
+                        "Vous : Non je viens d'arriver aujourd'hui je n'est pas encor obtenu tout mes badge d'admission"
+                        "Je vais te donner un conseil, \"Mange et bois pendant t'es combat !\"",
+                        "Avec un ramen dans le bid on ce sans revivre !"
+                        "Le Redbull pour l'énergie et la forme ! et le saké pour tout exploser !"
                     ],
-                    delay=4
-                )
-
-                if player.class_ == "guerrier":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "You tell him that you are a guerrier.",
-                            "\"A guerrier, eh? You're in luck. I have plenty of weapons and armour.\"",
-                            "\"In fact, I think this sword is as sharp as it's going to get. You should have it.\"",
-                            "An iron sword has been added to your inventory.",
-                            "An iron helmet has been added to your inventory.",
-                            "An iron breastplate has been added to your inventory.",
-                            "A set of iron platelegs has been added to your inventory.",
-                            "Use the \"equip item\" command to equip them."
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.iron_sword,
-                        items.iron_helmet,
-                        items.iron_breastplate,
-                        items.iron_platelegs
-                    ])
-
-                if player.class_ == "assassin":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "You tell him that you are an assassin.",
-                            "\"An assassin, eh? You're in luck. I have plenty of bows and hide armour.\"",
-                            "An oak bow has been added to your inventory.",
-                            "A cow hide body has been added to your inventory.",
-                            "A set of cow hide legs has been added to your inventory."
-                            "Use the \"equip item\" command to equip them."
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.oak_bow,
-                        items.cow_hide_body,
-                        items.cow_hide_legs
-                    ])
-
-                if player.class_ == "magicien":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "You tell him that you are a magicien.",
-                            "\"A magicien, eh? You're in luck. I have an assortment of staves and robes.\"",
-                            "An ice staff has been added to your inventory.",
-                            "A hood has been added to your inventory.",
-                            "A robe has been added to your inventory.",
-                            "Use the \"equip item\" command to equip them."
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.ice_staff,
-                        items.hood,
-                        items.robe
-                    ])
-
-                interface.print_multiple_lines(
-                    lines=[
-                        "\"You're also going to need some potions!\"",
-                        "Three health potions have been added to your inventory."
-                    ],
-                    delay=4
+                    delay=0
                 )
 
                 for _ in range(3):
                     player.inventory.append(items.health_potion())
 
                 if player.class_ in ["guerrier", "assassin"]:
-                    interface.print_("Three stamina potions have been added to your inventory.")
+                    interface.print_("Le Ramen a été ajouter a votre inventaire")
 
                     for _ in range(3):
                         player.inventory.append(items.stamina_potion())
                 else:
-                    interface.print_("Three mana potions have been added to your inventory.")
+                    interface.print_("Le RedBull a été ajouter a votre inventaire")
 
                     for _ in range(3):
                         player.inventory.append(items.mana_potion())
+                    interface.print_("Le saké a été ajouter a votre inventaire")
 
-                interface.print_("Use the \"use item\" command to use them if you need them.")
+
+                interface.print_("Utiliser \"use item\" pour manger et boire ce que vous avez prit, vosu devirez pourvoir combattre dans l'arène sans risque")
 
                 interface.print_()
                 player.can_progress_to_mountain = True

@@ -12,7 +12,7 @@ def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=map_.split("\n"),
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
@@ -28,7 +28,7 @@ def enter(room, player):
                 "Knowledge is power, as they say.",
                 "The point is, the only way to get through the door and get into the final chamber is to defeat the lion."
             ],
-            delay=4
+            delay=0
         )
 
     while True:
@@ -55,7 +55,7 @@ def enter(room, player):
                         "You have defeated the lion.",
                         "You are now able to get through the door and into the final chamber."
                     ],
-                    delay=4
+                    delay=0
                 )
 
         if command == "move":

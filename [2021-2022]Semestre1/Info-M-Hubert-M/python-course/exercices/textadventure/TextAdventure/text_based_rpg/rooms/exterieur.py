@@ -11,7 +11,7 @@ def enter(room, player):
             lines=[
                 "Tu est a l'exterieur dans la cours, Il y a des zones d'entrainements et beaucoup d'élèves"
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
@@ -29,7 +29,7 @@ def enter(room, player):
                 "Pierre : Oui",
                 "Vous : Vous êtes tousse bizarre  ici .."
             ],
-            delay=5
+            delay=0
         )
 
     while True:
@@ -37,6 +37,7 @@ def enter(room, player):
 
         if hasattr(player, 'talked_to_maeva'):
             additional_commands = ["attack"]
+
 
         command = interface.get_game_command(player, room, additional_commands)
 
@@ -56,20 +57,31 @@ def enter(room, player):
                             "Vous : Pierre m'as dit d'y allez mollot, je ne voulais pas vous blesser.**Et je ne pensait pas te battre aussi facilement**"
                             "Maeva : Tien prend ca et va voir le proviseur le chanceux, la prochaine fois tu rigoleras moins."
                             ],
-                        delay=3
+                        delay=0
                     )
                 interface.print_()
 
 
         if command == "move":
             place_to_move = move(["hall"])
+            if hasattr(player, 'first_boss_defeated'):
+                place_to_move = move(["hall", "cantine", "dortoire"])
+
 
             if place_to_move == "hall":
                 from .hall import room as hall
                 hall.enter(player)
-
+                
+            if place_to_move == "cantine":
+                from .shop import room as shop
+                shop.enter(player)
+                
+            if place_to_move == "dortoire":
+                from .mountain_exterior import room as mountain_exterior
+                mountain_exterior.enter(player)
+                
         if command == "talk":
-            if room.has_been_entered_before: 
+            if room.has_been_entered_before & player.talked_to_maeva == False: 
                 npc = interface.get_command(
                     ["maeva", "cancel"],
                     True
@@ -89,10 +101,61 @@ def enter(room, player):
                             "Vous : Pour moi ?",
                             "Maeva : allez cesson de tergiverser , affronte-moi !",
                             ],
-                        delay=3
+                        delay=0
                     )
                     interface.print_()
                     player.talked_to_maeva = True
+                    
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Tu enfile ton équipement, respire un bon coup. Ta fièrter te pousse devant toute cette foule."
+                            "Cependant tu est tout tramblant de peur, problème tu ne sait pas te battre..",
+                            ],
+                        delay=0
+                    )
+                    if player.class_ == "guerrier":
+                        interface.print_multiple_lines(
+                            lines=[
+                                "Un super équipement a été rajouter a votre inventaire équiper le !",
+                                ],
+                            delay=0
+                        )
+
+                        player.inventory.extend([
+                            items.steel_sword,
+                            items.steel_helmet,
+                            items.steel_breastplate,
+                            items.steel_platelegs
+                        ])
+
+                    if player.class_ == "assassin":
+                        interface.print_multiple_lines(
+                            lines=[
+                                "Un super équipement a été rajouter a votre inventaire équiper le !",
+                            ],
+                            delay=0
+                        )
+
+                        player.inventory.extend([
+                            items.willow_bow,
+                            items.bear_hide_body,
+                            items.bear_hide_legs
+                        ])
+
+                    if player.class_ == "magicien":
+                        interface.print_multiple_lines(
+                            lines=[
+                                "Un super équipement a été rajouter a votre inventaire équiper le !",
+                            ],
+                            delay=0
+                        )
+
+                        player.inventory.extend([
+                            items.fire_staff,
+                            items.battle_hood,
+                            items.battle_robe
+                        ])
+                
                     
             if npc == "pierre":
                 interface.print_multiple_lines(
@@ -104,60 +167,11 @@ def enter(room, player):
                         "Pierre : pour rien bonne chance pour ton combat, mon conseil c'est d'enfiler t'a super armure CHIAO !",
                         "Vous : vraiment bizzarre ce type..",
                         ],
-                    delay=3
+                    delay=0
                 )
                 interface.print_()
                 player.talked_to_pierre = True
                 
-                interface.print_multiple_lines(
-                lines=[
-                    "Tu enfile ton équipement, respire un bon coup. Ta fièrter te pousse devant toute cette foule."
-                    "Cependant tu est tout tramblant de peur, problème tu ne sait pas te battre..",
-                ],
-                delay=4
-                )
-                if player.class_ == "guerrier":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "Un super équipement a été rajouter a votre inventaire équiper le !",
-                            ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.steel_sword,
-                        items.steel_helmet,
-                        items.steel_breastplate,
-                        items.steel_platelegs
-                    ])
-
-                if player.class_ == "assassin":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "Un super équipement a été rajouter a votre inventaire équiper le !",
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.willow_bow,
-                        items.bear_hide_body,
-                        items.bear_hide_legs
-                    ])
-
-                if player.class_ == "magicien":
-                    interface.print_multiple_lines(
-                        lines=[
-                            "Un super équipement a été rajouter a votre inventaire équiper le !",
-                        ],
-                        delay=4
-                    )
-
-                    player.inventory.extend([
-                        items.fire_staff,
-                        items.battle_hood,
-                        items.battle_robe
-                    ])
                 
 
 

@@ -30,7 +30,7 @@ def start_game():
                     "",
                     "=" * 20
                 ],
-                delay=1
+                delay=0
             )
         else:
             interface.sleep(7)
@@ -38,7 +38,7 @@ def start_game():
                 lines=[
                     "SPEACHLESS END"
                 ],
-                delay=4
+                delay=0
             )
 
             interface.print_()

@@ -50,7 +50,7 @@ Ubuntu 20.04.3 LTS
     - [x] Ubuntu forever
 
 **INFO SUPPLEMENTAIRE :**
-- A revendre
+- A vendre
 
 ![ASUS ZENBOOK](https://i2.wp.com/laptopmedia.com/wp-content/uploads/2019/11/asuszenbookduoux481featured.jpg?ssl=1)
 

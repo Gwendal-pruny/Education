@@ -13,6 +13,9 @@ class Player:
         self.can_progress_to_mountain = False
         self.first_boss_defeated = False
         self.second_boss_defeated = False
+        self.talked_to_proviseur = False
+        self.talked_to_acceuil = False
+        
 
     consumable_items = inventory_properties.consumable_items
     equippable_items = inventory_properties.equippable_items

@@ -14,7 +14,7 @@ def enter(room, player):
                 "You are at in the first room of the caves under Goneril Mountain.",
                 "It is very dark, and very eery."
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
@@ -29,7 +29,7 @@ def enter(room, player):
                 "However, there is an even larger bear blocking the path to it.",
                 "To open the chest and get the key, you will have to deal with the bear."
             ],
-            delay=4
+            delay=0
         )
 
     while True:
@@ -57,7 +57,7 @@ def enter(room, player):
                         "You unlock the door, allowing you to progress to the next room.",
                         "In the chest you also find better versions of your current equipment."
                     ],
-                    delay=4
+                    delay=0
                 )
 
                 if player.class_ == "guerrier":
@@ -68,7 +68,7 @@ def enter(room, player):
                             "A steel platebody has been added to your inventory.",
                             "A set of steel platelegs has been added to your inventory."
                         ],
-                        delay=4
+                        delay=0
                     )
 
                     player.inventory.extend([
@@ -85,7 +85,7 @@ def enter(room, player):
                             "A bear hide body has been added to your inventory.",
                             "A set of bear hide legs has been added to your inventory."
                         ],
-                        delay=4
+                        delay=0
                     )
 
                     player.inventory.extend([
@@ -101,7 +101,7 @@ def enter(room, player):
                             "A battle hood has been added to your inventory.",
                             "A battle robe has been added to your inventory."
                         ],
-                        delay=4
+                        delay=0
                     )
 
                     player.inventory.extend([

@@ -1,0 +1,66 @@
+Fonction mystere(n) :
+    a, b, c : Entier
+
+    a ← 0
+    b ← 0
+    c ← 0
+
+    Tant Que n > 0 Faire :
+
+        Si n >= 100 Alors
+            n ← n – 100
+            a ← a+ 1
+
+        Sinon Si n >= 10 Alors
+            n ← n – 10
+            b ← b + 1
+
+        Sinon
+            n = n – 1
+            c = c + 1
+
+    Retourner [a, b, c]
+
+
+
+Fonction somme(n)
+    a, b, c : Entier
+    a, b, c <- mystere(n)
+
+    Si (a + b) == c Alors
+        retourner vrai
+    FinSi
+
+    retourner faux
+
+
+premiertour
+
+Fonction sommeDifference()
+    a, b, c : Entier
+
+    Pour i <- 100 à 999 Pas 1
+        a, b, c <- mystere(i)
+
+        Si (a + b) == c Alors
+            Afficher i, " est un nombre insaolite par somme car ", a, " + ", b, " = ", c
+            Si premiertour afficher i, " est le plus petit nombre insaolite par somme car ", a, " + ", b, " = ", c
+        
+        SinonSi (a - b) == c Alors
+            Afficher i, " est un nombre insolite par différence car ", a, " - ", b, " = ", c
+
+        FinSi
+
+        Si init !== 0 afficher init, " est le plus petit nombre insolite"
+
+    FinPour
+    Retourner vrai
+
+
+
+Fonction nombreEntiers()
+    
+    Pour i <- 100 à 999 Pas 1
+        Afficher i
+    FinPour
+    Retourner vrai

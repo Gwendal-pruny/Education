@@ -13,7 +13,7 @@ def enter(room, player):
                 "You are in the town square in Regan.",
                 "Normally it would be buzzing with villagers, but as everyone is currently busy being scared of ghosts, it is deserted."
             ],
-            delay=4
+            delay=0
         )
     else:
         room.has_been_entered_before = True
@@ -24,7 +24,7 @@ def enter(room, player):
                 "Normally it would be buzzing with villagers, but as everyone is currently busy being scared of ghosts, it is deserted.",
                 "Except, for a young villager sitting on a wooden bench across the other side of the square, crying."
             ],
-            delay=4
+            delay=0
         )
 
     while True:
@@ -61,7 +61,7 @@ def enter(room, player):
                         "Your path is clear to you now: you must get to the bottom of these supernatural occurances.",
                         "You should stop in at the weapons and armour shop before you start your adventure."
                     ],
-                    delay=4
+                    delay=0
                 )
                 interface.print_()
                 player.talked_to_cordelia = True
