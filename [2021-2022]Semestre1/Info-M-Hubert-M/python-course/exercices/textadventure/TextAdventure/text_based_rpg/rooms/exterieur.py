@@ -34,10 +34,15 @@ def enter(room, player):
 
     while True:
         additional_commands = ["talk", "move"]
-
-        if hasattr(player, 'talked_to_maeva'):
-            additional_commands = ["attack"]
-
+        if player.maeva_boss_defeated == False:
+            if player.talked_to_maeva:
+                additional_commands = ["talk", "move"]
+                
+            if player.talked_to_maeva & player.talked_to_pierre:
+                additional_commands = ["attack", "move"]
+        if player.maeva_boss_defeated:
+            additional_commands = ["move"]
+        
 
         command = interface.get_game_command(player, room, additional_commands)
 
@@ -45,11 +50,10 @@ def enter(room, player):
             target = interface.get_command(["maeva", "cancel"], True)
 
             if target == "maeva":
-                
                 battle = Battle(player, enemies.maeva())
                 battle.run()
 
-                player.first_boss_defeated = True
+                player.maeva_boss_defeated = True
                 interface.sleep(5)
                 interface.print_multiple_lines(
                         lines=[
@@ -63,9 +67,10 @@ def enter(room, player):
 
 
         if command == "move":
-            place_to_move = move(["hall"])
-            if hasattr(player, 'first_boss_defeated'):
+            if player.maeva_boss_defeated:
                 place_to_move = move(["hall", "cantine", "dortoire"])
+            else:
+                place_to_move = move(["hall"])
 
 
             if place_to_move == "hall":
@@ -77,8 +82,8 @@ def enter(room, player):
                 shop.enter(player)
                 
             if place_to_move == "dortoire":
-                from .mountain_exterior import room as mountain_exterior
-                mountain_exterior.enter(player)
+                from .dortoire import room as dortoire
+                dortoire.enter(player)
                 
         if command == "talk":
             if room.has_been_entered_before & player.talked_to_maeva == False: 
@@ -100,6 +105,7 @@ def enter(room, player):
                             "??? : Salut, désoler du retard , mais ton équipement est prêt, vas-y mollo je ne sais pas encor si elle est bien stabiliser pour toi.",
                             "Vous : Pour moi ?",
                             "Maeva : allez cesson de tergiverser , affronte-moi !",
+                            "",
                             ],
                         delay=0
                     )

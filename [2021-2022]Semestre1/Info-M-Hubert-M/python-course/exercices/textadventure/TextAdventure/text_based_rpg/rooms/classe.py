@@ -38,7 +38,7 @@ def enter(room, player):
                 battle = Battle(player, enemies.second_boss())
                 battle.run()
 
-                player.first_boss_defeated = True
+                player.segond_boss_defeated = True
                 interface.sleep(5)
                 interface.print_()
                 raise GameOver

@@ -2,9 +2,8 @@ from text_based_rpg import interface
 from text_based_rpg.start_game import start_game
 
 PLAY = "play"
-HELP = "help"
 QUIT = "quit"
-COMMANDS = [PLAY, HELP, QUIT]
+COMMANDS = [PLAY, QUIT]
 
 def play():
     while True:
@@ -15,9 +14,6 @@ def play():
 
         if command == PLAY:
             start_game()
-
-        if command == HELP:
-            interface.print_(help_text)
 
         if command == QUIT:
             break

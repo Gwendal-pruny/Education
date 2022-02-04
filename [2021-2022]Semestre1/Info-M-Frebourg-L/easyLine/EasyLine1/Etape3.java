@@ -21,7 +21,6 @@ public class Voyageur {
        this.nom=n;
         this.age=age;
 
-       // System.out.println(this.nom + " "+this.age);
     }
     public void setNom(String nom){
 
@@ -59,16 +58,16 @@ public void afficher(){
             System.out.println("Votre nombre entré est négatif, veuillez rentrez un âge positif :");
             age = sc.nextInt();
 
-        }/
+        }
 
 
         System.out.println("Veuillez sasir votre nom :");
         String nom = sc.next();
         System.out.println(nom.length()<2);
-     /*   while(nom.length()<2) {
+        while(nom.length()<2) {
             System.out.println("Votre nom doit être composé d'au moins deux caractères, veuillez recommencer :");
             nom= sc.next();
-        }*/
+        }
         if (age<1){
             System.out.println("Vous êtes un nourisson");
         }
@@ -82,7 +81,6 @@ public void afficher(){
             System.out.println("Vous êtes un senior");
         }
         Voyageur monVoyageur = new Voyageur(nom,age);
-        //System.out.println("Vous avez " + age + " "+ "ans"+ ", votre nom est " + nom);
         monVoyageur.afficher();
 
         nom="Josué";
@@ -91,5 +89,4 @@ public void afficher(){
         monVoyageur2.afficher();
 
          }
-        //System.out.println("Vous avez " + monVoyageur2.age + " "+ "ans"+ ", votre nom est " + monVoyageur2.nom);
     }

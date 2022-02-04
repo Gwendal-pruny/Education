@@ -23,10 +23,7 @@ def enter(room, player):
         )
 
     while True:
-        additional_commands = ["talk"]
-
-        if player.can_progress_to_mountain:
-            additional_commands = ["move"]
+        additional_commands = ["talk", "move"]
 
         command = interface.get_game_command(
             player,
@@ -41,43 +38,59 @@ def enter(room, player):
             )
 
             if npc == "Restaurateur":
-                interface.print_multiple_lines(
-                    lines=[
-                        "Bonjour ! je ne t'avais jamais vue ici avent ?",
-                        "Vous : Non je viens d'arriver aujourd'hui je n'est pas encor obtenu tout mes badge d'admission"
-                        "Je vais te donner un conseil, \"Mange et bois pendant t'es combat !\"",
-                        "Avec un ramen dans le bid on ce sans revivre !"
-                        "Le Redbull pour l'énergie et la forme ! et le saké pour tout exploser !"
-                    ],
-                    delay=0
-                )
-
-                for _ in range(3):
-                    player.inventory.append(items.health_potion())
-
-                if player.class_ in ["guerrier", "assassin"]:
-                    interface.print_("Le Ramen a été ajouter a votre inventaire")
+                if player.talked_to_restaurateur == False:
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Bonjour ! je ne t'avais jamais vue ici avent ?",
+                            "Vous : Non je viens d'arriver aujourd'hui je n'est pas encor obtenu tout mes badge d'admission"
+                            "Je vais te donner un conseil, \"Mange et bois pendant t'es combat !\"",
+                            "Avec un ramen dans le bid on ce sans revivre !"
+                            "Le Redbull pour l'énergie et la forme ! et le saké pour tout exploser !"
+                        ],
+                        delay=0
+                    )
 
                     for _ in range(3):
-                        player.inventory.append(items.stamina_potion())
-                else:
-                    interface.print_("Le RedBull a été ajouter a votre inventaire")
+                        player.inventory.append(items.health_potion())
 
-                    for _ in range(3):
-                        player.inventory.append(items.mana_potion())
-                    interface.print_("Le saké a été ajouter a votre inventaire")
+                    if player.class_ in ["guerrier", "assassin"]:
+                        interface.print_("Le Ramen a été ajouter a votre inventaire")
+
+                        for _ in range(3):
+                            player.inventory.append(items.stamina_potion())
+                    else:
+                        interface.print_("Le RedBull a été ajouter a votre inventaire")
+
+                        for _ in range(3):
+                            player.inventory.append(items.mana_potion())
+                        interface.print_("Le saké a été ajouter a votre inventaire")
 
 
-                interface.print_("Utiliser \"use item\" pour manger et boire ce que vous avez prit, vosu devirez pourvoir combattre dans l'arène sans risque")
+                    interface.print_("Utiliser \"use item\" pour manger et boire ce que vous avez prit, vosu devirez pourvoir combattre dans l'arène sans risque")
 
-                interface.print_()
-                player.can_progress_to_mountain = True
-        else:
-            place_to_move = move(["outside"])
+                    interface.print_()
+                    player.can_progress_to_classe = True
+                    player.talked_to_restaurateur = True
+                    
+                elif player.talked_to_restaurateur:
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Restaurateur : Bonjour ! je ne t'avais jamais vue ici avent ?",
+                            "Vous : Si"
+                            "Restaurateur : Si tu veut du rab attend la fin du service !"
+                        ],
+                        delay=0
+                    )
 
-            if place_to_move == "outside":
-                from .center_of_town import room as center_of_town
-                center_of_town.enter(player)
+        if command == "move":
+            place_to_move = move(["Sortir"])
+      
+            if place_to_move == "Sortir":
+                from .exterieur import room as exterieur
+                exterieur.enter(player)
+
+
+
 
 room = Room(
     map_=map_,

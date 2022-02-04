@@ -39,14 +39,14 @@ def get_command(commands, list_options=False):
             questions = [
                 inquirer.List(
                     "choice",
-                    message="Vous choissisez : ",
+                    message="Vous choissisez",
                     choices=[generate_readable_list(commands)],
                 ),
             ]
         questions = [
             inquirer.List(
                 "choice",
-                message= "Vous choissisez : ",
+                message= "Vous choissisez",
                 choices= commands,
             ),
         ]

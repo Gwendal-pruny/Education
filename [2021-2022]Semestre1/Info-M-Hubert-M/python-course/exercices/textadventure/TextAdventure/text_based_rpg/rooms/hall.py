@@ -31,13 +31,12 @@ def enter(room, player):
         command = interface.get_game_command(player, room, additional_commands)
 
         if command == "move":
-            if player.second_boss_defeated:
+            if player.forgerone_boss_defeated & player.talked_to_proviseur_second_medal:
                 place_to_move = move(["bureau du proviseur", "exterieur", "class 1-A"])
+            elif player.talked_to_proviseur:
+                place_to_move = move(["bureau du proviseur", "exterieur"])
             else:
                 place_to_move = move(["bureau du proviseur"])
-
-            if player.talked_to_cordelia:
-                place_to_move.append("exterieur")
 
             if place_to_move == "bureau du proviseur":
                 from .bureau_du_proviseur import room as bureau_du_proviseur
@@ -50,9 +49,15 @@ def enter(room, player):
                 classe.enter(player)
             
         if command == "talk":
-            if player.talked_to_acceuil:            
+            if player.talked_to_garcons & player.talked_to_acceuil:   
                 npc = interface.get_command(
                     ["evelyn", "cancel"],   
+                    True
+                )
+                
+            elif player.talked_to_acceuil:
+                npc = interface.get_command(
+                    ["evelyn", "garcons", "cancel"],   
                     True
                 )
             else: 
@@ -61,9 +66,6 @@ def enter(room, player):
                     True
                 )
             
-                
-
-
             if npc == "acceuil":
                 interface.print_multiple_lines(
                     lines=[
@@ -77,13 +79,32 @@ def enter(room, player):
                 player.talked_to_acceuil = True
                 
             if npc == "evelyn":
-                interface.print_multiple_lines(
-                    lines=[
-                        "Evelyn  : Allez vas dans le bureau, il t'attend",
-                        ],
-                    delay=0
-                )
-                interface.print_()
+                if player.maeva_boss_defeated:
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Evelyn : Félicitation pour ton premier combat !",
+                            "Vous : Merci"
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
+                    
+                if player.talked_to_proviseur:
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Evelyn : Il t'attendent tousse aux millieu de la cours",
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
+                else:
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Evelyn  : Allez vas dans le bureau, il t'attend",
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
                 
             if npc == "garcons":
                 interface.print_multiple_lines(
@@ -98,6 +119,7 @@ def enter(room, player):
                     delay=0
                 )
                 interface.print_()
+                player.talked_to_garcons = True
 
 
 room = Room(

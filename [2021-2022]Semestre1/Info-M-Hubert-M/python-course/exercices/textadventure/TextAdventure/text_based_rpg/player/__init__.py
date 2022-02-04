@@ -11,11 +11,18 @@ class Player:
         self.class_ = class_
         self.talked_to_cordelia = False
         self.can_progress_to_mountain = False
-        self.first_boss_defeated = False
-        self.second_boss_defeated = False
+        self.can_progress_to_classe = False
+        self.maeva_boss_defeated = False
+        self.professor_boss_defeated = False
+        self.forgerone_boss_defeated = False
         self.talked_to_proviseur = False
+        self.talked_to_proviseur_second_medal = False
         self.talked_to_acceuil = False
-        
+        self.talked_to_maeva = False
+        self.talked_to_pierre = False
+        self.talked_to_forgerone = False
+        self.talked_to_garcons = False
+        self.talked_to_restaurateur = False
 
     consumable_items = inventory_properties.consumable_items
     equippable_items = inventory_properties.equippable_items

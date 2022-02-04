@@ -1,19 +1,15 @@
 from .hall import room as hall
 from .shop import room as shop
-from .town_square import room as town_square
-from .center_of_town import room as center_of_town
-from .mountain_exterior import room as mountain_exterior
+from .dortoire import room as dortoire
 from .exterieur import room as exterieur
-from .second_room import room as second_room
+from .classe import room as classe
 
 rooms = [
     hall,
     shop,
-    town_square,
-    center_of_town,
-    mountain_exterior,
+    dortoire,
     exterieur,
-    second_room
+    classe,
 ]
 
 def reset():

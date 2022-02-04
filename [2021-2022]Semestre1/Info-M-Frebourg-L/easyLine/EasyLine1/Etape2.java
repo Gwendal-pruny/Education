@@ -1,9 +1,7 @@
-import java.util.;
+import java.util;
 public class Voyageur {
     private String nom;
     private int age;
-    public Voyageur(){}
-
     public Voyageur(String n, int age){
         Scanner sc=new Scanner(System.in);
         while(n.length()<2){
@@ -33,28 +31,26 @@ public class Voyageur {
 
         System.out.println("nom O_o ?");
         String nom=sc.next();
-       / while(nom.length()<2){
+       while(nom.length()<2){
             System.out.println("nom");
             nom=sc.next();
-        }*/
+        }
 
         System.out.println("age?");
         int age=sc.nextInt();
         while(age<0){
             System.out.println("age?");
              age=sc.nextInt();
-        }//w
+        }
 
         Voyageur monVoyageur = new Voyageur(nom,age);
-        //System.out.println(monVoyageur.nom +" "+ monVoyageur.age);
         monVoyageur.afficher();
 
         Voyageur monVoyageur2 = new Voyageur();
         monVoyageur2.nom="erambert";
         monVoyageur2.age=18;
-        //System.out.println(monVoyageur2.nom +" "+ monVoyageur2.age);
         monVoyageur2.afficher();
 
-     }//main 
+     } 
 
-}//class
+}

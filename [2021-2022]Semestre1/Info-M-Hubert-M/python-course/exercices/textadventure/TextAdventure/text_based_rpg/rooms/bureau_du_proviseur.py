@@ -50,26 +50,27 @@ def enter(room, player):
                 )
 
 
-            if npc == "proviseur":
-                interface.print_multiple_lines(
-                    lines=[
-                        "Vous : E..Excuser-moi ! ",
-                        "Proviseur : Du calme pas besoin de criez ! Vien raproche toi regarde ce spétacle.",
-                        "Vous : Ce sont des élève qui ce batte  a l’exterieur ! Il bouge si vite je n’arrive pas a les suivre !",
-                        "Proviseur : HaHA, nous n’avons pas les même notrion de vitesse mon ami !",
-                        "Proviseur : Bien tu voit la fille qui est en train de gagner le combat ?",
-                        "Vous : A gauche ? Oui.. ",
-                        "Proviseur : Tu est son prochaine adverser",
-                        "Proviseur : Maintenant sort et affronte la ",
-                        "Proviseur : Et dépèche toi elle t’attend déjà !",
-                        ],
-                    delay=0
-                )
-                interface.print_()
-                player.talked_to_proviseur = True
+            if player.talked_to_proviseur == False:
+                if npc == "proviseur":
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Vous : E..Excuser-moi ! ",
+                            "Proviseur : Du calme pas besoin de criez ! Vien raproche toi regarde ce spétacle.",
+                            "Vous : Ce sont des élève qui ce batte  a l’exterieur ! Il bouge si vite je n’arrive pas a les suivre !",
+                            "Proviseur : HaHA, nous n’avons pas les même notrion de vitesse mon ami !",
+                            "Proviseur : Bien tu voit la fille qui est en train de gagner le combat ?",
+                            "Vous : A gauche ? Oui.. ",
+                            "Proviseur : Tu est son prochaine adverser",
+                            "Proviseur : Maintenant sort et affronte la ",
+                            "Proviseur : Et dépèche toi elle t’attend déjà !",
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
+                    player.talked_to_proviseur = True
             
-            if npc == "proviseur":
-                if hasattr(player, "first_boss_defeated"):
+            if player.maeva_boss_defeated:
+                if npc == "proviseur":
                     interface.print_multiple_lines(
                         lines=[
                             "HaHA tu a gagner ! J'en était sur tu est prométteur, même si sans tes vrai pouvoir tu n'ira pas loin... ",
@@ -83,6 +84,16 @@ def enter(room, player):
                     )
                     interface.print_()
             
+            if player.forgerone_boss_defeated:
+                if npc == "proviseur":
+                    interface.print_multiple_lines(
+                        lines=[
+                            "Bien jouer pour ton deuxième combat, mais merci de pas venir me déranger aprs chaque combat que tu gagne, je tien a mon temps libre"
+                            ],
+                        delay=0
+                    )
+                    interface.print_()
+                    player.talked_to_proviseur_second_medal = True
                 
 
 room = Room(

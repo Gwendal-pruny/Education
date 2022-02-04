@@ -35,7 +35,7 @@ def enter(room, player):
     while True:
         additional_commands = ["attack"]
 
-        if player.first_boss_defeated:
+        if player.maeva_boss_defeated:
             additional_commands = ["move"]
 
         command = interface.get_game_command(player, room, additional_commands)
@@ -47,7 +47,7 @@ def enter(room, player):
                 battle = Battle(player, enemies.first_boss())
                 battle.run()
 
-                player.first_boss_defeated = True
+                player.maeva_boss_defeated = True
                 interface.sleep(5)
                 interface.print_()
 
@@ -114,8 +114,8 @@ def enter(room, player):
             place_to_move = move(["outside", "second room"])
 
             if place_to_move == "outside":
-                from .mountain_exterior import room as mountain_exterior
-                mountain_exterior.enter(player)
+                from .dortoire import room as dortoire
+                dortoire.enter(player)
 
             if place_to_move == "second room":
                 from .second_room import room as second_room
