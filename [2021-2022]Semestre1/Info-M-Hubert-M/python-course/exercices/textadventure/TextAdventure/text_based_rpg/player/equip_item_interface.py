@@ -6,18 +6,6 @@ def equip_item_interface(player):
     """
     Display an interface to the user allowing them to equip items in their
     inventory.
-
-    Arguments
-    ---------
-        player : Player
-            The player.
-
-    Returns
-    -------
-    str, None
-        str "back" when the player cancels out of the interface.
-        None when the player has no items in their inventory to equip.
-
     """
     while True:
         player.inventory_view(item.EQUIPPABLE)

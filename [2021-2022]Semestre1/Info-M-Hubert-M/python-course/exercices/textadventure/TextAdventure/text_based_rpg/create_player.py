@@ -65,11 +65,6 @@ _MAGE_ENTITY = CombatEntity(
 def create_player():
     """
     Display an interface that allows the player to create their character.
-
-    Returns
-    -------
-    Player
-        The Player instance representing the player.
     """
     interface.print_multiple_lines([
         "Voulez-vous être un guerrier ? un magicien ? un assassin ?.",

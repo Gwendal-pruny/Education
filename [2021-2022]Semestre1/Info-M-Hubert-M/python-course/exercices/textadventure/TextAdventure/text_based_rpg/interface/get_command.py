@@ -19,17 +19,6 @@ def get_command(commands, list_options=False):
     Get input from the user and match it against a provided list of commands.
     If the command given was not in the list, re-call the function
     recursively until a suitable command is given.
-
-    Arguments
-    ---------
-        commands : list[str]
-            A set of commands to match against.
-
-    Returns
-    -------
-    str
-        The suitable command provided by the user.
-
     """
     while True:
         if list_options == True:

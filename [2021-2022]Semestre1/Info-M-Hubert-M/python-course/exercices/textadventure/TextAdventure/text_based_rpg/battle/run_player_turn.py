@@ -4,16 +4,6 @@ def run_player_turn(battle):
     """
     Execute the player's turn in the battle, seeking input from the player as to
     what to do.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-    Returns
-    -------
-    None
-
     """
     # Loop allows for the player to cancel choices, execute commands after using
     # items.

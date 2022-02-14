@@ -6,24 +6,6 @@ from .generate_random_multiplier import generate_random_multiplier
 def attack(attacking_entity, enemy, attack_to_use):
     """
     Execute the given entity attacking an opponent.
-
-    Arguments
-    ---------
-        attacking_entity : CombatEntity
-            The entity that is attacking.
-
-        enemy : CombatEntity
-            The entity that is being attacked.
-
-        attack_to_use : Attack
-            The attack the attacking entity is using.
-
-    Returns
-    -------
-    object or None
-        object if a flag was fired, equal to the fired flag.
-        None otherwise.
-
     """
     if attack_to_use.stamina_cost > attacking_entity.stamina:
         return flags.NOT_ENOUGH_STAMINA

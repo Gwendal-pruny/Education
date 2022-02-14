@@ -4,17 +4,7 @@ from .exceptions import ItemIsNotEquippableError
 
 def equip(self, item_to_equip):
     """
-    Execute the player equipping an item.
-
-    Arguments
-    ---------
-        item_to_equip : Item
-            The item the player is equipping.
-
-    Returns
-    -------
-    None
-    
+    Execute the player equipping an item.    
     """
     if item_to_equip.type != item.EQUIPPABLE:
         raise ItemIsNotEquippableError

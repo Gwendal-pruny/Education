@@ -14,27 +14,6 @@ class Item:
             effects=None,
             attacks=None
     ):
-        """
-        Arguments
-        ---------
-            display_name : str
-                A readable name of the attack that can be displayed to the user.
-
-            type_ : object
-                A flag representing the type of the object; either consumable or
-                equippable.
-
-            equip_location : Optional[str]
-                If the item is equippable, the equip location to equip the item
-                to.
-
-            effects : list[ItemEffect]
-                The list of effects of the item when equipped or consumed.
-
-            attacks : list[Attack]
-                If the item is a weapon, the list of attacks the weapon gives
-                the user.
-        """
         if effects is None:
             effects = []
 

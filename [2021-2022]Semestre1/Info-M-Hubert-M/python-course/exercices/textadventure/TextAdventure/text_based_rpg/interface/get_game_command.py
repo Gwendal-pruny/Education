@@ -28,21 +28,6 @@ def get_game_command(player, room, additional_commands=[]):
     """
     Get a general game command from the player and execute it.
 
-    Arguments
-    ---------
-        player : Player
-            The player.
-
-        room : Room
-            The room the player is currently in.
-
-        additional_commands : Optional[list]
-            A list of additional commands to allow the play to enter.
-
-    Returns
-    -------
-    None
-
     """
     commands = additional_commands.copy()
     commands.extend(_BASE_COMMANDS)

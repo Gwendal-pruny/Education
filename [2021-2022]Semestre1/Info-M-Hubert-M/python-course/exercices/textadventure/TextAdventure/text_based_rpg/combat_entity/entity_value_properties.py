@@ -7,17 +7,6 @@ corresponding maximum stats for an entity.
 def generate_value_property(name):
     """
     Generate a property instance that can be used to represent an entity value.
-
-    Arguments
-    ---------
-        name : str
-            The name of the entity value to represent.
-
-    Returns
-    -------
-    property
-        The generated property.
-
     """
 
     @property
@@ -43,17 +32,6 @@ def generate_maximum_value_stat_property(name):
     """
     Generate a property instance that can be used to represent an entity's
     maximum value stat.
-
-    Arguments
-    ---------
-        name : str
-            The name of the entity value to represent the maximum stat ofS.
-
-    Returns
-    -------
-    property
-        The generated property.
-
     """
 
     @property

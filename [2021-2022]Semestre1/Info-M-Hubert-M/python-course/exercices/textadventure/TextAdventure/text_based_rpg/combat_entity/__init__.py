@@ -6,20 +6,6 @@ class CombatEntity:
     """A class for representing combat entities."""
 
     def __init__(self, display_name, attacks=None, **stats):
-        """
-        Arguments
-        ---------
-            display_name : str
-                The readable name of the entity that can be displayed to the
-                user.
-
-            attacks : Optional[list]
-                The list of attacks the entity has. Defaults to an empty list.
-
-            **stats
-                A set of integers that represent the entity's stats.
-
-        """
         for stat, value in stats.items():
             setattr(self, stat, value)
 

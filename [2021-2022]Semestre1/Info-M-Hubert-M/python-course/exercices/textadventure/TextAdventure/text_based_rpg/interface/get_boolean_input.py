@@ -9,13 +9,6 @@ def get_boolean_input():
     set of values that represent False.
     If the given input is not in either set, re-call the function recursively
     until a suitable input is given.
-
-    Returns
-    -------
-    bool
-        True if the given input was in the set of values representing True.
-        False if the given input was in the set of values representing False.
-
     """
     while True:
         received_input = get_input()

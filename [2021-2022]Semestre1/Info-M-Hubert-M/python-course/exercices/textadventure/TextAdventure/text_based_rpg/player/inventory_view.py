@@ -5,16 +5,6 @@ from .. import item
 def inventory_view(player, item_type=None):
     """
     Display a list of the items the player currently has in their inventory.
-
-    Arguments
-    ---------
-        player : Player
-            The player.
-
-    Returns
-    -------
-    None
-
     """
     if not player.inventory:
         interface.print_(DATA["inventory_view"]["no_items"])

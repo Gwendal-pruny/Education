@@ -1,44 +1,14 @@
-"""This module contains general utility functions for the game."""
-
 import random
 from . import interface
 
 def set_multiple_attributes(object_, **attributes):
-    """
-    Iterate over a dictionary and call setattr() on a given object for each
-    key-value pair.
 
-    Arguments
-    ---------
-        object_ : object
-            To object to set attributes of.
-
-        **attributes
-            The dictionary containing the key-value pairs of the attributes to
-            set.
-
-    Returns
-    -------
-    None
-
-    """
     for key, value in attributes.items():
         setattr(object_, key, value)
 
 def _generate_random_value(upper_limit):
     """
     Generate a random integer between 1 and the given limit inclusive.
-
-    Arguments
-    ---------
-        upper_limit : int
-            The upper limit of random numbers to generate.
-
-    Returns
-    -------
-    int
-        The random integer generated.
-
     """
     return random.randint(1, upper_limit)
 
@@ -61,17 +31,6 @@ def move(locations):
     """
     Provide an interface to the user facilitating their movement between
     locations.
-
-    Arguments
-    ---------
-        locations : list
-            A list of locations they can move to.
-
-    Returns
-    -------
-    str
-        The location the user enters to move to.
-
     """
     move_locations = locations.copy()
     move_locations.append("cancel")

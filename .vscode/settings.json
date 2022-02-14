@@ -17,5 +17,6 @@
         }
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "java.format.settings.url": "eclipse-formatter.xml"
+    "java.format.settings.url": "eclipse-formatter.xml",
+    "aiXcoder.showTrayIcon": true
 }

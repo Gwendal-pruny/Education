@@ -9,17 +9,6 @@ attacks."""
 def get_attack_from_name(self, attack_name):
     """
     Get the player's attack with the given name.
-
-    Arguments
-    ---------
-        attack_name : str
-            The name of the attack to get.
-
-    Returns
-    -------
-    Attack
-        The corresponding attack.
-
     """
     for attack in self.entity.attacks:
         if attack.name == attack_name:

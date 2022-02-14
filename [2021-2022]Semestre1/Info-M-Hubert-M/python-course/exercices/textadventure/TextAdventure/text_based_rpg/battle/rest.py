@@ -4,19 +4,6 @@ from .data import DATA
 def rest(battle, entity):
     """
     Execute the entity resting in the battle, printing relevant messages.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-        entity : CombatEntity
-            The entity that is resting.
-
-    Returns
-    -------
-    None
-    
     """
     prior_stamina = entity.stamina
     prior_mana = entity.mana

@@ -3,16 +3,6 @@ from .battle_util import PlayerHasDiedError
 def run(battle):
     """
     Run the battle, executing turns until an end condition is met.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-    Returns
-    -------
-    None
-
     """
 
     while True:

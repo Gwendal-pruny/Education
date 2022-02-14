@@ -16,12 +16,6 @@ DATA = json.load(
 def _make_full_list_of_stats():
     """
     Generate the full list of the entity's stats.
-
-    Returns
-    -------
-        list
-            The list of the entity's stats.
-
     """
     list_of_stats = DATA["_other_stats"].copy()
     list_of_stats.extend(
@@ -34,11 +28,6 @@ DATA["stats"] = _make_full_list_of_stats()
 def _make_full_list_of_values():
     """
     Generate a combined list of the entity's stats and entity values.
-
-    Returns
-    -------
-    list
-        The combined list.
     """
     values = DATA["entity_values"].copy()
     values.extend(DATA["stats"])

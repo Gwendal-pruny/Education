@@ -19,11 +19,6 @@ def _make_messages():
     Create a dictionary of the message templates, prefixed for both the play and
     the enemy.
 
-    Returns
-    -------
-    dict
-        The created dictionary.
-
     """
     messages = {}
 

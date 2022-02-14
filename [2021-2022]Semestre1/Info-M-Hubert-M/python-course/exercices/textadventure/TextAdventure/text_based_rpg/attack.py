@@ -13,31 +13,6 @@ class Attack:
             stamina_cost=0,
             mana_cost=0
     ):
-        """
-        Arguments
-        ---------
-            name : str
-                An identifying name of the attack.
-
-            display_name : str
-                A readable name of the attack that can be displayed to the user.
-
-            type_ : AttackStyle
-                The type of attack.
-
-            damage : int
-                The damage value of the attack.
-
-            description_of_being_used : str
-                A description of the attack being used against an enemy.
-
-            stamina_cost : int
-                The amount of stamina the attack consumes.
-
-            mana_cost : int
-                The amount of mana the attack consumes.
-
-        """
         set_multiple_attributes(
             self,
             name=name,

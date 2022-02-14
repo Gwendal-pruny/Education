@@ -9,15 +9,6 @@ class Battle:
     """
 
     def __init__(self, player, enemy):
-        """
-        Arguments
-        ---------
-            player : Player
-                The player.
-
-            enemy : CombatEntity
-                The enemy.
-        """
         util.set_multiple_attributes(
             self,
             player=player,

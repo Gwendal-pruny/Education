@@ -7,16 +7,6 @@ from .data import DATA
 def run_enemy_turn(battle):
     """
     Execute the enemy's turn in the battle.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-    Returns
-    -------
-    None
-    
     """
     if not len(battle.enemy.usable_attacks):
         battle.rest(battle.enemy)

@@ -5,16 +5,6 @@ def run_turn(battle):
     """
     Execute a turn in the battle, executing both the player's turn and the
     enemy's turn.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-    Returns
-    -------
-    None
-    
     """
     if battle.first_turn:
         battle.first_turn = False

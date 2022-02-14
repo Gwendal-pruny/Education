@@ -4,16 +4,6 @@ from .exceptions import ItemIsNotConsumableError
 def consume(self, item_to_consume):
     """
     Execute the player using an item.
-
-    Arguments
-    ---------
-        item_to_consume : Item
-            The item the player is using.
-
-    Returns
-    -------
-    None
-    
     """
 
     if item_to_consume.type != item.CONSUMABLE:

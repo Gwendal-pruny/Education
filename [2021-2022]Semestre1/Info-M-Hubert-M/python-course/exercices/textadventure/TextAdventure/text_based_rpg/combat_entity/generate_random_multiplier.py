@@ -5,11 +5,6 @@ def generate_random_multiplier():
     Generate a random multiplier for use in different parts of the battle
     algorithm.
 
-    Returns
-    -------
-    int, float
-        The multiplier generated.
-
     """
     return util.resolve_random_condition([
         (1, 10),

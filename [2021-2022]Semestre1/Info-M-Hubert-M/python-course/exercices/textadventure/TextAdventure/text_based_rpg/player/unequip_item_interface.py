@@ -4,18 +4,6 @@ from .data import DATA
 def unequip_item_interface(player):
     """
     Display an interface to the user allowing them to unequip items they have equipped.
-
-    Arguments
-    ---------
-        player : Player
-            The player.
-
-    Returns
-    -------
-    str, None
-        str "back" when the player cancels out of the interface.
-        None when the player has no items equipped to unequip.
-
     """
     if not player.equipped_items:
         interface.print_(DATA["equipment_view"]["no_items"])

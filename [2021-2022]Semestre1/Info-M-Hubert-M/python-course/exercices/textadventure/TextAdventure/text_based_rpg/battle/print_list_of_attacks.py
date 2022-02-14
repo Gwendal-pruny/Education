@@ -4,16 +4,6 @@ from .data import DATA
 def print_list_of_attacks(battle):
     """
     Display the list of attacks the user can use in the battle.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-    Returns
-    -------
-    None
-    
     """
     for attack in battle.player.entity.attacks:
         line = attack.display_name + " --- Dommage: " + str(attack.damage) + ". "

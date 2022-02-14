@@ -5,18 +5,6 @@ def discard_item_interface(player):
     """
     Display an interface to the user allowing them to discard items from their
     inventory.
-
-    Arguments
-    ---------
-        player : Player
-            The player.
-
-    Returns
-    -------
-    str, None
-        str "cancel" when the player cancels out of the interface.
-        None when the player has no items in their inventory to discard.
-
     """
     if not player.inventory:
         interface.print_(DATA["inventory_view"]["no_items"])

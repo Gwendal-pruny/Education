@@ -8,17 +8,6 @@ def get_integer_input(upper_limit):
     If the input does not parse as an integer, the integer is higher than the
     maximum integer acceptable, or the integer is less than 1, re-call the
     function recursively until an acceptable input is provided.
-
-    Arguments
-    --------
-        upper_limit : int
-            The maximum integer acceptable for the user to input.
-
-    Returns
-    -------
-        int
-            The acceptable integer provided by the user.
-
     """
     unsuitable_input_messsage = DATA["unsuitable_input_messages"][
         "get_integer_input"

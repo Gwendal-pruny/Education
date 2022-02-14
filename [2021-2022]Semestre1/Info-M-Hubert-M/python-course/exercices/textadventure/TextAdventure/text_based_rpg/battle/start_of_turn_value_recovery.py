@@ -5,18 +5,6 @@ def start_of_turn_value_recovery(battle, entity):
     """
     Execute the given entity recovering a small amount of stamina and mana in
     the battle.
-
-    Arguments
-    ---------
-        battle : Battle
-            The Battle instance representing the battle.
-
-        entity : CombatEntity
-            The entity to execute the recovery for.
-
-    Returns
-    -------
-    None
         
     """
     prior_stamina = entity.stamina
