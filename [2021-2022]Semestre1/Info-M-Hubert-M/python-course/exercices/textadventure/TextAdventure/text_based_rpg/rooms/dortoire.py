@@ -22,9 +22,9 @@ def enter(room, player):
             interface.print_multiple_lines(
                 lines=[
                     "Intiger par un attroupement et en recherche de badge vous tomber sur une forgeronne d'arme.",
-                    "Dès qu'elle vous voit elle vous prend a partie"
-                    "Forgerone : Prend ca et prépare toi au combat le chanceux !"
-                    "Vous : Le chanceux ? On ce connais ?"
+                    "Dès qu'elle vous voit elle vous prend a partie",
+                    "Forgerone : Prend ca et prépare toi au combat le chanceux !",
+                    "Vous : Le chanceux ? On ce connais ?",
                     "Forgerone : Cesse de te dégonfler enfile ca et vite !"
                 ],
                 delay=0

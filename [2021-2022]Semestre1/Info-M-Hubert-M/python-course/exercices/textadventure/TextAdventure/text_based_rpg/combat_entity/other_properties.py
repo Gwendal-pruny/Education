@@ -1,8 +1,3 @@
-"""
-This module contains miscellaneous property instances for use with the
-CombatEntity class.
-"""
-
 from .data import DATA
 
 @property
@@ -13,8 +8,6 @@ def evasion(entity):
         value /= 2
 
     return round(value)
-"""property: A property that computes the entity's evasion value."""
-
 @property
 def usable_attacks(entity):
     usable_attacks_list = []
@@ -27,7 +20,6 @@ def usable_attacks(entity):
             usable_attacks_list.append(entity_attack)
 
     return usable_attacks_list
-"""property: A property that computes the list of attacks the entity can use."""
 
 @property
 def values_view(entity):
@@ -47,4 +39,3 @@ def values_view(entity):
             )
 
     return "\n".join(lines)
-"""property: A property that generates the entity's value view."""

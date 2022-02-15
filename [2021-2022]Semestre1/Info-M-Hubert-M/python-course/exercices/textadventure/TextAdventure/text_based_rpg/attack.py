@@ -25,7 +25,6 @@ class Attack:
         )
 
 _AttackStyle = namedtuple("AttackStyle", ["damage_stat"])
-"""namedtuple: A class that represents different types of attacks."""
 
 MELEE = _AttackStyle(damage_stat="strength")
 RANGED = _AttackStyle(damage_stat="archery")

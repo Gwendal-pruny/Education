@@ -3,10 +3,6 @@ from .data import DATA
 from .exceptions import ItemIsNotConsumableError
 
 def use_item_interface(player):
-    """
-    Display an interface to the user allowing them to use items in their
-    inventory.
-    """
     while True:
         player.inventory_view(item.CONSUMABLE)
 
@@ -17,7 +13,7 @@ def use_item_interface(player):
         commands.append("back")
 
         interface.print_(
-            "You must enter " + interface.generate_readable_list(commands)
+            "Tu doit entrée " + interface.generate_readable_list(commands)
         )
 
         command = interface.get_command(commands)

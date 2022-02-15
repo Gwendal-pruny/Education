@@ -2,13 +2,10 @@ from .data import DATA
 from .get_input import get_input
 from .built_in_methods import print_
 
+
+"""a supp après changement methodo input"""
+
 def get_integer_input(upper_limit):
-    """
-    Get input from the user and parse it as an integer.
-    If the input does not parse as an integer, the integer is higher than the
-    maximum integer acceptable, or the integer is less than 1, re-call the
-    function recursively until an acceptable input is provided.
-    """
     unsuitable_input_messsage = DATA["unsuitable_input_messages"][
         "get_integer_input"
     ].format(upper_limit=upper_limit)

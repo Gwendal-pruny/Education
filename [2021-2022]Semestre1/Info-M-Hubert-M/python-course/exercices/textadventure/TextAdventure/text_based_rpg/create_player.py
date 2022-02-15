@@ -1,8 +1,3 @@
-"""
-This modules handles the interface and the logic behind creating the player's
-character.
-"""
-
 from . import interface
 from .combat_entity import CombatEntity
 from .player import Player
@@ -63,9 +58,6 @@ _MAGE_ENTITY = CombatEntity(
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )
 def create_player():
-    """
-    Display an interface that allows the player to create their character.
-    """
     interface.print_multiple_lines([
         "Voulez-vous être un guerrier ? un magicien ? un assassin ?.",
         "Que va tu choisire ?"

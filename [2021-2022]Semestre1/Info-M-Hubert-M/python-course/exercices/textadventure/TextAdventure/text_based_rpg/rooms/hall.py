@@ -69,7 +69,7 @@ def enter(room, player):
             if npc == "acceuil":
                 interface.print_multiple_lines(
                     lines=[
-                        "Vous : Bonjour je m’apppel ???, je suis la pour m’inscrire a AU vous pouvez maider, je suis au bonne endroit ?",
+                        "Vous : Bonjour, je suis la pour m’inscrire a AU vous pouvez maider, je suis au bonne endroit ?",
                         "???  : Hey, je t’attendait, le proviseur veut te voir sont bureau est derrière tu peut y allez mais avent je te conseil d’allez voir le jeune garcons si tu ne la pas déjà fait,",
                         "Vous : Merci evelyn",
                         ],

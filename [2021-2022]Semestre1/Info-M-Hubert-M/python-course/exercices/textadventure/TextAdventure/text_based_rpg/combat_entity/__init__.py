@@ -3,7 +3,6 @@ from . import entity_value_properties, other_properties, \
     restore_stamina_and_mana, attack
 
 class CombatEntity:
-    """A class for representing combat entities."""
 
     def __init__(self, display_name, attacks=None, **stats):
         for stat, value in stats.items():
@@ -26,7 +25,6 @@ class CombatEntity:
     restore_stamina_and_mana = restore_stamina_and_mana.restore_stamina_and_mana
     attack = attack.attack
 
-# Create value and maximum value stat properties for each entity value.
 for value_name in DATA["entity_values"]:
     setattr(
         CombatEntity,

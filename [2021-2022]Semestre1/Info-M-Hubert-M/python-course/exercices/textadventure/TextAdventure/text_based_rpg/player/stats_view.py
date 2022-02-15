@@ -3,9 +3,7 @@ from ..combat_entity.data import DATA as COMBAT_ENTITY_DATA
 from .data import DATA
 
 def _print_line(player, value_name):
-    """
-    Print a line of the view displaying the player's stats.
-    """
+
     interface.print_(
         DATA["stats_view_line"].format(
             name=value_name.capitalize(),
@@ -14,10 +12,6 @@ def _print_line(player, value_name):
     )
 
 def stats_view(player):
-    """
-    Display a list of the items the player's stats.
-
-    """
     for value_name in COMBAT_ENTITY_DATA["entity_values"]:
         _print_line(player, value_name)
 

@@ -4,14 +4,14 @@ from .get_command import get_command
 from .print_multiple_lines import print_multiple_lines
 from .built_in_methods import print_
 
-_MAP = "map"
-_STATS = "stats"
-_INVENTORY = "inventory"
-_EQUIPMENT = "equipment"
-_CONSUME_ITEM = "use item"
-_DISCARD_ITEM = "discard item"
-_EQUIP_ITEM = "equip item"
-_UNEQUIP_ITEM = "unequip item"
+_MAP = "carte"
+_STATS = "statistiques"
+_INVENTORY = "inventaire"
+_EQUIPMENT = "équipment"
+_CONSUME_ITEM = "utilisée un objet"
+_DISCARD_ITEM = "jeter un objet"
+_EQUIP_ITEM = "équiper un objet"
+_UNEQUIP_ITEM = "déséquipe un objet"
 
 _BASE_COMMANDS = [
     _MAP,
@@ -25,10 +25,7 @@ _BASE_COMMANDS = [
 ]
 
 def get_game_command(player, room, additional_commands=[]):
-    """
-    Get a general game command from the player and execute it.
 
-    """
     commands = additional_commands.copy()
     commands.extend(_BASE_COMMANDS)
 

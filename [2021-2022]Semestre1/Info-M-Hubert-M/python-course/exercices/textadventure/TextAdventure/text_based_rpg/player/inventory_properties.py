@@ -9,8 +9,6 @@ def consumable_items(player):
             items.append(inventory_item)
 
     return items
-"""property: A property that computes a list of the items the player has in
-their inventory which are consumable."""
 
 @property
 def equippable_items(player):
@@ -21,5 +19,3 @@ def equippable_items(player):
             items.append(inventory_item)
 
     return items
-"""property: A property that computes a list of the items the player has in
-their inventory which are equippable."""

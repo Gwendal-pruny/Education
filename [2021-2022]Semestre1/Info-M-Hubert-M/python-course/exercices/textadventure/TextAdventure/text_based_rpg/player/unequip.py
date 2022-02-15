@@ -1,10 +1,6 @@
 from .exceptions import NoItemEquippedInEquipLocationError
 
 def unequip(self, equip_location):
-    """
-    Execute the player unequipping an item.
-    """
-
     item_to_unequip = self.equipped_items.get(equip_location)
 
     if not item_to_unequip:

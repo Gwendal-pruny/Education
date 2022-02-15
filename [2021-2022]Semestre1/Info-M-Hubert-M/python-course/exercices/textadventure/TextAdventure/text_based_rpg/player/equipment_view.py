@@ -2,9 +2,6 @@ from .. import interface
 from .data import DATA
 
 def equipment_view(player):
-    """
-    Display a list of the items the player currently has equipped.
-    """
     if not player.equipped_items:
         interface.print_(DATA["equipment_view"]["no_items"])
         return

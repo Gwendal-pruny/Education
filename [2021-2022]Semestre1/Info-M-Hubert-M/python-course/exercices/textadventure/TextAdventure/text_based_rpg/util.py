@@ -7,9 +7,6 @@ def set_multiple_attributes(object_, **attributes):
         setattr(object_, key, value)
 
 def _generate_random_value(upper_limit):
-    """
-    Generate a random integer between 1 and the given limit inclusive.
-    """
     return random.randint(1, upper_limit)
 
 def resolve_random_condition(chances_data):
@@ -28,14 +25,18 @@ def resolve_random_condition(chances_data):
             return key
 
 def move(locations):
-    """
-    Provide an interface to the user facilitating their movement between
-    locations.
-    """
     move_locations = locations.copy()
     move_locations.append("cancel")
     return interface.get_command(move_locations, True)
 
 class GameOver(Exception):
-    """An exception that is raised when the user reaches the end of the game."""
+    interface.print_multiple_lines(
+        lines=[
+            "Proffesseur : félicitation et bienvenue dans la classe ! Tu mérite ta place.",
+            "Proffesseur : Je t'invite a t'assoire t'es cammarade vont arriver tu te présentera après",
+            "                JOUR 1 : L'ascension", 
+            "Félicitation vous êtes arriver a la fin du jour 0 et de mon jeux pour le moment ! "
+        ],
+        delay=0
+    )
     pass

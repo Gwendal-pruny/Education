@@ -1,11 +1,9 @@
-"""This modules contains the code representing the enemies in the game."""
-
 from .combat_entity import CombatEntity
 from . import attack
 
-def bear():
+def monstre():
     return CombatEntity(
-        display_name="Bear",
+        display_name="monstre",
         attacks=[
             attack.Attack(
                 name="slash",
@@ -41,7 +39,7 @@ def maeva():
                 name="slash",
                 display_name="Slash",
                 type_=attack.MELEE,
-                damage=3,
+                damage=8,
                 description_of_being_used="slashe",
                 stamina_cost=3
             ),
@@ -49,16 +47,16 @@ def maeva():
                 name="punch dash",
                 display_name="Punch dash",
                 type_=attack.MELEE,
-                damage=6,
+                damage=9,
                 description_of_being_used="Punch dash",
                 stamina_cost=4
             )
         ],
-        maximum_health=25,
+        maximum_health=40,
         maximum_stamina=20,
         strength=10,
         defence=15,
-        dexterity=6,
+        dexterity=8,
         composure=7,
         critical_hit_chance=4
     )
@@ -79,46 +77,46 @@ def forgerone():
                 name="Hammer earthquakes",
                 display_name="Hammer earthquakes",
                 type_=attack.MELEE,
-                damage=8,
+                damage=10,
                 description_of_being_used="Hammer earthquakes",
                 stamina_cost=4
             )
         ],
-        maximum_health=35,
-        maximum_stamina=30,
+        maximum_health=50,
+        maximum_stamina=20,
         strength=12,
         defence=15,
-        dexterity=3,
+        dexterity=8,
         composure=7,
         critical_hit_chance=4
     )
 
-def second_boss():
+def proffeseur():
     return CombatEntity(
-        display_name="The poor, out-of-place lion",
+        display_name="Professeur",
         attacks=[
             attack.Attack(
-                name="slash",
-                display_name="Slash",
+                name="Lancé de craie",
+                display_name="Craie",
                 type_=attack.MELEE,
-                damage=8,
-                description_of_being_used="slashe",
+                damage=10,
+                description_of_being_used="lancé de craie",
                 stamina_cost=6
             ),
             attack.Attack(
-                name="bite",
-                display_name="Bite",
+                name="Coup de règle en MÉTAL",
+                display_name="Règle",
                 type_=attack.MELEE,
-                damage=14,
-                description_of_being_used="bite",
+                damage=19,
+                description_of_being_used="coup de règle",
                 stamina_cost=8
             )
         ],
-        maximum_health=40,
+        maximum_health=100,
         maximum_stamina=50,
         strength=15,
         defence=25,
         dexterity=7,
         composure=8,
-        critical_hit_chance=4
+        critical_hit_chance=15
     )

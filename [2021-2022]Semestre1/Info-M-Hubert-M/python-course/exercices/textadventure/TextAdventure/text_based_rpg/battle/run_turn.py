@@ -2,10 +2,6 @@ from .. import interface
 from . import battle_util
 
 def run_turn(battle):
-    """
-    Execute a turn in the battle, executing both the player's turn and the
-    enemy's turn.
-    """
     if battle.first_turn:
         battle.first_turn = False
     else:

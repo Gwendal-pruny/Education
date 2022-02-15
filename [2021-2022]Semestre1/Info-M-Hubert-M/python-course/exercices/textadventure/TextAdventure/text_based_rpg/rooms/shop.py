@@ -76,7 +76,7 @@ def enter(room, player):
                     interface.print_multiple_lines(
                         lines=[
                             "Restaurateur : Bonjour ! je ne t'avais jamais vue ici avent ?",
-                            "Vous : Si"
+                            "Vous : Si",
                             "Restaurateur : Si tu veut du rab attend la fin du service !"
                         ],
                         delay=0

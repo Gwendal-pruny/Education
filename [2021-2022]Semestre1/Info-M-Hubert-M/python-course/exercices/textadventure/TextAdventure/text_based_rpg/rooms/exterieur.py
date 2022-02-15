@@ -58,7 +58,8 @@ def enter(room, player):
                 interface.print_multiple_lines(
                         lines=[
                             "Maeva : Quelle endurance ! Tu tappe comme une fillete mais qu'es que tu sait endurer les coups.. tu m'a eu d'épuisement ce n'est que partie remise",
-                            "Vous : Pierre m'as dit d'y allez mollot, je ne voulais pas vous blesser.**Et je ne pensait pas te battre aussi facilement**"
+                            "Vous : Pierre m'as dit d'y allez mollot, je ne voulais pas vous blesser.",
+                            "**Et je ne pensait pas te battre aussi facilement**",
                             "Maeva : Tien prend ca et va voir le proviseur le chanceux, la prochaine fois tu rigoleras moins."
                             ],
                         delay=0
@@ -144,8 +145,8 @@ def enter(room, player):
 
                         player.inventory.extend([
                             items.willow_bow,
-                            items.bear_hide_body,
-                            items.bear_hide_legs
+                            items.hide_body,
+                            items.hide_legs
                         ])
 
                     if player.class_ == "magicien":

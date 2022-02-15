@@ -3,9 +3,6 @@ from .data import DATA
 from .exceptions import ItemIsNotEquippableError
 
 def equip(self, item_to_equip):
-    """
-    Execute the player equipping an item.    
-    """
     if item_to_equip.type != item.EQUIPPABLE:
         raise ItemIsNotEquippableError
 

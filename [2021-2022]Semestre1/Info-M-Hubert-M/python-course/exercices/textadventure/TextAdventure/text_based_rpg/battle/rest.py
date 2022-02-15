@@ -2,9 +2,6 @@ from .. import interface
 from .data import DATA
 
 def rest(battle, entity):
-    """
-    Execute the entity resting in the battle, printing relevant messages.
-    """
     prior_stamina = entity.stamina
     prior_mana = entity.mana
 

@@ -1,4 +1,3 @@
-"""This modules contains the code representing the items in the game."""
 
 from . import item, attack
 
@@ -6,22 +5,22 @@ iron_sword = item.Item(
     display_name="Epé",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="strength", modifier=5), item.ItemEffect(stat="dexterity", modifier=-2)],
+    effects=[item.ItemEffect(stat="strength", modifier=3), item.ItemEffect(stat="dexterity", modifier=-2)],
     attacks=[
         attack.Attack(
-            name="stab",
-            display_name="Stab",
+            name="Coup d'épé",
+            display_name="Coup",
             type_=attack.MELEE,
             damage=3,
             stamina_cost=2,
-            description_of_being_used="stab"
+            description_of_being_used="coup d'épé'"
         ),
         attack.Attack(
             name="slash",
             display_name="Slash",
             type_=attack.MELEE,
             damage=5,
-            stamina_cost=4,
+            stamina_cost=6,
             description_of_being_used="slash"
         )
     ]
@@ -32,7 +31,7 @@ iron_helmet = item.Item(
     type_=item.EQUIPPABLE,
     equip_location="head",
     effects=[
-        item.ItemEffect(stat="defence", modifier=4),
+        item.ItemEffect(stat="defence", modifier=3),
         item.ItemEffect(stat="strength", modifier=1),
         item.ItemEffect(stat="dexterity", modifier=-1)
     ]
@@ -42,21 +41,21 @@ iron_breastplate = item.Item(
     display_name="Plastron",
     type_=item.EQUIPPABLE,
     equip_location="torso",
-    effects=[item.ItemEffect(stat="defence", modifier=6), item.ItemEffect(stat="strength", modifier=2), item.ItemEffect(stat="dexterity", modifier=-2)]
+    effects=[item.ItemEffect(stat="defence", modifier=4), item.ItemEffect(stat="strength", modifier=2), item.ItemEffect(stat="dexterity", modifier=-2)]
 )
 
 iron_platelegs = item.Item(
     display_name="Jambière",
     type_=item.EQUIPPABLE,
     equip_location="legs",
-    effects=[item.ItemEffect(stat="defence", modifier=5), item.ItemEffect(stat="strength", modifier=1), item.ItemEffect(stat="dexterity", modifier=-1)]
+    effects=[item.ItemEffect(stat="defence", modifier=3), item.ItemEffect(stat="strength", modifier=1), item.ItemEffect(stat="dexterity", modifier=-1)]
 )
 
 oak_bow = item.Item(
     display_name="Arc",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="archery", modifier=5), item.ItemEffect(stat="dexterity", modifier=-1)],
+    effects=[item.ItemEffect(stat="archery", modifier=4), item.ItemEffect(stat="dexterity", modifier=-1)],
     attacks=[
         attack.Attack(
             name="shoot",
@@ -73,21 +72,21 @@ cow_hide_body = item.Item(
     display_name="Camouflage haut de vache",
     type_=item.EQUIPPABLE,
     equip_location="torso",
-    effects=[item.ItemEffect(stat="defence", modifier=5), item.ItemEffect(stat="archery", modifier=3)]
+    effects=[item.ItemEffect(stat="defence", modifier=4), item.ItemEffect(stat="archery", modifier=3)]
 )
 
 cow_hide_legs = item.Item(
     display_name="Camouflage bas de vache",
     type_=item.EQUIPPABLE,
     equip_location="legs",
-    effects=[item.ItemEffect(stat="defence", modifier=4), item.ItemEffect(stat="archery", modifier=2)]
+    effects=[item.ItemEffect(stat="defence", modifier=3), item.ItemEffect(stat="archery", modifier=2)]
 )
 
 ice_staff = item.Item(
     display_name="Pistolet de glace",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="magic", modifier=5), item.ItemEffect(stat="dexterity", modifier=-2)],
+    effects=[item.ItemEffect(stat="magic", modifier=4), item.ItemEffect(stat="dexterity", modifier=-2)],
     attacks=[
         attack.Attack(
             name="icebolt",
@@ -95,7 +94,7 @@ ice_staff = item.Item(
             type_=attack.MAGIC,
             damage=3,
             mana_cost=4,
-            description_of_being_used="fire an icebolt at"
+            description_of_being_used="Balle de glace"
         )
     ]
 )
@@ -104,35 +103,35 @@ robe = item.Item(
     display_name="Robe",
     type_=item.EQUIPPABLE,
     equip_location="torso",
-    effects=[item.ItemEffect(stat="defence", modifier=4), item.ItemEffect(stat="magic", modifier=4)]
+    effects=[item.ItemEffect(stat="defence", modifier=3), item.ItemEffect(stat="magic", modifier=4)]
 )
 
 hood = item.Item(
     display_name="Hood",
     type_=item.EQUIPPABLE,
     equip_location="head",
-    effects=[item.ItemEffect(stat="defence", modifier=3), item.ItemEffect(stat="magic", modifier=3)]
+    effects=[item.ItemEffect(stat="defence", modifier=2), item.ItemEffect(stat="magic", modifier=3)]
 )
 
 steel_sword = item.Item(
     display_name="Epé magique",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="strength", modifier=10), item.ItemEffect(stat="dexterity", modifier=-4)],
+    effects=[item.ItemEffect(stat="strength", modifier=7), item.ItemEffect(stat="dexterity", modifier=-8)],
     attacks=[
         attack.Attack(
-            name="stab",
-            display_name="Stab",
+            name="Coup de l'épé de feux",
+            display_name="Coup d'épé magique",
             type_=attack.MELEE,
             damage=6,
             stamina_cost=4,
-            description_of_being_used="stab"
+            description_of_being_used="épé enflamer"
         ),
         attack.Attack(
-            name="slash",
+            name="Coup tranchant",
             display_name="Slash",
             type_=attack.MELEE,
-            damage=10,
+            damage=9,
             stamina_cost=8,
             description_of_being_used="slash"
         )
@@ -168,28 +167,28 @@ willow_bow = item.Item(
     display_name="Arc magique",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="archery", modifier=10), item.ItemEffect(stat="dexterity", modifier=-2)],
+    effects=[item.ItemEffect(stat="archery", modifier=9), item.ItemEffect(stat="dexterity", modifier=-2)],
     attacks=[
         attack.Attack(
-            name="shoot",
+            name="Flèche enflamer",
             display_name="Shoot",
             type_=attack.RANGED,
             damage=6,
             stamina_cost=2,
-            description_of_being_used="shoot"
+            description_of_being_used="flèche enflamer"
         )
     ]
 )
 
-bear_hide_body = item.Item(
-    display_name="Bear hide body",
+hide_body = item.Item(
+    display_name="hide body",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=10), item.ItemEffect(stat="archery", modifier=6)]
 )
 
-bear_hide_legs = item.Item(
-    display_name="Bear hide legs",
+hide_legs = item.Item(
+    display_name="hide legs",
     type_=item.EQUIPPABLE,
     equip_location="legs",
     effects=[item.ItemEffect(stat="defence", modifier=8), item.ItemEffect(stat="archery", modifier=4)]

@@ -1,13 +1,4 @@
-"""
-This module contains functions for generating property instances that can be
-used to with the CombatEntity class to represent entity values and their 
-corresponding maximum stats for an entity.
-"""
-
 def generate_value_property(name):
-    """
-    Generate a property instance that can be used to represent an entity value.
-    """
 
     @property
     def value_property(entity):
@@ -17,7 +8,6 @@ def generate_value_property(name):
     def value_property(entity, value):
         value_maximum = getattr(entity, "maximum_" + name)
 
-        # Prohibit the value from exceeding it's maximum or falling below zero.
         if value > value_maximum:
             value = value_maximum
 
@@ -29,10 +19,6 @@ def generate_value_property(name):
     return value_property
 
 def generate_maximum_value_stat_property(name):
-    """
-    Generate a property instance that can be used to represent an entity's
-    maximum value stat.
-    """
 
     @property
     def maximum_value_stat_property(entity):

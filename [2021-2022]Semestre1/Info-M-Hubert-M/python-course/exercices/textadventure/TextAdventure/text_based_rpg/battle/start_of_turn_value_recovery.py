@@ -2,11 +2,6 @@ from .. import interface
 from .data import DATA
 
 def start_of_turn_value_recovery(battle, entity):
-    """
-    Execute the given entity recovering a small amount of stamina and mana in
-    the battle.
-        
-    """
     prior_stamina = entity.stamina
     prior_mana = entity.mana
 

@@ -5,9 +5,6 @@ from ..combat_entity import flags as combat_entity_flags
 from .data import DATA
 
 def run_enemy_turn(battle):
-    """
-    Execute the enemy's turn in the battle.
-    """
     if not len(battle.enemy.usable_attacks):
         battle.rest(battle.enemy)
         return

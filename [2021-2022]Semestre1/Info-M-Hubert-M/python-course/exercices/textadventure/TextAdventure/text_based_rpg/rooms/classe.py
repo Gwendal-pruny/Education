@@ -10,11 +10,7 @@ def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "Proffesseur : Salut, tu a déjà finit de récolter les 3 badge ?",
-                "Vous : Non il m'en manque un..",
-                "Proffesseur : Que dirais tu de m'affronter moi pour ton 3 ème combat ?"
-                "Proffesseur : cependant défaite ou victoire ne compte plus je t'évalurait directement"
-                "Vous : d'accord ca me convient"
+                "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
                 
             ],
             delay=0
@@ -22,7 +18,11 @@ def enter(room, player):
     else:
         interface.print_multiple_lines(
             lines=[
-                "XXXXXXXXXXXXXXXXXXX",
+                "Proffesseur : Salut, tu a déjà finit de récolter les 3 badge ?",
+                "Vous : Non il m'en manque un..",
+                "Proffesseur : Que dirais tu de m'affronter moi pour ton 3 ème combat ?"
+                "Proffesseur : cependant défaite ou victoire ne compte plus je t'évalurait directement"
+                "Vous : d'accord pas de pitiée",
             ],
             delay=0
         )
@@ -35,7 +35,7 @@ def enter(room, player):
             target = interface.get_command(["proffesseur", "cancel"], True)
 
             if target == "proffesseur":
-                battle = Battle(player, enemies.second_boss())
+                battle = Battle(player, enemies.proffeseur())
                 battle.run()
 
                 player.segond_boss_defeated = True

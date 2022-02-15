@@ -2,10 +2,6 @@ from .. import interface
 from .data import DATA
 
 def discard_item_interface(player):
-    """
-    Display an interface to the user allowing them to discard items from their
-    inventory.
-    """
     if not player.inventory:
         interface.print_(DATA["inventory_view"]["no_items"])
         return
@@ -17,7 +13,7 @@ def discard_item_interface(player):
         commands.append("back")
 
         interface.print_(
-            "You must enter " + interface.generate_readable_list(commands)
+            "Tu doit entrée" + interface.generate_readable_list(commands)
         )
 
         command = interface.get_command(commands)

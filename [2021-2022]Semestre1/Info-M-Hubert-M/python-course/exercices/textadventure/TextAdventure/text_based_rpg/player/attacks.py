@@ -3,13 +3,8 @@ from .data import DATA
 @property
 def attack_names(self):
     return [attack.name for attack in self.entity.attacks]
-"""property: A property that computes a list of names of the player's
-attacks."""
 
 def get_attack_from_name(self, attack_name):
-    """
-    Get the player's attack with the given name.
-    """
     for attack in self.entity.attacks:
         if attack.name == attack_name:
             return attack
@@ -43,5 +38,3 @@ def attacks_view(self):
         lines.append("")
 
     return "\n".join(lines)
-"""property: Computes the view displaying the player's attacks to display to the
-user."""

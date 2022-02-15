@@ -15,16 +15,8 @@ QUIT = "quit"
 COMMANDS = [PLAY, HELP, QUIT]
 
 def get_command(commands, list_options=False):
-    """
-    Get input from the user and match it against a provided list of commands.
-    If the command given was not in the list, re-call the function
-    recursively until a suitable command is given.
-    """
     while True:
         if list_options == True:
-            # print_(
-            #     "You may enter: " + generate_readable_list(commands)
-            # )
             questions = [
                 inquirer.List(
                     "choice",

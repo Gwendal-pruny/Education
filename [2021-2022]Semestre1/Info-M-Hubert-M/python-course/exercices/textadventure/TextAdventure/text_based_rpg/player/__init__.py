@@ -9,8 +9,6 @@ class Player:
         self.equipped_items = {}
         self.entity = entity
         self.class_ = class_
-        self.talked_to_cordelia = False
-        self.can_progress_to_mountain = False
         self.can_progress_to_classe = False
         self.maeva_boss_defeated = False
         self.professor_boss_defeated = False

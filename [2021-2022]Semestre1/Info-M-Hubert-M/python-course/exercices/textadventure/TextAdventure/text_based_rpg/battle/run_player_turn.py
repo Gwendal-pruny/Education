@@ -1,12 +1,6 @@
 from .. import interface
 
 def run_player_turn(battle):
-    """
-    Execute the player's turn in the battle, seeking input from the player as to
-    what to do.
-    """
-    # Loop allows for the player to cancel choices, execute commands after using
-    # items.
     while True:
         battle.print_player_message(
             "commands",

@@ -4,10 +4,6 @@ from . import battle_util, commands, print_list_of_attacks, rest, \
     start_of_turn_value_recovery
 
 class Battle:
-    """
-    A class for representing battles.
-    """
-
     def __init__(self, player, enemy):
         util.set_multiple_attributes(
             self,

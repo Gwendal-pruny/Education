@@ -2,9 +2,6 @@ from .. import interface
 from .data import DATA
 
 def unequip_item_interface(player):
-    """
-    Display an interface to the user allowing them to unequip items they have equipped.
-    """
     if not player.equipped_items:
         interface.print_(DATA["equipment_view"]["no_items"])
         return
@@ -16,7 +13,7 @@ def unequip_item_interface(player):
         commands.append("back")
 
         interface.print_(
-            "You must enter " + interface.generate_readable_list(commands)
+            "Tu doit entrée" + interface.generate_readable_list(commands)
         )
 
         command = interface.get_command(commands)
