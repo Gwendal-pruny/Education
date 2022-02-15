@@ -38,7 +38,7 @@ Error 418
 
 **Suis-je un adulte ?**
 
-Non
+
 
 **Entreprise :**
 

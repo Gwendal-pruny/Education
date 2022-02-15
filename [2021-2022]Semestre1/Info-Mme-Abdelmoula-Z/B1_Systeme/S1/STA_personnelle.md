@@ -6,7 +6,7 @@
 
 ## Bonjour ! Voici mes STA, 2 ordinateurs portables, 1 pc fix.
 
-<details><summary>### Ordinateur portable étude </summary>
+<details><summary>Ordinateur portable étude </summary>
 
  
 **MARQUE :** 
@@ -60,7 +60,7 @@ Ubuntu 20.04.3 LTS
 </details>
 
 
-<details><summary>### Ordinateur portable pro</summary>
+<details><summary>Ordinateur portable pro</summary>
 
 
 **MARQUE :** DELL XPS 15
@@ -109,7 +109,7 @@ Ubuntu 20.04.3 LTS
 
 ## Mon ordinateurs principal, le plus important :
 
-<details><summary>### Ordinateur fixe</summary>
+<details><summary>Ordinateur fixe</summary>
 
 
 **MARQUE :**    - Marque : Intel, Amd, Gigabyte, Asus, Msi, HyperX, Corsair, Seagate, Be quiet, crucial, Nvidia
@@ -181,7 +181,3 @@ Windows 11 last ver
 - Katana
 
 </details>
-
-
-
-
