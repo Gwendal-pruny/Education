@@ -24,5 +24,3 @@ Quels services seront nécessaires pour déployer un site web (HTML, CSS, JS et 
 
 
 Quel est le nom de domaine choisi pour le déploiement de votre site ?
-
-.fr
