@@ -4,7 +4,7 @@ from .player import Player
 from . import attack
 
 _ENTITY_DISPLAY_NAME = "You"
-_CRITICAL_HIT_CHANCE = 4
+_CRITICAL_HIT_CHANCE = 6
 
 _WARRIOR = "guerrier"
 _ARCHER = "assassin"
@@ -27,8 +27,8 @@ _WARRIOR_ENTITY = CombatEntity(
     maximum_stamina=30,
     strength=8,
     defence=10,
-    dexterity=20,
-    composure=20,
+    dexterity=25,
+    composure=10,
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )
 
@@ -40,7 +40,7 @@ _ARCHER_ENTITY = CombatEntity(
     strength=4,
     archery=15,
     defence=6,
-    dexterity=20,
+    dexterity=25,
     composure=15,
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )
@@ -53,7 +53,7 @@ _MAGE_ENTITY = CombatEntity(
     magic=12,
     strength=2,
     defence=6,
-    dexterity=20,
+    dexterity=25,
     composure=12,
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )

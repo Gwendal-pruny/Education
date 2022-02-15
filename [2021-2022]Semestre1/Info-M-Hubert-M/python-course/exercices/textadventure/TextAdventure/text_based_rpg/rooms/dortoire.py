@@ -38,10 +38,10 @@ def enter(room, player):
                     )
 
                     player.inventory.extend([
-                        items.iron_sword,
-                        items.iron_helmet,
-                        items.iron_breastplate,
-                        items.iron_platelegs
+                        items.steel_sword,
+                        items.steel_helmet,
+                        items.steel_breastplate,
+                        items.steel_platelegs
                     ])
 
             if player.class_ == "assassin":

@@ -41,7 +41,19 @@ def enter(room, player):
                 player.segond_boss_defeated = True
                 interface.sleep(5)
                 interface.print_()
-                raise GameOver
+                interface.print_multiple_lines(
+                    lines=[
+                        "Proffesseur : félicitation et bienvenue dans la classe ! Tu mérite ta place.",
+                        "Proffesseur : Je t'invite a t'assoire t'es cammarade vont arriver tu te présentera après",
+                        "                JOUR 1 : L'ascension", 
+                        "Félicitation vous êtes arriver a la fin du jour 0 et de mon jeux pour le moment ! "
+                    ],
+                    delay=0
+                )
+                
+                
+                
+                # raise GameOver
 
 
 room = Room(

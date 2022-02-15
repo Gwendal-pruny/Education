@@ -5,23 +5,23 @@ iron_sword = item.Item(
     display_name="Epé",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="strength", modifier=3), item.ItemEffect(stat="dexterity", modifier=-2)],
+    effects=[item.ItemEffect(stat="strength", modifier=5), item.ItemEffect(stat="dexterity", modifier=-2)],
     attacks=[
         attack.Attack(
             name="Coup d'épé",
-            display_name="Coup",
+            display_name="Coup d'épé",
             type_=attack.MELEE,
             damage=3,
             stamina_cost=2,
-            description_of_being_used="coup d'épé'"
+            description_of_being_used="coup d'épé"
         ),
         attack.Attack(
-            name="slash",
-            display_name="Slash",
+            name="Super coup d'épé",
+            display_name="coup d'épé fort",
             type_=attack.MELEE,
-            damage=5,
-            stamina_cost=6,
-            description_of_being_used="slash"
+            damage=7,
+            stamina_cost=5,
+            description_of_being_used="super coup d'épé fort"
         )
     ]
 )
@@ -117,23 +117,23 @@ steel_sword = item.Item(
     display_name="Epé magique",
     type_=item.EQUIPPABLE,
     equip_location="arms",
-    effects=[item.ItemEffect(stat="strength", modifier=7), item.ItemEffect(stat="dexterity", modifier=-8)],
+    effects=[item.ItemEffect(stat="strength", modifier=9), item.ItemEffect(stat="dexterity", modifier=-8)],
     attacks=[
         attack.Attack(
             name="Coup de l'épé de feux",
             display_name="Coup d'épé magique",
             type_=attack.MELEE,
-            damage=6,
-            stamina_cost=4,
-            description_of_being_used="épé enflamer"
+            damage=15,
+            stamina_cost=10,
+            description_of_being_used="tranche avec ton épé enflamer"
         ),
         attack.Attack(
             name="Coup tranchant",
-            display_name="Slash",
+            display_name="Coup tranchant",
             type_=attack.MELEE,
-            damage=9,
-            stamina_cost=8,
-            description_of_being_used="slash"
+            damage=7,
+            stamina_cost=4,
+            description_of_being_used="tranche"
         )
     ]
 )

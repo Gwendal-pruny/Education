@@ -1,40 +1,40 @@
 {
     "attack_view": {
-    "titre": "Vos attaques",
-    "divider_character": "=",
-    "stamina_cost_template": "Coût de l’endurance : {}." ,
-    "mana_cost_template": "Coût de mana : {}."
+        "titre": "Vos attaques",
+        "divider_character": "=",
+        "stamina_cost_template": "Coût de l’endurance : {}." ,
+        "mana_cost_template": "Coût de mana : {}."
     },
     
     "messages": {
-    "item_already_equipped": "Il y a un {item} déjà équipé à cet endroit. Voulez-vous l’inégaler et équiper votre nouvel article? (o/n)" ,
-    "you_must_enter": "You must enter {}. ",
-    "item_equipped": "Vous avez équipé un {}.",
-    "item_consumed": "Vous avez utilisé un {}.",
-    "item_consumed_effect": "Vous avez restauré {amount} {value}." ,
-    "item_equipped_increased": "Votre {stat} a augmenté de {montant}. ",
-    "item_equipped_decreased": "Votre {stat} a diminué de {montant}. ",
-    "no_item_equipped_in_location": "Aucun article n’est équipé à cet endroit.",
-    "not_equippable": "Cet article n’est pas équipable.",
-    "not_consumable": "Cet élément n’est pas utilisable.",
-    "item_unequipped": "Vous avez un {}.",
-    "item_discarded": "Vous avez jeté un {}."
+        "item_already_equipped": "Il y a un {item} déjà équipé à cet endroit. Voulez-vous l’inégaler et équiper votre nouvel article? (o/n)" ,
+        "you_must_enter": "You must enter {}. ",
+        "item_equipped": "Vous avez équipé un {}.",
+        "item_consumed": "Vous avez utilisé un {}.",
+        "item_consumed_effect": "Vous avez restauré {amount} {value}." ,
+        "item_equipped_increased": "Votre {stat} a augmenté de {amount}. ",
+        "item_equipped_decreased": "Votre {stat} a diminué de {amount}. ",
+        "no_item_equipped_in_location": "Aucun article n’est équipé à cet endroit.",
+        "not_equippable": "Cet article n’est pas équipable.",
+        "not_consumable": "Cet élément n’est pas utilisable.",
+        "item_unequipped": "Vous avez un {}.",
+        "item_discarded": "Vous avez jeté un {}."
     },
     
-    "inventory_view " : {
-    "no_items": "Vous n’avez aucun article en inventaire. ",
-    "no_equippable_items": "Vous n’avez pas d’articles pouvant être équipés dans votre inventaire. ",
-    "no_consumable_items ": "Vous n’avez pas d’articles qui peuvent être utilisés dans votre inventaire. ",
-    "item_line": "{number}. {name}",
-    "increase_effect ": "Augmente votre {stat} de {montant}. ",
-    "decrease_effect": "Diminue votre {stat} de {montant}."
+    "inventory_view": {
+        "no_items": "Vous n’avez aucun article en inventaire. ",
+        "no_equippable_items": "Vous n’avez pas d’articles pouvant être équipés dans votre inventaire. ",
+        "no_consumable_items": "Vous n’avez pas d’articles qui peuvent être utilisés dans votre inventaire. ",
+        "item_line": "{number}. {name}",
+        "increase_effect": "Augmente votre {stat} de {amount}. ",
+        "decrease_effect": "Diminue votre {stat} de {amount}."
     },
     
     "equipment_view": {
-    "no_items": "Vous n’avez pas d’articles équipés.",
-    "item_line": "{location} --- {name}",
-    "increase_effect": "Augmente votre {stat} de {montant}. ",
-    "decrease_effect": "Diminue votre {stat} de {montant}."
+        "no_items": "Vous n’avez pas d’articles équipés.",
+        "item_line": "{location} --- {name}",
+        "increase_effect": "Augmente votre {stat} de {amount}. ",
+        "decrease_effect": "Diminue votre {stat} de {amount}."
     },
     
     "stats_view_line" : "{name} : {value}"

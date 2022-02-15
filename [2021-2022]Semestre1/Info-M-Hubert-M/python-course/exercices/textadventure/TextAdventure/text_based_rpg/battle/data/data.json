@@ -1,14 +1,14 @@
 {
     "prefixes": {
-        "player": "Tu",
-        "enemy": "Enemie"
+        "player": "Robert",
+        "enemy": "le méchant"
     },
 
     "templates": {
         "start_of_each_turn_stamina_regeneration": "récuperer {} de stamina.",
         "start_of_each_turn_mana_regeneration": "récuperer {}} mana.",
 
-        "commands": "TU peut {}.",
+        "commands": "peut {}.",
 
         "rested_and_restored_stamina": "a récuperer {} stamina.",
         "rested_and_restored_mana": "a récuperer {} mana.",
@@ -19,10 +19,10 @@
         "not_enough_stamina": "n’ont pas assez d’endurance pour cette attaque.",
         "not_enough_mana": "n’ont pas assez de mana pour cette attaque.",
 
-        "player_attack_evaded": "vous avez échappé à l’attaque !",
-        "enemy_attack_evaded": "a échappé à l’attaque ennemie !",
+        "player_attack_evaded": "vesqui l’attaque !",
+        "enemy_attack_evaded": "à vesqui l’attaque ennemie !",
 
-        "critical_hit": "a reçu un coup critique !",
+        "critical_hit": "fait un coup critique !",
         "damage_dealt": "{attack_description} {opponent}, Inflige {damage} dommages.",
 
         "victory": "Vous avez gagner la bataille!"

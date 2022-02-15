@@ -30,13 +30,5 @@ def move(locations):
     return interface.get_command(move_locations, True)
 
 class GameOver(Exception):
-    interface.print_multiple_lines(
-        lines=[
-            "Proffesseur : félicitation et bienvenue dans la classe ! Tu mérite ta place.",
-            "Proffesseur : Je t'invite a t'assoire t'es cammarade vont arriver tu te présentera après",
-            "                JOUR 1 : L'ascension", 
-            "Félicitation vous êtes arriver a la fin du jour 0 et de mon jeux pour le moment ! "
-        ],
-        delay=0
-    )
+    
     pass

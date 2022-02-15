@@ -26,7 +26,7 @@ def monstre():
         maximum_stamina=15,
         strength=8,
         defence=10,
-        dexterity=4,
+        dexterity=20,
         composure=5,
         critical_hit_chance=2
     )
@@ -36,29 +36,29 @@ def maeva():
         display_name="maeva",
         attacks=[
             attack.Attack(
-                name="slash",
-                display_name="Slash",
+                name="Frappe",
+                display_name="Frappe",
                 type_=attack.MELEE,
-                damage=8,
-                description_of_being_used="slashe",
+                damage=5,
+                description_of_being_used="frappe",
                 stamina_cost=3
             ),
             attack.Attack(
-                name="punch dash",
-                display_name="Punch dash",
+                name="Finishim",
+                display_name="finishim",
                 type_=attack.MELEE,
-                damage=9,
-                description_of_being_used="Punch dash",
-                stamina_cost=4
+                damage=12,
+                description_of_being_used="FINISHIM",
+                stamina_cost=8
             )
         ],
         maximum_health=40,
         maximum_stamina=20,
-        strength=10,
-        defence=15,
-        dexterity=8,
-        composure=7,
-        critical_hit_chance=4
+        strength=20,
+        defence=20,
+        dexterity=19,
+        composure=10,
+        critical_hit_chance=3
     )
     
 def forgerone():
@@ -66,27 +66,27 @@ def forgerone():
         display_name="forgerone",
         attacks=[
             attack.Attack(
-                name="Coup de marteau",
-                display_name="Hammer",
+                name="Forgage d'esprit",
+                display_name="Hammer spirit inpulse",
                 type_=attack.MELEE,
-                damage=5,
-                description_of_being_used="Hammer",
+                damage=10,
+                description_of_being_used="hammer spirit inpulse",
                 stamina_cost=3
             ),
             attack.Attack(
                 name="Hammer earthquakes",
                 display_name="Hammer earthquakes",
                 type_=attack.MELEE,
-                damage=10,
+                damage=20,
                 description_of_being_used="Hammer earthquakes",
                 stamina_cost=4
             )
         ],
-        maximum_health=50,
-        maximum_stamina=20,
-        strength=12,
-        defence=15,
-        dexterity=8,
+        maximum_health=70,
+        maximum_stamina=30,
+        strength=25,
+        defence=25,
+        dexterity=0,
         composure=7,
         critical_hit_chance=4
     )
@@ -99,24 +99,24 @@ def proffeseur():
                 name="Lancé de craie",
                 display_name="Craie",
                 type_=attack.MELEE,
-                damage=10,
+                damage=15,
                 description_of_being_used="lancé de craie",
-                stamina_cost=6
+                stamina_cost=10
             ),
             attack.Attack(
                 name="Coup de règle en MÉTAL",
                 display_name="Règle",
                 type_=attack.MELEE,
-                damage=19,
+                damage=20,
                 description_of_being_used="coup de règle",
-                stamina_cost=8
+                stamina_cost=15
             )
         ],
-        maximum_health=100,
-        maximum_stamina=50,
-        strength=15,
+        maximum_health=150,
+        maximum_stamina=25,
+        strength=30,
         defence=25,
-        dexterity=7,
+        dexterity=0,
         composure=8,
-        critical_hit_chance=15
+        critical_hit_chance=2
     )
