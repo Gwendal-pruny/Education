@@ -18,7 +18,7 @@ def monstre():
                 display_name="Bite",
                 type_=attack.MELEE,
                 damage=4,
-                description_of_being_used="bite",
+                description_of_being_used="mord",
                 stamina_cost=6
             )
         ],
@@ -56,7 +56,7 @@ def maeva():
         maximum_stamina=20,
         strength=20,
         defence=20,
-        dexterity=19,
+        dexterity=9,
         composure=10,
         critical_hit_chance=3
     )
@@ -86,8 +86,8 @@ def forgerone():
         maximum_stamina=30,
         strength=25,
         defence=25,
-        dexterity=0,
-        composure=7,
+        dexterity=5,
+        composure=9,
         critical_hit_chance=4
     )
 
@@ -100,23 +100,23 @@ def proffeseur():
                 display_name="Craie",
                 type_=attack.MELEE,
                 damage=15,
-                description_of_being_used="lancé de craie",
+                description_of_being_used="lance des craies sur",
                 stamina_cost=10
             ),
             attack.Attack(
                 name="Coup de règle en MÉTAL",
                 display_name="Règle",
                 type_=attack.MELEE,
-                damage=20,
-                description_of_being_used="coup de règle",
+                damage=25,
+                description_of_being_used="donne un coup de règle à",
                 stamina_cost=15
             )
         ],
         maximum_health=150,
         maximum_stamina=25,
         strength=30,
-        defence=25,
-        dexterity=0,
+        defence=15,
+        dexterity=4,
         composure=8,
         critical_hit_chance=2
     )

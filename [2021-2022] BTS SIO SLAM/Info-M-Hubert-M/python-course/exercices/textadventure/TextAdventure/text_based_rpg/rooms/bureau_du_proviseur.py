@@ -7,12 +7,20 @@ map_ = """Tu est dans le bureau du proviseur"""
 
 def enter(room, player):
     if room.has_been_entered_before:
-        interface.print_multiple_lines(
-            lines=[
-                "Le proviseur a l'air occuper..."
-            ],
-            delay=0
-        )
+        if player.forgerone_boss_defeated:
+            interface.print_multiple_lines(
+                lines=[
+                    "Le proviseur semble regarder les combat depuis la son siège.."
+                ],
+                delay=0
+            )
+        else:
+            interface.print_multiple_lines(
+                lines=[
+                    "Le proviseur a l'air occuper..."
+                ],
+                delay=0
+            )
     else:
         room.has_been_entered_before = True
         interface.print_multiple_lines(
@@ -88,7 +96,8 @@ def enter(room, player):
                 if npc == "proviseur":
                     interface.print_multiple_lines(
                         lines=[
-                            "Bien jouer pour ton deuxième combat, mais merci de pas venir me déranger aprs chaque combat que tu gagne, je tien a mon temps libre"
+                            "Bien jouer pour ton deuxième combat, mais merci de pas venir me déranger après chaque combat que tu gagne",
+                            "je tien a mon temps libre",
                             ],
                         delay=0
                     )

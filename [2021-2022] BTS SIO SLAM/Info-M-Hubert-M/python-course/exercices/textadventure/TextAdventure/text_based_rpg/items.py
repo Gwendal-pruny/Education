@@ -131,7 +131,7 @@ steel_sword = item.Item(
             name="Coup tranchant",
             display_name="Coup tranchant",
             type_=attack.MELEE,
-            damage=7,
+            damage=8,
             stamina_cost=4,
             description_of_being_used="tranche"
         )
@@ -181,14 +181,14 @@ willow_bow = item.Item(
 )
 
 hide_body = item.Item(
-    display_name="hide body",
+    display_name="Haut combinaison de combat",
     type_=item.EQUIPPABLE,
     equip_location="torso",
     effects=[item.ItemEffect(stat="defence", modifier=10), item.ItemEffect(stat="archery", modifier=6)]
 )
 
 hide_legs = item.Item(
-    display_name="hide legs",
+    display_name="Bas de combinaison de combat",
     type_=item.EQUIPPABLE,
     equip_location="legs",
     effects=[item.ItemEffect(stat="defence", modifier=8), item.ItemEffect(stat="archery", modifier=4)]

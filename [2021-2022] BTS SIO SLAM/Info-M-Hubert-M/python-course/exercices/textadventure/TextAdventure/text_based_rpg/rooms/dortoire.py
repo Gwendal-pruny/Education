@@ -9,9 +9,9 @@ def enter(room, player):
     if room.has_been_entered_before:
         interface.print_multiple_lines(
             lines=[
-                "Vous tomber sur la forgeronne d'arme de la dernière fois.",
-                "Elle ne semble plus proposer d'équipement.",
-                "Et les dortoire semble toujours fermer"
+                "Vous tomber sur la forgeronne d'arme de la dernière fois",
+                "Elle ne semble plus proposer d'équipement",
+                "Les dortoire semble toujours fermer",
             ],
             delay=0
         )

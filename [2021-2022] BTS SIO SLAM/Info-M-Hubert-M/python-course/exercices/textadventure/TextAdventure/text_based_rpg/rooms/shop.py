@@ -73,14 +73,38 @@ def enter(room, player):
                     player.talked_to_restaurateur = True
                     
                 elif player.talked_to_restaurateur:
-                    interface.print_multiple_lines(
+                    if player.forgerone_boss_defeated:
+                        interface.print_multiple_lines(
+                        lines=[
+                            "Restaurateur : Salut toi ton combat était vraiment inmprésionnant !",
+                            "Vous : Merci beaucoup ca ma creuser l'appétie !",
+                            "Restaurateur : Allez tien de quoi de rasassier, et bon courage contre ton dernière adverse."
+                        ],
+                        delay=0
+                    )
+                        for _ in range(3):
+                            player.inventory.append(items.health_potion())
+
+                        if player.class_ in ["guerrier", "assassin"]:
+                            interface.print_("Le Ramen a été ajouter a votre inventaire")
+
+                            for _ in range(3):
+                                player.inventory.append(items.stamina_potion())
+                        else:
+                            interface.print_("Le RedBull a été ajouter a votre inventaire")
+
+                            for _ in range(3):
+                                player.inventory.append(items.mana_potion())
+                            interface.print_("Le saké a été ajouter a votre inventaire")
+                    else:
+                        interface.print_multiple_lines(
                         lines=[
                             "Restaurateur : Bonjour ! je ne t'avais jamais vue ici avent ?",
                             "Vous : Si",
                             "Restaurateur : Si tu veut du rab attend la fin du service !"
                         ],
                         delay=0
-                    )
+                        )
 
         if command == "move":
             place_to_move = move(["Sortir"])

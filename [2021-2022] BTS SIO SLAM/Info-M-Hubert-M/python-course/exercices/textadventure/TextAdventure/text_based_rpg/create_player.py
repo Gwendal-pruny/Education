@@ -12,7 +12,7 @@ _MAGE = "magicien"
 _CLASSES = [_WARRIOR, _ARCHER, _MAGE]
 
 _PUNCH_ATTACK = attack.Attack(
-    name="punch",
+    name="Coup de poing",
     display_name="Punch",
     type_=attack.MELEE,
     damage=1,
@@ -28,7 +28,7 @@ _WARRIOR_ENTITY = CombatEntity(
     strength=8,
     defence=10,
     dexterity=25,
-    composure=10,
+    composure=13,
     critical_hit_chance=_CRITICAL_HIT_CHANCE
 )
 

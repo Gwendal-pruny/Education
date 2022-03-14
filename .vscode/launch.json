@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch saveFlowerData",
+            "request": "launch",
+            "mainClass": "saveFlowerData",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Voyageur",
+            "request": "launch",
+            "mainClass": "Voyageur",
+            "projectName": "EsieeIT_77a7596c"
+        },
+        {
+            "type": "java",
             "name": "Launch Etape1",
             "request": "launch",
             "mainClass": "Etape1",

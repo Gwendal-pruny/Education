@@ -90,12 +90,13 @@ def enter(room, player):
                     interface.print_()
                     
                 if player.talked_to_proviseur:
-                    interface.print_multiple_lines(
-                        lines=[
-                            "Evelyn : Il t'attendent tousse aux millieu de la cours",
-                            ],
-                        delay=0
-                    )
+                    if player.maeva_boss_defeated == False :
+                        interface.print_multiple_lines(
+                            lines=[
+                                "Evelyn : Il t'attendent tousse aux millieu de la cours",
+                                ],
+                            delay=0
+                        )
                     interface.print_()
                 else:
                     interface.print_multiple_lines(

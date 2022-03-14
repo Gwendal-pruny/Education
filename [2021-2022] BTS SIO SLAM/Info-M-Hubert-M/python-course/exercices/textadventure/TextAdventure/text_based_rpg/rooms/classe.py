@@ -20,8 +20,8 @@ def enter(room, player):
             lines=[
                 "Proffesseur : Salut, tu a déjà finit de récolter les 3 badge ?",
                 "Vous : Non il m'en manque un..",
-                "Proffesseur : Que dirais tu de m'affronter moi pour ton 3 ème combat ?"
-                "Proffesseur : cependant défaite ou victoire ne compte plus je t'évalurait directement"
+                "Proffesseur : Que dirais tu de m'affronter moi pour ton 3 ème combat ?",
+                "Proffesseur : cependant défaite ou victoire ne compte plus je t'évalurait directement",
                 "Vous : d'accord pas de pitiée",
             ],
             delay=0
@@ -50,10 +50,7 @@ def enter(room, player):
                     ],
                     delay=0
                 )
-                
-                
-                
-                # raise GameOver
+                raise GameOver
 
 
 room = Room(
