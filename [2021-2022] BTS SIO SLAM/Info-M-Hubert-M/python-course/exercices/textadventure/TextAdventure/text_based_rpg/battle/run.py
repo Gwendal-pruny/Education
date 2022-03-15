@@ -11,7 +11,7 @@ def run(battle):
             raise PlayerHasDiedError
 
         if battle.enemy.health == 0:
-            battle.print_player_message("victory")
+            battle.print_player_message("Victorie !")
 
             battle.player.entity.stamina = battle.player.entity.maximum_stamina
             battle.player.entity.mana = battle.player.entity.maximum_mana

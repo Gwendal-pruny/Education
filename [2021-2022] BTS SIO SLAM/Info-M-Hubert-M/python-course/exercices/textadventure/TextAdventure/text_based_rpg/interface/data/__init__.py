@@ -1,5 +1,5 @@
 """
-This module is an interface to the package's data.json file.
+interface json
 """
 
 import os

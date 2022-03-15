@@ -1,7 +1,3 @@
-"""
-This module is an interface to the package's data.json file.
-"""
-
 import os
 import json
 
@@ -12,14 +8,8 @@ DATA = json.load(
         ) + "/data.json"
     )
 )
-"""dict: The parsed data.json file."""
 
 def _make_messages():
-    """
-    Create a dictionary of the message templates, prefixed for both the play and
-    the enemy.
-
-    """
     messages = {}
 
     for entity_name, entity_prefix in DATA["prefixes"].items():

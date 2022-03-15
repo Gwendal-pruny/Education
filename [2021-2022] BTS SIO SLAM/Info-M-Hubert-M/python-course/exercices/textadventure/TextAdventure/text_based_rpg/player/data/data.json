@@ -7,7 +7,7 @@
     },
     
     "messages": {
-        "item_already_equipped": "Il y a un {item} déjà équipé à cet endroit. Voulez-vous l’inégaler et équiper votre nouvel article? (o/n)" ,
+        "item_already_equipped": "Il y a un {item} déjà équipé à cet endroit. Voulez-vous l'échanger et équiper votre nouvel article? (y/n)" ,
         "you_must_enter": "You must enter {}. ",
         "item_equipped": "Vous avez équipé un {}.",
         "item_consumed": "Vous avez utilisé un {}.",
@@ -38,4 +38,4 @@
     },
     
     "stats_view_line" : "{name} : {value}"
-    }
+}

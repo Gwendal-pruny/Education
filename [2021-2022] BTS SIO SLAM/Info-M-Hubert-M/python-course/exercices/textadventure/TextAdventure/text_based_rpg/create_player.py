@@ -13,7 +13,7 @@ _CLASSES = [_WARRIOR, _ARCHER, _MAGE]
 
 _PUNCH_ATTACK = attack.Attack(
     name="Coup de poing",
-    display_name="Punch",
+    display_name="Coup de poing",
     type_=attack.MELEE,
     damage=1,
     stamina_cost=2,

@@ -24,7 +24,7 @@ def start_game():
                     "",
                     "",
                     "",
-                    "T'es MORT, t'es nul",
+                    "Your are dead.... it's not impossible to win.. u r jst bad",
                     "",
                     "",
                     "",
