@@ -2,7 +2,9 @@
 
 ![Logo](logo.png)
 
-## ⚙️ Fonctionnement
+![Icons](assets/icons.svg)
+
+## 🖥️ Présentation
 
 Pour être le plus efficace possible, ce cours essaye de mélanger au mieux un apprentissage solide des fondamentaux tout en laissant entrevoir la puissance du langage à travers ses notions un peu plus complexes.
 
@@ -16,21 +18,6 @@ Les notions apprises sont réparties en 5 catégories :
 
 Les balises `【💡 Spoiler】` que l'on peut trouver au sein des cours servent souvent à vous prévenir que l'explication précédente a été volontairement vulgarisée et que d'autres détails viendront plus tard.
 
-## 📚 Exercices
-
-Lorsque vous aurez intégralement lu un chapitre de cours, il vous faudra réaliser l'exercice associé afin d'appliquer les nouvelles notions qui ont été apprises :
-
-* **Lisez bien l'énoncé** écrit dans le fichier `README.md`.
-* **Copiez les fichiers originaux de l'exercice** en dehors de ce répertoire, pour qu'il ne soit jamais écrasé par une quelconque opération Git en cas de mise à jour du fichier original.
-* **Réalisez l'exercice** le plus vite possible pour ne pas accumuler de retard. Lorsque vous cherchez comment réaliser quelque chose, ayez toujours le réflexe de consulter d'abord le cours lié à l'exercice, puis ensuite cherchez sur internet. Si vous bloquez trop longtemps sur quelque chose, vous pouvez me contacter.
-* **Vérifiez les conditions de réussite** de l'exercice écrits sur son `README.md` avant de me l'envoyer.
-* **Envoyez-moi votre exercice terminé par e-mail** à `michael.hubert@edu.itescia.fr`. Vous pouvez également uploader votre exercice en créant un dépôt GitHub personnel **PRIVÉ** puis en me donnant les droits d'accès dessus.
-* Une fois l'exercice corrigé par mes soins, vous recevrez aurez un score de réussite selon différents critères : la **syntaxe** de votre code, la réponse aux **objectifs** de l'énoncé, et la **qualité** de fonctionnement du code (présence de bugs, gestion de cas possibles, etc).
-
-Votre degré d'investissement et votre progression observée à travers les 4 exercices déterminera une note qui apparaîtra sur le bulletin scolaire. L'important n'est donc pas de juste réaliser à tout prix les exercices, mais d'apprendre la logique d'un bon développeur à force de résoudre de nombreux problèmes.
-
-L'entraide entre étudiants est encouragée lorsqu'elle consiste en une réflexion à plusieurs ou à un partage de connaissances, pas à un simple recopiage de code.
-
 ## ⏩ Chapitres
 
 * [Introduction théorique à la programmation](cours/intro.ipynb)
@@ -39,82 +26,127 @@ L'entraide entre étudiants est encouragée lorsqu'elle consiste en une réflexi
   * Les variables
   * Les blocs logiques
   * Les fonctions
-* [Introduction 1](cours/introduction1.ipynb)
-  * ⚙️ Lexique
-  * 🖊️ L'indentation
-  * 🖊️ Écrire un commentaire
-  * 🖊️ Assigner une variable
-  * 🖊️ Les types de valeurs
-  * 🖊️ Opérateurs arithmétiques
-  * 🔨 Fonctions built-in - `print()`
-  * 🖊️ ️Lire une liste ou un tuple
-  * 🖊️ ️Lire un dictionnaire
-  * 🖊️ Concaténation
-  * 🔨 Fonctions built-in - Conversions de types
-  * 🔨 Fonctions built-in - `input()`
-  * 🖊️ Formatage de chaînes de caractères
-  * ️🖊️ Expressions booléennes
-  * 🖊️ ️Les structures conditionnelles - `if` / `elif` / `else`
-  * 🖊️ La boucle `for`
-  * 🔨 Fonctions built-in - `range()`
-  * 🔨 Fonctions built-in - `enumerate()`
-  * ⚙️ Créer et utiliser un script Python
-  * _Exercice_ : [Billetterie](exercices/billetterie/)
-* [Introduction 2](cours/introduction2.ipynb)
-  * 🖊️ Les constantes
-  * 🔨 Manipuler une chaîne de caractères
-  * 🔨 ️Manipuler une liste
-  * 🔨 ️Manipuler un dictionnaire
-  * 🔨 Fonctions built-in - `len()`
-  * ️🖊️ ️La boucle while
-  * 🖊️ ️Variables mutables et immutables
-  * 🔨 ️Lire et manipuler un set
-  * ️🖊️ Les fonctions
-  * ⚙️ Le passage des variables
-  * ⚙️ La portée des variables
-  * 🔨 Fonctions built-in - `dir()`
-  * 🖊️ L'opérateur ternaire conditionnel
-  * 🖊️ Le point-virgule
-  * ⚙️ Débugger avec PDB
-  * ⚙️ Présence dans un script
-  * _Exercice_ : [Text Adventure](exercices/textadventure/)
-* [Intermédiaire 1](cours/intermediaire1.ipynb)
-  * 🖊️ Les `*args` et `**kwargs`
-  * 🖊️ Le déballage de valeurs
-  * 🖊️ Retourner plusieurs valeurs
-  * 🖊️ Les classes, attributs et méthodes
-  * 🖊️ L'héritage
-  * 🖊️ La capture des exceptions
-  * 🔨 Fonctions built-in - `open()`
-  * 🖊️ Le bloc `with`
-  * 🖊️ L'import de modules
-  * 🧰 Bibliothèque standard - `random`
-  * 🧰 Bibliothèque standard - `argparse`
-  * _Exercice_ : [Journal](exercices/journal/)
-* [Intermédiaire 2](cours/intermediaire2.ipynb)
-  * 🖊️ Les décorateurs
-  * 🖊️ La levée d'exceptions
-  * 🧰 Bibliothèque standard - `os.path`
-  * 🧰 Bibliothèque standard - `datetime`
-  * 🧰 Bibliothèque standard - `json`
-  * ⚙️ Les environnements virtuels
-  * ⚙️ Installer un paquet avec PIP
-  * 📚 Bibliothèque tierce - Pillow
-  * _Exercice_ : [Rugby](exercices/rugby/)
-* Avancé 1
-  * 🖊️ Les expressions régulières
-  * 🖊️ La compréhension de listes
-  * 🖊️ La compréhension de dictionnaires
-  * 🖊️ Unpacking avec * et **
-  * ⚙️ Variables d'environnement
-* Avancé 2
-  * 🖊️ Les fonctions anonymes
-  * 🖊️ Le type hinting
-  * 🖊️ Assignment expression
-  * 🖊️ Dataclass
-  * 🖊️ Coroutines et async/await
+
+![Basic 1](assets/header_basic-1.svg)
+[Basic 1](cours/basic-1.ipynb) (ex "Introduction 1")
+
+* ⚙️ Lexique
+* 🖊️ L'indentation
+* 🖊️ Écrire un commentaire
+* 🖊️ Assigner une variable
+* 🖊️ Les types de valeurs
+* 🖊️ Opérateurs arithmétiques
+* 🔨 Fonctions built-in - `print()`
+* 🖊️ ️Lire une liste/tuple
+* 🖊️ ️Lire un dictionnaire
+* 🖊️ Concaténation
+* 🔨 Fonctions built-in - Conversions de types
+* ️🖊️ Expressions booléennes
+* 🖊️ ️Les structures conditionnelles - `if` / `elif` / `else`
+* 🖊️ La boucle `for`
+* ⚙️ Créer et utiliser un script Python
+* _Exercice_ : [????](exercices/???/)
+
+![Basic 2](assets/header_basic-2.svg)
+[Basic 2](cours/basic-2.ipynb) (ex "Introduction 2")
+
+* ⚙️ La portée des variables (1)
+* 🔨 Manipuler une chaîne de caractères
+* 🔨 ️Manipuler une liste
+* 🔨 ️Manipuler un dictionnaire
+* 🖊️ Formatage de chaînes de caractères
+* 🔨 Fonctions built-in - `input()`
+* 🔨 Fonctions built-in - `range()`
+* 🔨 Fonctions built-in - `enumerate()`
+* 🔨 Fonctions built-in - `len()`
+* ️🖊️ ️La boucle while
+* _Exercice_ : [Billetterie](exercices/billetterie/)
+
+![Advanced 1](assets/header_advanced-1.svg)
+[Advanced 1](cours/advanced-1.ipynb) (ex "Introduction 2")
+
+* 🖊️ ️Variables mutables et immutables
+* ️🖊️ Les fonctions
+* ⚙️ Le passage des variables
+* ⚙️ La portée des variables (2)
+* 🔨 Fonctions built-in - `dir()`
+* 🖊️ L'opérateur ternaire conditionnel
+* 🖊️ Le point-virgule
+* 🖊️ Les constantes
+* ⚙️ Déboguer avec PDB
+* ⚙️ Vérifier la présence dans un script
+* _Exercice_ : [Text Adventure](exercices/textadventure/)
+
+![Advanced 2](assets/header_advanced-2.svg)
+[Advanced 2](cours/advanced-2.ipynb) (ex "Intermédiaire 1")
+
+* 🖊️ Les `*args` et `**kwargs`
+* 🖊️ Le déballage de valeurs
+* 🖊️ Retourner plusieurs valeurs
+* 🖊️ Les classes, attributs et méthodes
+* 🖊️ L'héritage
+* 🖊️ La capture des exceptions
+* 🔨 Fonctions built-in - `open()`
+* 🖊️ Le bloc `with`
+* 🖊️ L'import de modules
+* 🧰 Bibliothèque standard - `random`
+* 🧰 Bibliothèque standard - `argparse`
+* _Exercice_ : [Journal](exercices/journal/)
+
+![Advanced 3](assets/header_advanced-3.svg)
+[Advanced 3](cours/advanced-3.ipynb) (ex "Intermédiaire 2")
+
+* 🖊️ La levée d'exceptions avec `raise`
+* 🖊️ La levée d'exceptions de debug avec `assert`
+* 🖊️ Set et frozenset
+* 🔨 ️Lire et manipuler un set
+* 🧰 Bibliothèque standard - `os.path`
+* 🧰 Bibliothèque standard - `datetime`
+* 🧰 Bibliothèque standard - `json`
+* ⚙️ Installer un paquet avec PIP
+* ⚙️ Les environnements virtuels
+* 📚 Bibliothèque tierce - Pillow
+* _Exercice_ : [Rugby](exercices/rugby/)
+
+![Master 1](assets/header_master-1.svg)
+[Master 1](cours/master-1.ipynb) (ex "Avancé 1")
+
+* 🖊️ Les décorateurs
+* 🖊️ Les expressions régulières
+* 🖊️ La compréhension de listes
+* 🖊️ La compréhension de dictionnaires
+* 🖊️ Unpacking avec * et **
+* ⚙️ Variables d'environnement
+
+![Master 2](assets/header_master-2.svg)
+[Master 2](cours/master-2.ipynb) (ex "Avancé 2")
+
+* 🖊️ Les fonctions anonymes
+* 🖊️ Assignment expression
+* 🖊️ Dataclass
+* 🖊️ Coroutines et async/await
+* 🖊️ Le type hinting
 
 En plus des projets, vous pouvez retrouver les cours et entraînements réalisés en classe dans le dossier [livecoding](livecoding/).
+
+## 📚 Exercices
+
+Lorsque vous aurez intégralement lu un chapitre de cours, il vous faudra réaliser l'exercice associé afin d'appliquer les nouvelles notions qui ont été apprises :
+
+* **Lisez bien l'énoncé** écrit dans le fichier `README.md`.
+* **Copiez les fichiers originaux de l'exercice** en dehors de ce répertoire, pour qu'il ne soit jamais écrasé par une quelconque opération Git en cas de mise à jour du fichier original.
+* **Réalisez l'exercice** le plus vite possible pour ne pas accumuler de retard. Lorsque vous cherchez comment réaliser quelque chose, ayez toujours le réflexe de consulter d'abord le cours lié à l'exercice, puis ensuite cherchez sur internet. Si vous bloquez trop longtemps sur quelque chose, vous pouvez me contacter.
+* **Vérifiez les conditions de réussite** de l'exercice écrits sur son `README.md` avant de me l'envoyer.
+
+Même si vous l'avez terminé en avance, envoyez votre exercice juste avant la date imposée au cas où vous voudriez revenir dessus. Lorsque vous êtes prêt :
+
+* Assurez-vous que **votre exercice s'exécute** correctement à partir d'un terminal.
+* **Envoyez votre exercice terminé par e-mail** à `michael.hubert@edu.itescia.fr`. Vous pouvez également uploader votre exercice en créant un dépôt GitHub personnel **PRIVÉ** puis en me donnant les droits d'accès dessus.
+* Une fois l'exercice corrigé par mes soins, vous recevrez aurez un score de réussite selon différents critères : la **syntaxe** de votre code, la réponse aux **objectifs** de l'énoncé, et la **qualité** de fonctionnement du code (présence de bugs, gestion de cas possibles, etc).
+
+Votre degré d'investissement et votre progression observée à travers les 4 exercices déterminera une note qui apparaîtra sur le bulletin scolaire. L'important n'est donc pas de juste réaliser à tout prix les exercices, mais d'apprendre la logique d'un bon développeur à force de résoudre de nombreux problèmes.
+
+L'entraide entre étudiants est encouragée lorsqu'elle consiste en une réflexion à plusieurs ou à un partage de connaissances, pas à un simple recopiage de code.
 
 ## 🔍 Approfondir
 
