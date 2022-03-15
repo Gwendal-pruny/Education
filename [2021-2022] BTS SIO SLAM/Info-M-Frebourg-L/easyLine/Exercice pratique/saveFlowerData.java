@@ -1,10 +1,5 @@
 import java.util.Scanner;
 
-// ! COULEUR 1
-// ! COULEUR 2
-// ! TAILLE
-// ! NOM
-
 public class saveFlowerData {
     public String primaryColor;
     public String secondaryColor;
@@ -54,43 +49,53 @@ public class saveFlowerData {
     }
     
     private static void newFlower() {
-        Scanner sc1=new Scanner(System.in);
-        saveFlowerData newFlowerData = new saveFlowerData();
-        newFlowerData.toString();
+        Scanner sc=new Scanner(System.in);
 
+        
+        // ? Get flower data
+        saveFlowerData newFlowerData = new saveFlowerData();
+        System.out.println(newFlowerData.toString());
+
+
+        // ? Change flower height
         System.out.println("\nSouhaitez-vous modifier la propriété 'taille' de la fleur ? (0 = oui /1 = non): ");
-        int YesOrNo=sc1.nextInt();
+        int YesOrNo=sc.nextInt();
         while(YesOrNo == 0){
             newFlowerData.parramettersModification();
-            System.out.println("\nSouhaitez-vous continuer de modifier la propriété 'taille' de la fleur ? (oui / non): ");
-            YesOrNo=sc1.nextInt();
+            System.out.println(newFlowerData.toString());
+            System.out.println("\nSouhaitez-vous continuer de modifier la propriété 'taille' de la fleur ? (0 = oui /1 = non): ");
+            YesOrNo=sc.nextInt();
         }
 
-        System.out.println("\nNouvelle fleurs ajouter a la plantation");
+
+        // ? 
+        System.out.println("\nNouvelle fleurs ajouté a la plantation");
         newFlowerData.toString();
         planting[] flower = new planting[10]; 
-		flower[0] = new planting(newFlowerData.toString());
+		flower[0] = new planting(newFlowerData);
+        System.out.println(newFlowerData.toString());
     }
 
 
     @Override
     public String toString() {
-        return "\nCouleur principale : "+primaryColor+"\n Couleur secondaire : "+this.secondaryColor+"\n Hauteur : "+this.height+"\n Nom : "+this.name+" ";
+        return "\nCouleur principale : "+primaryColor+"\nCouleur secondaire : "+this.secondaryColor+"\nHauteur : "+this.height+"\nNom : "+this.name+" ";
     }
 
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
 
-        System.out.println("\nSouhaitez-vous allez a votre plantation ( oui ) \n ou rajoutez une fleurs a votre plantation ? ( non ): ");
-        String YesOrNo=sc.nextLine();
-        while(YesOrNo != "oui"){
-            System.out.println("En cours d'ajout d'une nouvelle fleurs a la plantaiton ! ");
+        System.out.println("\nSouhaitez-vous allez a votre plantation ( 1 =  oui )\nou rajoutez une fleurs a votre plantation ? ( 0 = non ): ");
+        int YesOrNo=sc.nextInt();
+        System.out.println(YesOrNo);
+        while(YesOrNo == 0){
+            System.out.println("En cours d'ajout d'une nouvelle fleurs a la plantation ! ");
             newFlower();
             System.out.println("\nSouhaitez-vous allez a votre plantation ( oui ) \n ou rajoutez une fleurs a votre plantation ? ( non ):");
-            YesOrNo=sc.nextLine();
-
-
+            YesOrNo=sc.nextInt();
         }
+        System.out.println("BIEN JOUER ");
+
     }
 }
 
