@@ -1,8 +1,8 @@
-import java.util;
-public class Voyageur {
+import java.util.Scanner;
+public class Etape2 {
     private String nom;
     private int age;
-    public Voyageur(String n, int age){
+    public Etape2(String n, int age){
         Scanner sc=new Scanner(System.in);
         while(n.length()<2){
             System.out.println("ressaisir nom");
@@ -43,10 +43,10 @@ public class Voyageur {
              age=sc.nextInt();
         }
 
-        Voyageur monVoyageur = new Voyageur(nom,age);
+        Etape2 monVoyageur = new Etape2(nom,age);
         monVoyageur.afficher();
 
-        Voyageur monVoyageur2 = new Voyageur();
+        Etape2 monVoyageur2 = new Etape2();
         monVoyageur2.nom="erambert";
         monVoyageur2.age=18;
         monVoyageur2.afficher();

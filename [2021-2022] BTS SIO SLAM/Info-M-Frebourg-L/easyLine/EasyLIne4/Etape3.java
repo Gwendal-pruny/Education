@@ -1,11 +1,9 @@
 import java.util.Scanner;
-public class Voyageur {
+public class Etape3 {
     private String nom;
     private int age;
-    public Voyageur(){
-    }
 
-    public Voyageur (String n, int age){
+    public Etape3 (String n, int age){
         Scanner sc=new Scanner(System.in);
         while(n.length()<2){
             System.out.println("ressaisir nom");
@@ -43,7 +41,7 @@ public class Voyageur {
         } 
         this.age=ageV;
     }
-public void afficher(){
+    public void afficher(){
         System.out.println(this.nom + " "+this.age);
      }
     public String getNom(){
@@ -54,7 +52,7 @@ public void afficher(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir votre age :");
         int age = sc.nextInt();
-        /while(age<0) {
+        while(age<0) {
             System.out.println("Votre nombre entré est négatif, veuillez rentrez un âge positif :");
             age = sc.nextInt();
 
@@ -80,13 +78,13 @@ public void afficher(){
         else if (age>60);
             System.out.println("Vous êtes un senior");
         }
-        Voyageur monVoyageur = new Voyageur(nom,age);
-        monVoyageur.afficher();
 
+        Etape3 monVoyageur = new Etape3(nom,age);
+        monVoyageur.afficher();
+        
         nom="Josué";
         age=18;
-        Voyageur monVoyageur2 = new Voyageur(nom,age);
+        Etape3 monVoyageur2 = new Etape3(nom,age);
         monVoyageur2.afficher();
 
-         }
-    }
+}
