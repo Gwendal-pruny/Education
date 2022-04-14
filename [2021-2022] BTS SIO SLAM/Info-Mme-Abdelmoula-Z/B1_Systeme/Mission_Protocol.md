@@ -1,4 +1,5 @@
-## Mission : Wireshark et découvertes des protocoles
+#### [Gwendal PRUNY](mailto:gwendal.pruny@gmail.com), ESIEE-IT
+## Mission : Wireshark et découvertes des protocoles (BTS - SIO) - 14/03/2022
 
 ### Objectif
 
