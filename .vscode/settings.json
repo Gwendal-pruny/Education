@@ -18,5 +18,16 @@
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "java.format.settings.url": "eclipse-formatter.xml",
-    "aiXcoder.showTrayIcon": true
+    "aiXcoder.showTrayIcon": true,
+    "github.copilot.advanced": {
+    
+    },
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.enable": {
+    
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    }
 }
