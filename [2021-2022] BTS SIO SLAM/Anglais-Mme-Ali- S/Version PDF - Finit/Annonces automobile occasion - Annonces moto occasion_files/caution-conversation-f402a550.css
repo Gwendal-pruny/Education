@@ -1,4 +1,0 @@
-.cbm-moduleCaution.caution{display:grid;grid-template-columns:1fr 1fr 1fr;grid-column-gap:10px;grid-row-gap:10px}@media (max-width: 767px){.cbm-moduleCaution.caution{grid-template-columns:1fr}}.cbm-moduleCaution.caution .button,.cbm-moduleCaution.caution a{font-weight:700}.cbm-moduleCaution .legal{font-style:italic;color:#666;font-size:13px}.cbm-moduleCaution form .field-group{display:flex;justify-content:space-between}.cbm-moduleCaution form .field-group>*{width:49%}.cbm-moduleCaution form>*{margin-bottom:10px}.cbm-moduleCaution .caution__report-gvt img{margin-right:10px}
-
-
-/*# sourceMappingURL=caution-conversation-f402a550.css.map*/
