@@ -1,0 +1,123 @@
+html, body {
+    background: black;
+}
+
+header {
+    padding: 2em 0;
+    color: white;
+    background: url(header.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header .container {
+    display: flex;
+    align-items: end;
+}
+
+header .container #logo {
+    height: 250px;
+    margin-right: 3em;
+    padding: 1em;
+    background: black;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    font-size: 1.3em;
+    font-family: "HK Grotesk", sans-serif;
+    font-weight: 900;
+    flex-direction: row;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+nav a {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: black;
+    box-shadow: 0 0 10px black;
+}
+
+nav a:hover {
+    color: white;
+    background: #333;
+}
+
+nav a.active {
+    color: black;
+    background: linear-gradient(45deg, rgba(64,224,208,1) 0%, rgba(255,140,0,1) 50%, rgba(255,0,128,1) 100%);
+}
+
+main .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: "HK Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 0.25em;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background:linear-gradient(270deg, rgba(255,140,0,1) 0%, rgba(255,0,128,1) 100%);
+}
+
+h3 {
+    padding-bottom: 3px;
+    border-bottom: 5px solid rgba(255,140,0,1);
+}
+
+.team h3 {
+    margin-top: 2rem;
+    border: none;
+}
+.team h3 span {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    color: white;
+    background: black;
+}
+
+.team .flag {
+    min-width: 150px;
+    max-width: 20%;
+    float: right;
+    outline: 2px solid black;
+}
+
+form label {
+    width: 370px;
+    text-align: right;
+}
+
+form input[type="submit"] {
+    margin-left: 370px;
+}
+
+form fieldset legend {
+    padding: 0 0 0 375px;
+    border-bottom: 3px solid black;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer ,footer a {
+    color: #BBB;
+}
+
+footer a:hover {
+    color: white;
+}

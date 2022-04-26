@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% load l10n %}
+
+{% block title %}Les stades{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Les stades</h2>
+    <p>Retrouvez ici tous les stades dans lesquels se dérouleront les rencontres de la Rugby Tropical Cup.</p>
+    {% for stadium in stadiums %}
+    <h3>{{ stadium.name }}, {{ stadium.location }}</h3>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox={{ stadium.longitude|unlocalize }},{{ stadium.latitude|unlocalize }},{{ stadium.longitude|unlocalize }},{{ stadium.latitude|unlocalize }}&layer=mapnik" width="425" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <br>
+    <a class="btn btn-primary" href="https://www.openstreetmap.org/#map=16/{{ stadium.latitude|unlocalize }}/{{ stadium.longitude|unlocalize }}" target="_blank" rel="noopener noreferrer">
+        Afficher une carte plus grande
+    </a>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

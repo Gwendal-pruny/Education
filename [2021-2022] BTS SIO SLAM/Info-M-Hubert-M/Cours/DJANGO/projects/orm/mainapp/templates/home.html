@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Page d'accueil</h2>
+    {% if message %}
+    <div class="alert alert-primary" role="alert">
+        {{ message }}
+    </div>
+    {% endif %}
+    <p>Bienvenue sur notre site web.</p>
+    <p>Cette compétition est organisée par {{ organisateur | upper }}.</p>
+    <h3>Coup d'envoi</h3>
+    <p>
+        Le premier match de la compétition se déroulera le {{ event.start | date:"l d F" }}
+        au stade {{ event.stadium.name }} : {{ event.team_home.country }} vs {{ event.team_away.country }}.
+    </p>
+</div>
+{% endblock %}
