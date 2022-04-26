@@ -51,7 +51,7 @@ UPDATE armure SET armure_ilvl=15 WHERE armure_ilvl < 15;
 
 -- QUESTION 6
 
-SELECT armure_name FROM armure;
+SELECT * FROM armure;
 
 -- QUESTION 7
 
@@ -66,3 +66,9 @@ INSERT INTO player SELECT classe_id FROM personnage;
 ALTER TABLE armure CHANGE armure_position idP TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
 ALTER TABLE armure DROP nom;
 
+-- 16,5/20
+-- 16,5/20
+-- 16,5/20
+-- 16,5/20
+-- 16,5/20
+-- 16,5/20
