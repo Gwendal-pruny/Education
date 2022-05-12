@@ -27,6 +27,10 @@ class Interview(ElementJournal):
     print(interviews.ElementJournal)
     # Constructeur __init__ à écrire
 
+    """List all names of GitHub repositories for an org."""
+     
+    _
+
 class Generateur():
     date = None
     edition = None
