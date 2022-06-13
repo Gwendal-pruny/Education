@@ -24,8 +24,8 @@ public String tostring(){
     return "le nom de voyage est"+this.nom+" l'age de voygeur est "+this.age;
 }
 public static void main(String args[]){
-    Voyageur p1=new Voyageur("dupont",1950);
-    Voyageur p2=new Voyageur("mercier",1962);
+    Voyageur p1=new Voyageur("Jack",2000);
+    Voyageur p2=new Voyageur("Arncess",2001);
     System.out.println(p1.nom);
     p1.affiche();
     p2.affiche();

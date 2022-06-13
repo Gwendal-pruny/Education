@@ -5,7 +5,7 @@ public class Voyageur {
     public Voyageur(String n, int age){
         Scanner sc=new Scanner(System.in);
         while(n.length()<2){
-            System.out.println("ressaisir nom");
+            System.out.println("retry");
             n=sc.next();
         }
         this.nom=n;
@@ -15,12 +15,13 @@ public class Voyageur {
         System.out.println(this.nom +" "+this.age);
     }
     public String getNom(){
-        return this.nom+"waza";
+        return this.nom;
     }
+
     public void setNom(String nom){
         Scanner sc=new Scanner(System.in);
         while(nom.length()<2){
-            System.out.println("ressaisir nom");
+            System.out.println("retry");
             nom=sc.next();
         }
         this.nom=nom;
@@ -29,7 +30,7 @@ public class Voyageur {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
 
-        System.out.println("nom O_o ?");
+        System.out.println("nom ?");
         String nom=sc.next();
        while(nom.length()<2){
             System.out.println("nom");
@@ -47,8 +48,8 @@ public class Voyageur {
         monVoyageur.afficher();
 
         Voyageur monVoyageur2 = new Voyageur();
-        monVoyageur2.nom="erambert";
-        monVoyageur2.age=18;
+        monVoyageur2.nom="albert";
+        monVoyageur2.age=20;
         monVoyageur2.afficher();
 
      } 

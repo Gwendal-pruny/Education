@@ -13,7 +13,7 @@ public class Voyageur {
         }
 
         while(age<0){
-            System.out.println("ressaisir votre age2");
+            System.out.println("ressaisir votre age");
             age=sc.nextInt();
 
 
@@ -55,7 +55,7 @@ public void afficher(){
         System.out.println("Veuillez saisir votre age :");
         int age = sc.nextInt();
         /while(age<0) {
-            System.out.println("Votre nombre entré est négatif, veuillez rentrez un âge positif :");
+            System.out.println("retry");
             age = sc.nextInt();
 
         }
@@ -83,8 +83,8 @@ public void afficher(){
         Voyageur monVoyageur = new Voyageur(nom,age);
         monVoyageur.afficher();
 
-        nom="Josué";
-        age=18;
+        nom="José";
+        age=20;
         Voyageur monVoyageur2 = new Voyageur(nom,age);
         monVoyageur2.afficher();
 

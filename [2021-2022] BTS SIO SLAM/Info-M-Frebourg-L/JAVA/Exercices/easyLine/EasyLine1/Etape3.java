@@ -83,8 +83,8 @@ public void afficher(){
         Voyageur monVoyageur = new Voyageur(nom,age);
         monVoyageur.afficher();
 
-        nom="Josué";
-        age=18;
+        nom="José";
+        age=20;
         Voyageur monVoyageur2 = new Voyageur(nom,age);
         monVoyageur2.afficher();
 

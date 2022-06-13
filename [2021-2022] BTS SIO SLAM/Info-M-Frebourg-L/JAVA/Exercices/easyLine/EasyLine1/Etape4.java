@@ -72,7 +72,7 @@ public class Voyageur {
     public void setAge(int age) {
         Scanner sc=new Scanner(System.in);
         while (age < 0) {
-            System.out.print("Votre âge est négatif, veuillez taper un âge positif : ");
+            System.out.print("retry : ");
             age=sc.nextInt();
         }
         this.age = age;
@@ -120,8 +120,8 @@ public class Voyageur {
         monVoyageur.afficher();
 
         Voyageur monVoyageur2 = new Voyageur();
-        monVoyageur2.setNom("erambert");
-        monVoyageur2.setAge(18);
+        monVoyageur2.setNom("Albert");
+        monVoyageur2.setAge(20);
         monVoyageur2.afficher();
         monVoyageur2.categorie = "adulte";
         System.out.println("C'est un " + monVoyageur2.categorie + " : " + monVoyageur2.nom + " / "+ monVoyageur2.age + " ans");
