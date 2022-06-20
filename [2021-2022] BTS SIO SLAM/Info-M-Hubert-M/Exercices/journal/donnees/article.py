@@ -1,4 +1,3 @@
-
 articles = [
     {
         "date": "2021-04-06",
@@ -48,29 +47,5 @@ articles = [
         "auteur": "Armand PACHERE",
         "titre": "L'OM va réaliser au Japon un match amical avec le tenant en titre de la J.League 1",
         "contenu": "Le club cite une volonté de resserrer ses liens avec ses fans Japonais, et l'occasion d'y vendre également le premier béret officiel de l'OM",
-    },
-]
-
-interviews = [
-    {
-        "date": "2021-04-06",
-        "edition": "national",
-        "auteur": "test",
-        "invite": "Pierre REPUBLICAIN",
-        "contenu": "La troisième raison de son retour en politique va vous étonner !",
-    },
-    {
-        "date": "2021-04-06",
-        "edition": "idf",
-        "auteur": "Léon CULTURA",
-        "invite": "Poire",
-        "contenu": "Découvrez cette nouvelle chanteuse du Val-de-Marne qui truste le top France du site de streaming Spotizeer",
-    },
-    {
-        "date": "2021-04-07",
-        "edition": "national",
-        "auteur": "Marcel GASTROMEO",
-        "invite": "Léo DIVINCI",
-        "contenu": "L'un des plus grands chefs de Bordeaux récompensé pour ses étonnantes et audacieuses ravioles à l'ananas",
     },
 ]
