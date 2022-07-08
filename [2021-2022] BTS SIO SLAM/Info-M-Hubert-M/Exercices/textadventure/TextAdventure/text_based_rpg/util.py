@@ -33,5 +33,7 @@ def move(locations):
     return interface.get_command(move_locations, True)
 
 class GameOver(Exception):
-    print("Yes le jeux est finit félicitation !"),
+    print("Made by Gwendal Pruny for ESIEE-IT 2022, thx for playing."),
+    print(""),
+    print(""),
     pass
