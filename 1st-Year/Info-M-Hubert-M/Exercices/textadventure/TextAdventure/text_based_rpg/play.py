@@ -16,4 +16,6 @@ def play():
             start_game()
 
         if command == QUIT:
+            interface.print_(help_text)
+            
             break
