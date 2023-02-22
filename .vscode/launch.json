@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Voyageur",
+            "request": "launch",
+            "mainClass": "Voyageur",
+            "projectName": "EsieeIT_4c74fd64"
+        },
+        {
+            "type": "java",
             "name": "Launch saveFlowerData",
             "request": "launch",
             "mainClass": "saveFlowerData",
