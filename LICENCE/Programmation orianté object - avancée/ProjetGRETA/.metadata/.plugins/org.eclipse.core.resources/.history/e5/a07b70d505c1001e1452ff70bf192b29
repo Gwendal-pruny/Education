@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulaire simple</title>
+</head>
+<body>
+
+<h2>Entrez vos informations</h2>
+
+<form action="Form" method="GET">
+  Nom: <input type="text" name="nom"><br>
+  Nb heures: <input type="text" name="nbHeures"><br>
+  <input type="submit" value="Créer cette matière">
+</form>
+
+</body>
+</html>

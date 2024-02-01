@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\zerio\Desktop\ep\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3188971376.index
+663686691.index
+1642095357.index
+2146776875.index
+3020358925.index
+2383041419.index
+1028545754.index

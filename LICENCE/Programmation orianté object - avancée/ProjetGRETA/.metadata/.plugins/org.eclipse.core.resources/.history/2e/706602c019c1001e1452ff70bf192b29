@@ -1,0 +1,23 @@
+package Model;
+
+public class Matiere {
+    private String nom;
+    private String nbHeures;
+
+    // Getters et Setters
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNbHeures() {
+        return nbHeures;
+    }
+
+    public void setNbHeures(String nbHeures) {
+        this.nbHeures = nbHeures;
+    }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer Matière</title>
+</head>
+<body>
+	<h2>Créateur de matières : </h2>
+	<br></br>
+    <form action="Controller" method="GET">
+        Nom: <input type="text" name="nom" /><br>
+        Nb heures: <input type="text" name="nbHeures" /><br>
+        <input type="submit" value="Créer cette matière" />
+    </form>
+</body>
+</html>
