@@ -11,7 +11,6 @@ A l'aide du script fourni :
 implémenter les fonctionnalités suivantes en le complétant
 
 
-
 import socket
 def main():
    host = 'enp0s3'
