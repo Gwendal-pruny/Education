@@ -2,7 +2,7 @@
 
 **Nom prénom :**
 
-Je suis Gwendal Pruny et j'ai 18 ans.
+Je suis Gwendal Pruny et j'ai 20 ans.
 
 **De quel Lycée / école ( formation ) :**
 
@@ -16,6 +16,10 @@ J'habite à Ennery et je mets 10 à 40 minutes pour venir en prenant le seul bus
 
 Avec la formation BTS SIO SLAM j'ai la possibilité d'obtenir un diplôme reconnu et qui a de la valeur pour rentrer dans énormément de cursus plus tard ( Ingénieur, M2I ...). La possibilité d'être en même temps en alternance été aussi essentiels car l'expérience est très prisé en informatique.
 
+**Pourquoi Licence Cybersécuriter ?**
+
+Avec la formation cybersécuriter j'ai la possibilité d'obtenir un diplôme reconnu et qui a de la valeur pour rentrer dans énormément de cursus plus tard. La possibilité d'être en même temps en alternance été aussi essentiels car l'expérience est très prisé en informatique.
+
 **Pourquoi Esiee-IT ?**
 
 J'ai choisi Esiee-IT car c'est une toute nouvelle école de la CCI avec une grande potentielle et des cursur qui m'intéresse tousse.
@@ -24,7 +28,7 @@ J'ai choisi Esiee-IT car c'est une toute nouvelle école de la CCI avec une gran
 
 Defauts :
 
-    Trop facilement ennuyer, Travaille pas assez ce qui me déplaît / travaille trop ce qui me plaît.
+    Trop facilement ennuyer, Travaille pas assez ce qui me déplaît / Trop perfectioniste sur ce qui me plaît.
 
 Qualités :
 
@@ -33,15 +37,18 @@ Qualités :
 
 **Information Supplémentaire :**
 
-Error 418
-
-
-**Suis-je un adulte ?**
-
-
+Error 418 ( I'm a tea pot )
 
 **Entreprise :**
 
-Entreprise : SquadEasy
+Entreprise : SquadEasy ( 1 ans )
 Rôle : QA en mode BDD (Quality Assurer / behaviour driven development)
-Stack : Node.JS , JS (Objectif en cours -> FullStack)
+Stack : Node.JS , JS 
+
+Entreprise : StockPro ( 1 ans )
+Rôle : QA en mode BDD (Quality Assurer / behaviour driven development)
+Stack : Scrum master, Tests automatisés
+
+Entreprise : Thales ( 1 ans )
+Rôle : Developpeur en cybersécuriter
+Stack : Python
