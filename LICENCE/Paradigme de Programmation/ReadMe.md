@@ -1,3 +1,7 @@
+# IL MANQUE QUE LES IMAGES (image du cli/Gui), je fais ça demain, cependant tout marche
+
+
+
 # Pattern Builder
 ## Description
 Le pattern Builder permet de construire des objets complexes étape par étape. Il sépare la construction d'un objet complexe de sa représentation, permettant ainsi le même processus de construction de produire différents types et représentations d'objets.
