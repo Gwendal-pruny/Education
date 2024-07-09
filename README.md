@@ -1,54 +1,138 @@
-# EsieeIT
+# 🛡️ Gwendal Pruny: A Journey in Cybersecurity 🛡️
 
-**Nom prénom :**
+![Cybersecurity Banner](https://via.placeholder.com/800x200)
 
-Je suis Gwendal Pruny et j'ai 20 ans.
+## 🌐 Personal Information
+- **Name:** Gwendal Pruny
+- **Age:** 21 years old
+- **Residence:** Ennery, France
+- **Contact:** [Email](mailto:gwendalpruny@gmail.com) | [Website](http://www.gwendalpruny.fr)
 
-**De quel Lycée / école ( formation ) :**
+---
 
-J'ai suivi un cursus technologique et obtenu mon BAC STI2D SIN ( Science technologie de l'information et du développement durable système informatique et numérique) à Jean Perrin à Saint-ouen l'aumône mais, j'ai fait la plus grande partie de mon lycée et tout mon collège à Notre de Dame de la Compassion à Pontoise.
+## 🎓 Education: Building a Fortress of Knowledge
 
-**Résidence :**
+### Lycée & Collège
+- **Lycée:** Jean Perrin, Saint-Ouen-l'Aumône
+  - **Degree:** BAC STI2D SIN (Science Technologie de l'Industrie et du Développement Durable, Systèmes Informatiques et Numériques)
+- **Collège:** Notre Dame de la Compassion, Pontoise
 
-J'habite à Ennery et je mets 10 à 40 minutes pour venir en prenant le seul bus qui passe dans ma campagne.
+### Higher Education
+![Education Image](https://via.placeholder.com/400x200)
+- **BTS SIO SLAM:** ESIEE IT, Pontoise
+  - **Specialization:** Solutions Logicielles et Applications Métiers (SLAM)
+  - **Mode:** Alternance
+  - **Reason for Choice:** The BTS SIO SLAM program offered a solid foundation in software solutions and applications, essential for understanding the intricacies of secure software development.
+- **License:** ESIEE IT
+  - **Specialization:** Cybersécurité
+  - **Mode:** Alternance
+  - **Reason for Choice:** This program was a stepping stone towards my ultimate goal of becoming a cybersecurity expert. The blend of theoretical knowledge and practical experience prepared me for the dynamic field of cyber defense.
+- **Master:** OTERIA Cyber School, Gennevilliers (in progress)
+  - **Specialization:** Cybersécurité
+  - **Mode:** Alternance
+  - **Reason for Choice:** OTERIA Cyber School is renowned for its cutting-edge curriculum and industry connections, making it the perfect place to hone my skills and stay ahead in the ever-evolving world of cybersecurity.
 
-**Pourquoi BTS SIO SLAM ?**
+---
 
-Avec la formation BTS SIO SLAM j'ai la possibilité d'obtenir un diplôme reconnu et qui a de la valeur pour rentrer dans énormément de cursus plus tard ( Ingénieur, M2I ...). La possibilité d'être en même temps en alternance été aussi essentiels car l'expérience est très prisé en informatique.
+## 💼 Professional Experience: Securing the Digital Frontier
 
-**Pourquoi Licence Cybersécuriter ?**
+![Professional Experience Image](https://via.placeholder.com/400x200)
 
-Avec la formation cybersécuriter j'ai la possibilité d'obtenir un diplôme reconnu et qui a de la valeur pour rentrer dans énormément de cursus plus tard. La possibilité d'être en même temps en alternance été aussi essentiels car l'expérience est très prisé en informatique.
+### Thales
+- **Role:** Developer in Cybersecurity
+- **Stack:** Python
+- **Contributions:** Developed secure systems to protect sensitive data and implemented robust encryption protocols to safeguard communication channels.
 
-**Pourquoi Esiee-IT ?**
+### StockPro
+- **Role:** QA in BDD (Quality Assurer / Behaviour Driven Development)
+- **Stack:** Scrum Master, Automated Testing
+- **Contributions:** Designed and executed automated test suites, ensuring the reliability and security of software applications through rigorous testing methodologies.
 
-J'ai choisi Esiee-IT car c'est une toute nouvelle école de la CCI avec une grande potentielle et des cursur qui m'intéresse tousse.
+### SquadEasy
+- **Role:** QA in BDD (Quality Assurer / Behaviour Driven Development)
+- **Stack:** Node.js, JavaScript
+- **Contributions:** Streamlined QA processes using BDD frameworks, enhancing the security and performance of the company's SaaS platform.
 
-**Qui suis-je comme étudiant ?**
+---
 
-Defauts :
+## 🛠️ Technical Skills: The Arsenal
 
-    Trop facilement ennuyer, Travaille pas assez ce qui me déplaît / Trop perfectioniste sur ce qui me plaît.
+![Technical Skills Image](https://via.placeholder.com/400x200)
 
-Qualités :
+### Programming Languages
+- **Proficient:** HTML, CSS, Python, Java
+- **Intermediate:** C#/C++, MySQL/PHP
 
-    Sérieux, passionné, opstiner
+### Tools & Technologies
+- **Operating Systems:** Debian, Windows
+- **Development Tools:** Docker, Git, CI/CD, Jenkins
+- **Security Tools:** Kali Linux, Wireshark, Metasploit
 
+---
 
-**Information Supplémentaire :**
+## 💡 Soft Skills: The Soft Armor
+- **Adaptability:** Thrives in dynamic environments
+- **Autonomy:** Works well independently
+- **Determination:** Persistent in achieving goals
 
-Error 418 ( I'm a tea pot )
+---
 
-**Entreprise :**
+## 🎯 Hobbies & Interests: Beyond the Firewall
 
-Entreprise : SquadEasy ( 1 ans )
-Rôle : QA en mode BDD (Quality Assurer / behaviour driven development)
-Stack : Node.JS , JS 
+![Hobbies Image](https://via.placeholder.com/400x200)
 
-Entreprise : StockPro ( 1 ans )
-Rôle : QA en mode BDD (Quality Assurer / behaviour driven development)
-Stack : Scrum master, Tests automatisés
+- **Sports:** Climbing, Weightlifting, Mountain Biking (VTT/DH)
+- **Languages:** Fluent in English (A1-C2), Beginner in Spanish
+- **Tech Interests:** AI, Cyber Defense Strategies, Ethical Hacking
 
-Entreprise : Thales ( 1 ans )
-Rôle : Developpeur en cybersécuriter
-Stack : Python
+---
+
+## 📞 Contact Information: Reach Out
+
+![Contact Information Image](https://via.placeholder.com/400x200)
+
+- **Phone:** 07 69 93 59 97
+- **Email:** [gwendalpruny@gmail.com](mailto:gwendalpruny@gmail.com)
+- **Website:** [www.gwendalpruny.fr](http://www.gwendalpruny.fr)
+
+---
+
+## 🌱 Personal Traits: The Core
+
+### Strengths
+- **Serious:** Dedicated to tasks
+- **Passionate:** Enthusiastic about technology
+- **Persistent:** Never gives up
+
+### Weaknesses
+- **Easily Bored:** Needs constant challenges
+- **Selective Worker:** Focuses intensely on interesting tasks
+- **Perfectionist:** Strives for perfection in favored tasks
+
+---
+
+## ℹ️ Additional Information: Fun Facts
+- **Fun Fact:** 418 (I'm a teapot) - I enjoy quirky humor and creative problem-solving.
+
+---
+
+## 🔍 Repository Overview: Explore My Digital Fortress
+
+![Repository Overview Image](https://via.placeholder.com/400x200)
+
+Welcome to my repository! Here, you can find a comprehensive collection of my academic and professional work, from my BTS to my current Master's studies. This repository serves as a showcase of my projects, coursework, and professional experience, demonstrating my journey and growth in the field of technology and cybersecurity.
+
+### What to Expect:
+- **Detailed Project Documentation:** Insightful descriptions of projects showcasing my problem-solving skills and technical expertise.
+- **Source Code:** Clean and well-documented code for various assignments and projects, highlighting my coding practices and security considerations.
+- **Reports and Analysis:** In-depth analyses and reports from my internships and professional roles, offering a glimpse into my approach to cybersecurity challenges.
+- **Continuous Updates:** Regular updates as I progress through my Master's program, reflecting my ongoing learning and professional development.
+
+### Repository Link:
+**[Gwendal Pruny's Repository](https://github.com/Zerio113/AboutMyself/tree/main)**
+
+Feel free to navigate through the directories and files to get a deeper understanding of my work and capabilities. For any questions or collaboration opportunities, please reach out through the contact information provided above.
+
+---
+
+Thank you for taking the time to learn more about me and my work. I look forward to connecting with fellow tech enthusiasts and professionals!
